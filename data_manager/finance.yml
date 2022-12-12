@@ -1,0 +1,177 @@
+---
+parameters:
+  data_source: &data_source morningstar
+  label_01: &label_01 label 1
+
+  ascii_data_columns_parameter: &ascii_data_columns_parameter [x/L, unknown1, unknown2, unknown3, unknown4, Damage, unknown5]
+
+  plot_suptitle: &plot_suptitle Technical analysis
+  plot_title: &plot_title Asset Ticker, {}
+  plot_suptitle2: &plot_suptitle2 Asset Value Variation
+  plot_title2: &plot_title2 Asset Ticker, {}
+
+db:
+  server_type: mssql
+  server: localhost\SQLEXPRESS
+  user: NULL
+  password: NULL
+  database: master
+
+default:
+  Analysis:
+    returns:
+      flag: True
+    portfolio:
+      flag: True
+  data_sources:
+    tiingo:
+      label: tiingo
+      api_key: 512e3063ad18b5116a83cf7ce7d852af4181917c
+    iex:
+      label: iex_cloud
+      api_key: pk_8610c1dedebf482fbbc37de3ecc9ca5b
+
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+
+stocks:
+  - ticker: WNW
+    initial_investment: 1000
+    yearly_payment:
+    dividend_reinvestment: True
+    purchase_date: NULL
+    purchase_price: NULL
+  - ticker: OXY
+    initial_investment: 1000
+    yearly_payment: 0
+    dividend_reinvestment: True
+    purchase_date: NULL
+    purchase_price: NULL
+  - ticker: SPY
+    initial_investment: 1000
+    yearly_payment: 0
+    dividend_reinvestment: True
+    purchase_date: NULL
+    purchase_price: NULL
+  - ticker: BRK-B
+    initial_investment: 1000
+    yearly_payment: 0
+    dividend_reinvestment: True
+    purchase_date: NULL
+    purchase_price: NULL
+  - ticker: XME
+    initial_investment: 1000
+    yearly_payment: 0
+    dividend_reinvestment: True
+    purchase_date: NULL
+    purchase_price: NULL
+  - ticker: XOP
+    initial_investment: 1000
+    yearly_payment: 0
+    dividend_reinvestment: True
+    purchase_date: NULL
+    purchase_price: NULL
+  - ticker: XLE
+    initial_investment: 1000
+    yearly_payment: 0
+    dividend_reinvestment: True
+    purchase_date: NULL
+    purchase_price: NULL
+  - ticker: XES
+    initial_investment: 1000
+    yearly_payment: 0
+    dividend_reinvestment: True
+    purchase_date: NULL
+    purchase_price: NULL
+  - ticker: JPM-P-C
+    initial_investment: 1000
+    yearly_payment: 0
+    dividend_reinvestment: True
+    purchase_date: NULL
+    purchase_price: NULL
+
+# Date 12/23/2019 OXY Fund: $11,622; AB Small Cap Value: $23,087; S&P500: $6,247;
+401K:
+  S&P 500 Index Fund
+  158.8118
+  $39.338550
+  $6,247.43
+  15.25%
+  Small Cap Value Fund
+  278.3727
+  $82.935980
+  $23,087.11
+  56.37%
+  Oxy Stock Fund
+  514.4068
+  $22.593594
+  $11,622.30
+  28.38%
+  Oxy Stock Fund (Equivalent)
+  297
+  $39.01
+  $39.0100
+Retirement:
+  S&P 500 Index Fund
+  524.7394
+  $39.338550
+  $20,642.49
+  100.00%
+
+
+plots:
+  timeline:
+    -
+      file_suffix: timeline
+      suptitle: *plot_suptitle
+      size: default
+      orientation: portrait
+      plt_kind: line
+      title: *plot_title
+      grid: True
+      legend: True
+      legend_location: best
+      marker: NULL
+      x: [date]
+      y: [close, 20_day_rolling, 100_day_rolling]
+      label: [price, 20 day average, 100 day average]
+      xlabel: Date
+      ylabel: Closing Price ($)
+      text_fields:
+        -
+          x : 0.0000001
+          y: 33
+          text: Stress Jt. Center
+        -
+          x : 0.0000001
+          y: 4908.5
+          text: Keel Jt. Center
+
+  returns:
+    -
+      file_suffix: returns
+      suptitle: *plot_suptitle2
+      size: default
+      orientation: portrait
+      plt_kind: line
+      title: *plot_title2
+      grid: True
+      legend: True
+      legend_location: best
+      marker: NULL
+      x: [date]
+      y: [value]
+      label: [Asset Value]
+      xlabel: Date
+      ylabel: Asset Value ($)
+      text_fields:
+        -
+          x : 0.0000001
+          y: 33
+          text: Stress Jt. Center
+        -
+          x : 0.0000001
+          y: 4908.5
+          text: Keel Jt. Center

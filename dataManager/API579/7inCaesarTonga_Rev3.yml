@@ -1,0 +1,141 @@
+Default:
+  Analysis:
+    GML:
+      Circumference: True
+      Length: False
+    LML: False
+  Units: inch
+ReadingSets:
+  - 
+    io: data_manager\data\CeasarTongaGrid_Rev2 (Process).xlsx
+    sheet_name: Sheet1
+    index_col: 0
+    skiprows: 0
+    skipfooter: 0
+    DataCorrectionFactor: 1.00
+    DataFill: True
+    Label: Feature 1
+    Contour: 
+      xlim: NULL
+      ylim: NULL
+      zlim: [1.00, 1.280]
+    FCARate: Historical
+    FCA:
+      - 0.00
+      - 0.04
+      - 0.08
+      - 0.12
+      - 0.16
+      - 0.20
+      - 0.24
+      - 0.28
+      - 0.32
+      - 0.36
+      - 0.40
+
+      
+API579Parameters:
+  RSFa: 0.9
+  Age: 15
+  FCARateFloor: 0.00118
+  FoliasFactor:
+    FlawParameter: [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0]
+    Mt:
+      Cylindrical: [1.001, 1.056, 1.199, 1.394, 1.618, 1.857, 2.103, 2.351, 2.600, 2.847, 3.091, 3.331, 3.568, 3.801, 4.032, 4.262, 4.492, 4.727, 4.970, 5.225, 5.497]
+      Conical: [1.001, 1.056, 1.199, 1.394, 1.618, 1.857, 2.103, 2.351, 2.600, 2.847, 3.091, 3.331, 3.568, 3.801, 4.032, 4.262, 4.492, 4.727, 4.970, 5.225, 5.497]
+      Spherical: []
+Geometry:
+   NominalID: NULL
+   NominalOD: 7.69
+   DesignWT : 1.280
+   StartWTFactor : 1
+   tmin: 0.970
+   AssessmentLengthCeilingFactor_Circumference: NULL
+   AssessmentLengthCeilingFactor_Length: 1.0
+   CorrosionAllowance: 0.0
+
+Design:
+  InternalPressure: 14530
+  ExternalPressure: 0
+  Temperature:
+    Ambient: 50
+    Operating: 90
+    Maximum: null
+  BendingMoment: 0
+  AxialForce: 0
+  Torsion: 0
+  Condition: Restrained
+Material:
+  E: 30000000.0
+  rho: 7800
+  Poissionsratio: 0.3
+  SMYS: 70000
+  SMUS: null
+  ThermalExpansionCoefficient: 6.5e-06
+  WeldFactor:
+    Seamless: 1.0
+DesignFactors:
+  Pressure: 0.72
+  Longitudinal: 0.9
+  EquivalentStress: 0.9
+  Logitudinal: 0.9
+  TemperatureDerating: 1.0
+
+LML:
+  LTA:
+    - 
+      io: dataManager\API579\CT - Sample WT Profile (Simulated3).xlsx
+      sheet_name: Sheet1
+      index_col: 0
+      skiprows: 0
+      skipfooter: 0
+      DataCorrectionFactor: 1.00
+      Label: Feature 1
+      sIndex:
+        - 8
+        - 18
+      cIndex:
+        - 10
+        - 13
+      s: NULL
+      c: NULL
+      Contour: 
+        xlim: NULL
+        ylim: NULL
+        zlim: [1.172, 1.280]
+      FCA:
+        - 0.00
+        - 0.04
+        - 0.08
+        - 0.12
+        - 0.16
+        - 0.20
+        - 0.24
+        - 0.28
+        - 0.32
+        - 0.36
+        - 0.40
+        - 0.44
+      Lmsd: 15
+      MtType: Cylindrical
+      FCAs: NULL
+      FCAc: NULL
+      FCANonFlawRatio: 0.25
+
+PlotSettings:
+  Data:
+    PltSupTitle: Caesar Tonga, Pipe-in-Pipe Flowline FFS
+    PltTitle: Measured WT
+    PltXLabel: Circumference (inch)
+    PltYLabel: Length (inch)
+  LML:
+    PltSupTitle: Caesar Tonga, Pipe-in-Pipe Flowline FFS
+    PltTitle: Local Metal Loss, Levels 1 & 2
+    PltXLabel: Future Corrosion Allowance (inch)
+    PltYLabel: Maximum Allowable Working Pressure (psi)
+  GML:
+    PltSupTitle: Caesar Tonga, Pipe-in-Pipe Flowline FFS
+    PltTitle: General Metal Loss, Level 2
+    PltXLabel: Future Corrosion Allowance (inch)
+    PltYLabel: Maximum Allowable Working Pressure (psi)
+

@@ -1,0 +1,1 @@
+SELECT * FROM {0} WITH (SNAPSHOT) WHERE {1} >='{2}' and {1} <'{3}';

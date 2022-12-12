@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="lib/d3_reusables.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>D3 dimple Tutorial</title>
+</head>
+
+<body>
+
+<h1>2 Bar Charts with repeatable code</h1>
+
+<div id="#runningHistory"></div>
+
+<div id="#weatherHistory"></div>
+
+<script type="text/javascript">
+    var milesRun = [2, 5, 4, 1, 2, 6, 5];
+    var highTemperatures = [77, 71, 82, 87, 84, 78, 80, 84, 86, 72, 71, 68, 75, 73, 80, 85, 86, 80];
+
+    var runningChart = barChart().barPadding(2);
+    d3.select(document.getElementById("#runningHistory"))
+        .datum(milesRun)
+        .call(runningChart);
+
+    var weatherChart = barChart().fillColor('coral');
+    d3.select(document.getElementById("#weatherHistory"))
+        .datum(highTemperatures)
+        .call(weatherChart);
+
+
+</script>
+
+</body>
+</html>

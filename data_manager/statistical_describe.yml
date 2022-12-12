@@ -1,0 +1,70 @@
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+
+results:
+
+files:
+  from_xlsx:
+    -
+      io: data_manager\data\posters\062614DrillRig-posterAds.xlsx
+      sheet_name: Process2
+      index_col: NULL
+      skiprows: 0
+      skipfooter: 0
+      label: BHA Power Section Data 1
+      columns: [Vessel Type, Maximum Water Depth Rating, LENGTH]
+      replace:
+        -
+          to_replace: "-"
+          value: NULL
+      to_numeric:
+        - LENGTH
+        - Maximum Water Depth Rating
+
+Analysis:
+  group_by:
+    -
+      group_by_item: [Vessel Type]
+      describe: Vessel Type
+      viz:
+        df_columns: [count]
+        plt_kind: bar
+        xlabel: Vessel Type
+        ylabel: Number of Vessels (#)
+        suptitle: Vessel Types
+        title: Offshore Drill Rig Data, 2015
+        xticklabels: [Drillships, Semisubmersibles]
+        grid: False
+        legend: True
+        legend_location: outside
+    -
+      group_by_item: [Vessel Type]
+      describe: Maximum Water Depth Rating
+      viz:
+        df_columns: [min, 25%, 50%, 75%, max]
+        plt_kind: bar
+        xlabel: Vessel Type
+        ylabel: Depth Rating (ft)
+        suptitle: Vessel Water Depth Rating
+        title: Offshore Drill Rig Data, 2015
+        xticklabels: [Drillships, Semisubmersibles]
+        grid: False
+        legend: True
+        legend_location: outside
+    -
+      group_by_item: [Vessel Type]
+      describe: LENGTH
+      viz:
+        df_columns: [min, 25%, 50%, 75%, max]
+        plt_kind: bar
+        xlabel: Vessel Type
+        ylabel: Vessel Length (ft)
+        suptitle: Vessel Length Statistics
+        title: Offshore Drill Rig Data, 2015
+        xticklabels: [Drillships, Semisubmersibles]
+        grid: False
+        legend: True
+        legend_location: outside

@@ -1,0 +1,371 @@
+default:
+  Analysis:
+    Analyze :
+      flag: False
+      file_type: yaml
+      simulation: False
+      statics: False
+    Summary:
+      flag: True
+      AddMinimumToSummary: True
+      AddMaximumToSummary: True
+      AddMeanToSummary: True
+    RangeGraph:
+      flag: True
+      add_effective_tension_to_cfg: False
+    time_series:
+      flag: True
+      histogram: True
+      summation: True
+    cummulative_histograms:
+      flag: False
+    rain_flow:
+      BinLabels: [Eff Ten Bin Start (kN), Eff Ten Bin End (kN)]
+      bins: 100
+      range:
+        - 0
+        - 1000
+  config:
+    overwrite:
+      output: True
+
+  Constants:
+    g : 9.81
+  units:
+    verticalDistance: m
+    declinationAngle: deg with vertical
+    Temperature: deg F
+    Pressure: psi
+    EffectiveTension: kN
+    BendingMoment: kNm
+    YieldStrength: psi
+    E: psi
+    NominalID: inch
+    NominalOD: inch
+    NominalWT: inch
+    Rho: kg/m3
+    MassPerUnitLength: kg/m
+    WeightPerUnitLength: N/m
+    SoilStiffness: kN/m/m
+    BuoyancyCoverage: Percentage
+  log_level: DEBUG
+
+PostProcessUnits:
+    System : US
+    Effective Tension:
+        US: 1
+        SI: 1
+    Bend Moment:
+        US: 1
+        SI: 1
+    API STD 2RD Method 1:
+        US: 1
+        SI: 1
+
+
+Files:
+  data_source: csv
+  csv_filename: K:\0198\NoTanker\static\LC_batch_temp.csv
+
+  data: []
+
+PlotSettings:
+  Name: Buoyancy Element Hydrodynamic Coefficients
+  SupTitle: Buoyancy Element Hydrodynamic Coefficients
+  Title: SLWR Configuration Development
+
+Summary:
+-
+  SummaryFileName: E_topUni_BuoyBot
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Min
+      SimulationPeriod: [0]
+      ArcLength:
+        - 0
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Mean
+      SimulationPeriod: [0]
+      ArcLength:
+        - 0
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Max
+      SimulationPeriod: [0]
+      ArcLength:
+        - 0
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Min
+      SimulationPeriod: [0]
+      ArcLength:
+        - 0
+      Variable: Y
+      Label: Azimuth CCW From North
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Mean
+      SimulationPeriod: [0]
+      ArcLength:
+        - 0
+      Variable: Declination
+      Label: Inclination with Vert.
+      transform: {'type': 'linear', 'scale': -1, 'shift': 180}
+
+-
+  SummaryFileName: D_topUni
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Min
+      SimulationPeriod: [0]
+      ArcLength:
+        - 2.05
+        - 2.25
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Mean
+      SimulationPeriod: [0]
+      ArcLength:
+        - 2.05
+        - 2.25
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Max
+      SimulationPeriod: [0]
+      ArcLength:
+        - 2.05
+        - 2.25
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Min
+      SimulationPeriod: [0]
+      ArcLength:
+        - 2.05
+        - 2.25
+      Variable: Y
+      Label: Azimuth CCW From North
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Mean
+      SimulationPeriod: [0]
+      ArcLength:
+        - 2.05
+        - 2.25
+      Variable: Declination
+      Label: Inclination with Vert.
+      transform: {'type': 'linear', 'scale': -1, 'shift': 180}
+
+-
+  SummaryFileName: C_Swivel_Top
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Min
+      SimulationPeriod: [0]
+      ArcLength:
+        - 2.206
+        - 2.406
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Mean
+      SimulationPeriod: [0]
+      ArcLength:
+        - 2.206
+        - 2.406
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Max
+      SimulationPeriod: [0]
+      ArcLength:
+        - 2.206
+        - 2.406
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Min
+      SimulationPeriod: [0]
+      ArcLength:
+        - 2.206
+        - 2.406
+      Variable: Y
+      Label: Azimuth CCW From North
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Mean
+      SimulationPeriod: [0]
+      ArcLength:
+        - 2.206
+        - 2.406
+      Variable: Declination
+      Label: Inclination with Vert.
+      transform: {'type': 'linear', 'scale': -1, 'shift': 180}
+
+-
+  SummaryFileName: B_Swivel_Bot
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Min
+      SimulationPeriod: [0]
+      ArcLength:
+        - 3.676
+        - 3.876
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Mean
+      SimulationPeriod: [0]
+      ArcLength:
+        - 3.676
+        - 3.876
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Max
+      SimulationPeriod: [0]
+      ArcLength:
+        - 3.676
+        - 3.876
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Min
+      SimulationPeriod: [0]
+      ArcLength:
+        - 3.676
+        - 3.876
+      Variable: Y
+      Label: Azimuth CCW From North
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Mean
+      SimulationPeriod: [0]
+      ArcLength:
+        - 3.676
+        - 3.876
+      Variable: Declination
+      Label: Inclination with Vert.
+      transform: {'type': 'linear', 'scale': -1, 'shift': 180}
+
+-
+  SummaryFileName: A_BotUni_Top
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Min
+      SimulationPeriod: [0]
+      ArcLength:
+        - 9.1
+        - 9.3
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Mean
+      SimulationPeriod: [0]
+      ArcLength:
+        - 9.1
+        - 9.3
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Max
+      SimulationPeriod: [0]
+      ArcLength:
+        - 9.1
+        - 9.3
+      Variable: Effective Tension
+      Label: Mean Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Min
+      SimulationPeriod: [0]
+      ArcLength:
+        - 9.1
+        - 9.3
+      Variable: Y
+      Label: Azimuth CCW From North
+    -
+      Command: Range Graph
+      ObjectName: riserChain
+      AdditionalData:
+        - Mean
+      SimulationPeriod: [0]
+      ArcLength:
+        - 9.1
+        - 9.3
+      Variable: Declination
+      Label: Inclination with Vert.
+      transform: {'type': 'linear', 'scale': -1, 'shift': 180}

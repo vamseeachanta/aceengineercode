@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Tutorial</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+
+    <h1>First D3 Document</h1>
+
+    <script type="text/javascript">
+// Lesson 1: Simple Text
+//    d3.select("body").append("p").text("Our First Paragraph using D3!");
+//    p.style({"font-size":"50px","font-family":"arial"});
+
+// Lesson 2: Data Binding and display text
+//    var data_values = [5,10,30,8,45,24,16,55,60];
+//    var p_text = d3.selectAll("p").data(data_values).enter().append("p").text("hello world");
+//    p_text.style({"font-size":"20px","font-family":"arial"});
+
+// Lesson 3: Data Binding and display values of data
+//    var data_values = [5,10,30,8,45,24,16,55,60];
+//    var p = d3.selectAll("p").data(data_values).enter().append("p").text(function(value){ return value; });
+//    p.style({"font-size":"20px","font-family":"arial"});
+
+// Lesson 4: Define SVG and add Circle and Rectangle
+//        var data_values = [5,10,30,8,45,24,16,55,60];
+//        var svg = d3.select("body").append("svg").attr({"width":450,"height":400});
+//        svg.append("circle").attr({"r":"30px", "cx":"250px", "cy":"250px"});
+//        svg.append("rect").attr({"x":"30px", "y":"150px", "width":"30px", "height":"100px"});
+
+// Lesson 5: Define SVG and prepare a bar chart
+        var svg = d3.select("body").append("svg").attr({"width":450,"height":400});
+        var data_values = [5,10,30,8,45,24,16,55,60,45,32,18,11,3];
+        var bars = svg.selectAll("rect").data(data_values).enter().append("rect").attr("width","25px").attr("height", function(d){ return d; });
+        bars.attr("x", function(d,i){ return i*30; });
+        bars.attr("height", function(d){ return d*5; });
+        bars.attr("y", function(d){ return 400-d*5; });
+        bars.attr("fill", "steelblue");
+        var max = d3.max(data_values);
+        var min = d3.min(data_values);
+        bars.filter(function(d){ return d==max; }).attr("fill","green");
+        bars.filter(function(d){ return d==min; }).attr("fill","red");
+
+    </script>
+
+</body>
+</html>

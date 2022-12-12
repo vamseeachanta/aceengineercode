@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON2HTML Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.4.0/json2html.min.js"></script>
+
+</head>
+<body>
+<h3>DIV ID Starts here</h3>
+<div id="result"></div>
+<h3>DIV ID Ends here</h3>
+
+
+</body>
+
+    <script>
+        let template = {'<>':'div','html':'${title} ${year}'};
+        let data = [
+            {"title":"Heat","year":"1995"},
+            {"title":"Snatch","year":"2000"},
+            {"title":"Up","year":"2009"},
+            {"title":"Unforgiven","year":"1992"},
+            {"title":"Amadeus","year":"1984"}
+        ];
+        //native javascript
+<!--        document.write( json2html.transform(data,template) );-->
+        //or with jQuery
+        $("#result").json2html(data,template);
+    </script>
+
+<!--<script>-->
+<!--var transform = {'<>':'div','class':function(){if(this.score < 10) return('red');},'html':'${company}'};-->
+
+<!--var data = [{'company':'ABC Corp.','score':15},-->
+<!--            {'company':'XYZ Inc.','score':9},-->
+<!--            {'company':'PBB Org.','score':35},-->
+<!--            {'company':'CBA Ltd.','score':5}];-->
+
+<!--document.write( json2html.transform({},transform) );-->
+<!--</script>-->
+
+<!--<script>-->
+<!--let transform = {'<>':'li','text':'${name} (${age})'};-->
+<!--let data = [-->
+<!--    {'name':'Bob','age':40},-->
+<!--    {'name':'Frank','age':15},-->
+<!--    {'name':'Bill','age':65},-->
+<!--    {'name':'Robert','age':24}-->
+<!--];-->
+<!--$('ul').json2html( data,transform );-->
+<!--</script>-->
+
+
+
+</html>

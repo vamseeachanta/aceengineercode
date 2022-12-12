@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: Our first bar chart with data</title>
+        <script src="https://d3js.org/d3.v5.js"></script>
+        <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+        <script src="lib/d3_reusables.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib/d3.css">
+	</head>
+	<body>
+        <div id="#lineD3">
+        <h3>Basic d3 line plot</h3>
+        <p>This is a simple line plot</p>
+        </div>
+
+        <div id="#scatterD3">
+        <h3>Basic d3 scatter plot</h3>
+        <p>This is a simple scatter plot</p>
+        </div>
+
+        <div id="#barD3">
+        <h3>Basic d3 bar chart</h3>
+        <p>This is a simple bar chart</p>
+        </div>
+
+        <div id="#basicD3">
+        <h3>Basic d3 playground</h3>
+        <p>This is a starting paragraph</p>
+        </div>
+
+		<script type="text/javascript">
+
+            // Line chart with options
+            var options = {chartType: 'line', xDate: true, x: ['dateTime'], y: ['close'], marker: {flag: true, size: 5, fillColor: 'royalblue'}
+            , dataLabel: false, dataConverstion: {flag: true}, };
+            var dom = "#lineD3";
+            var dataset = [{"year":2001,"month":1,"close":10},{"year":2002,"month":2,"close":20},{"year":2003,"month":3,"close":40},{"year":2004,"month":4,"close":80},{"year":2004,"month":5,"close":99.8}]
+            lineChartD01(dom, dataset, options);
+
+            // Scatter chart with options
+            var options = {chartType: 'scatter', x: ['date'], y: ['close'], marker: {size: 'variable', fillColor: 'royalblue'}, dataLabel: false}
+            var dom = "#scatterD3";
+            dataset = [{"date":1,"close":93.24},{"date":2,"close":95.35},{"date":3,"close":98.84},{"date":4,"close":99.92},{"date":5,"close":99.8}]
+            scatterChartD02(dom, dataset, options);
+
+            // Column chart with options
+            var options = {chartType: 'column', fillColor: 'teal', dataLabel: true}
+            var dom = "#barD3";
+            dataset=[ 25, 7, 5, 26, 11 ];
+            barChartD02(dom, dataset, options);
+            // bar option is NOT tested (May be worth splitting into bar and column chart?)
+            // var options = {chartType: 'bar', fillColor: 'teal', dataLabel: true}
+            // var dom = "#barD3";
+            // dataset=[ 25, 7, 5, 26, 11 ];
+
+            // First small playgorund
+            var dom = "#basicD3";
+            dataset=[ 25, 7, 5, 26, 11 ];
+            basicD3PlayGround(dom, dataset);
+		</script>
+
+	</body>
+</html>

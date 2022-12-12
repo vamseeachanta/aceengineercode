@@ -1,0 +1,210 @@
+SHEAR7 4.8 generated at 5:49 AM on 6/13/2019.
+OrcaFlex 10.0e: orcaflex_analysis_py_batch_script.txt (modified 5:52 AM on 6/13/2019).
+*** BLOCK 1. unit system ***
+0  Unit system, 0=SI, 1=US
+*** BLOCK 2. structural and hydrodynamic data ***
+999  Structural model type, .mds file is used to import the modal response
+869.5944  Total cylinder length
+1142  Number of segments
+1025  Fluid density
+1.35E-6  Kinematic viscosity
+0.003  Structural damping ratio
+177190.78  Effective tension at x/L=0
+14  Number of Zones
+0  0.0052576236  zone start, finish (x/L)
+0.5334  0.5334  0.48895  Diameter, stress OD and stress ID
+0.0011395523  208.05016  -2322.9522  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.0052576236  0.010515247  zone start, finish (x/L)
+1.2954  0.5334  0.48895  Diameter, stress OD and stress ID
+0.0011395523  1531.831  -15654.422  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.34443511  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.010515247  0.014020329  zone start, finish (x/L)
+1.143  0.5334  0.48895  Diameter, stress OD and stress ID
+0.0011395523  3317.6578  495210.08  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.60748937  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.014020329  0.035050824  zone start, finish (x/L)
+1.143  0.6604  0.6096  Diameter, stress OD and stress ID
+0.0024958168  1787.3491  71283.259  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.47310913  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.035050824  0.038555906  zone start, finish (x/L)
+1.2954  0.5334  0.48895  Diameter, stress OD and stress ID
+0.0011395523  1829.4688  -13323.507  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.30771405  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.038555906  0.045566071  zone start, finish (x/L)
+1.2954  0.5334  0.48895  Diameter, stress OD and stress ID
+0.0011395523  1383.0121  -8853.2745  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.36279565  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.045566071  0.0595864  zone start, finish (x/L)
+1.2954  0.5334  0.48895  Diameter, stress OD and stress ID
+0.0011395523  1159.7838  -6229.0926  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.39033645  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.0595864  0.13845075  zone start, finish (x/L)
+1.2954  0.5334  0.48895  Diameter, stress OD and stress ID
+0.0011395523  1025.8468  -5229.8486  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.36279565  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.13845075  0.82194182  zone start, finish (x/L)
+1.3716  0.5334  0.48895  Diameter, stress OD and stress ID
+0.0011395523  1164.7444  383.90311  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.79526647  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.82194182  0.90080617  zone start, finish (x/L)
+1.2954  0.5334  0.48895  Diameter, stress OD and stress ID
+0.0011395523  1025.8468  -7542.7743  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.36279565  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.90080617  0.90781633  zone start, finish (x/L)
+5.588  0.60325  0.47625  Diameter, stress OD and stress ID
+0.0038786889  22505.427  -178639.34  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.062106816  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.90781633  0.91587802  zone start, finish (x/L)
+5.588  0.60325  0.47625  Diameter, stress OD and stress ID
+0.0038786889  31240.45  -240584.21  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+0.06982873  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.91587802  0.94742376  zone start, finish (x/L)
+0.9144  0.9144  0.8128  Diameter, stress OD and stress ID
+0.012579554  592.03911  -802.00979  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+0.94742376  1  zone start, finish (x/L)
+0.9144  0.9144  0.8382  Diameter, stress OD and stress ID
+0.0098416314  611.41272  -11935.11  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.5 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  1  0.2  0.18  0.2  0  Ca, DampCoeff0, DampCoeff1, DampCoeff2, DampCoeff3, DampCoeff4
+*** BLOCK 3. current data ***
+85  1  1  Number, probability, ID
+0.02920902  0.00099902503  x/L, current velocity
+0.040766055  0.00099895455
+0.052323091  0.00099888246
+0.063880126  0.00099882525
+0.075437162  0.00099124003
+0.086994197  0.00097328143
+0.098551233  0.00095532416
+0.11010827  0.00091658094
+0.1216653  0.00086583356
+0.13322234  0.00081518078
+0.14477937  0.00076858337
+0.15633641  0.00075988751
+0.16789345  0.0007511948
+0.17945048  0.00074250317
+0.19100752  0.00073381187
+0.20256455  0.00072512064
+0.21412159  0.00071642936
+0.22567862  0.00070773801
+0.23723566  0.00069904657
+0.24879269  0.00069035504
+0.26034973  0.00068166341
+0.27190676  0.00067297169
+0.2834638  0.00066427987
+0.29502084  0.00065558796
+0.30657787  0.00064689596
+0.31813491  0.00063820386
+0.32969194  0.00062951168
+0.34124898  0.0006208194
+0.35280601  0.00061212703
+0.36436305  0.00060343457
+0.37592008  0.00059474202
+0.38747712  0.00058604938
+0.39903416  0.00057735665
+0.41059119  0.00056866384
+0.42214823  0.00055997093
+0.43370526  0.00055127794
+0.4452623  0.00054258486
+0.45681933  0.0005338917
+0.46837637  0.00052519845
+0.4799334  0.00051650511
+0.49149044  0.00050898764
+0.50304747  0.00050587527
+0.51460451  0.00050276153
+0.52616155  0.00049964595
+0.53771858  0.00049652811
+0.54927562  0.0004934076
+0.56083265  0.00049028408
+0.57238969  0.00048715724
+0.58394672  0.00048402683
+0.59550376  0.00048089262
+0.60706079  0.00047775447
+0.61861783  0.00047461227
+0.63017486  0.00047146597
+0.6417319  0.00046831557
+0.65328894  0.00046516113
+0.66484597  0.00046200276
+0.67640301  0.0004588406
+0.68796004  0.00045567485
+0.69951708  0.00045250576
+0.71107411  0.0004493336
+0.72263115  0.00044615868
+0.73418818  0.00044298135
+0.74574522  0.00043980196
+0.75730225  0.00043662091
+0.76885929  0.00043343857
+0.78041633  0.00043025532
+0.79197336  0.0004270715
+0.8035304  0.00042388725
+0.81508743  0.00042070217
+0.82664447  0.00041751434
+0.8382015  0.00041432439
+0.84975854  0.00041114082
+0.86131557  0.00040798239
+0.87287261  0.00040489212
+0.88442965  0.00040192872
+0.89598668  0.00039991602
+0.90754372  0.00037661715
+0.91910075  0
+0.93065779  0
+0.94221482  0
+0.95377186  0
+0.96532889  0
+0.97688593  0
+0.98844296  0
+1  0
+*** BLOCK 4. S-N and scf data ***
+1  Number of SN curves defined
+1 1  SN Curve ID (Curve1), Number of SN segments
+0  Endurance limit
+10000000  1E9  S, N
+1E10  1
+1 0 1.0  Global SCF, flag for BSCLF (0=not used;1=used)
+0  Number of stress concentration points
+*** BLOCK 5. computation/output options ***
+2  Calculation option, 2=Response defined by common.mds file
+0  1  0.011499614  Output summary locations: start, end, increment (x/L)
+9.80665  g
+0.05 0.3  Power ratio cutoff level, primary zone amplitude limit
+1  Power ratio exponent
+0  flag for importing nodal effective tension and mass (1=y;0=n)
+0  flag for MATLAB animation data output (1=y;0=n)
+1  flag for generating .scr file (1=y;0=n)
+0  flag for generating .dmg file (1=y;0=n)
+0  flag for generating .fat file (1=y;0=n)
+0  flag for out file selection, (0=.out;1=.out1;2=.out1+.out2)
+4  Beta control number (0=no beta iterations, up to 10 for the number of beta iterations)
+0  flag for selecting the riser diameter for fatigue (0=OD;1=ID)
+0  flag for fatigue calculation method (0=default;1=zero-crossing
+0  flag for response (0=transverse;1=inline)
+0  flag for generating .str file (1=y;0=n)
+*** BLOCK 6. supplemental data (not used) ***

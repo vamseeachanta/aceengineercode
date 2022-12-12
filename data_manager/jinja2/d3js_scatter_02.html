@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script src="lib/d3_reusables.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/d3.css">
+    <title>D3 Scatter</title>
+</head>
+
+<body>
+
+<h1>Scatter Chart</h1>
+
+<div id="#timeTrace"></div>
+
+<script type="text/javascript">
+
+    // var timeTraceData = [{"date":"2007-04-24T05:00:00.000Z","close":93.24},{"date":"2007-04-25T05:00:00.000Z","close":95.35},{"date":"2007-04-26T05:00:00.000Z","close":98.84},{"date":"2007-04-27T05:00:00.000Z","close":99.92},{"date":"2007-04-30T05:00:00.000Z","close":99.8}]
+    var timeTraceData = [{"date":1,"close":93.24},{"date":2,"close":95.35},{"date":3,"close":98.84},{"date":4,"close":99.92},{"date":5,"close":99.8}]
+    var timeTraceChart = scatterChart().height(600);
+    d3.select(document.getElementById("#timeTrace"))
+        .datum(timeTraceData)
+        .call(timeTraceChart);
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+default:
+  Analysis:
+    AddMinimumToSummary: True
+    AddMaximumToSummary: True
+    AddMeanToSummary: True
+
+Files: 
+  - 
+    Name: SLWR_16OD_SE1200_HE1500_TSJ3p0in_30ft_100yr Wave, Far BeamSea PS, Seed 1087, 10571s.sim
+    Label: No Drag on End Elements
+    ObjectName: SLWR
+  - 
+    Name: SLWR_16OD_SE1200_HE1500_TSJ3p0in_30ft_100yr Wave, Far BeamSea PS, Seed 1087, 10571s_EndStartElements.sim
+    Label: With Drag at Start and End Buoyancy Hydrodynamic Coeffs
+    ObjectName: SLWR
+#  - 
+#    Name: SLWR_16OD_SE1200_HE1500_TSJ3p0in_30ft_100yr Wave, Far BeamSea PS, Seed 1087, 10571s_EndStartElementsHighDrag.sim
+#    Label: Start and End Buoyancy Very High Hydrodynamic Coeffs
+#    ObjectName: SLWR
+
+PlotSettings:
+  Name: Buoyancy Element Hydrodynamic Coefficients
+  SupTitle: Buoyancy Element Hydrodynamic Coefficients
+  Title: SLWR Configuration Development
+
+RangeGraph:
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 3400
+    - 5400
+  Variable: Effective Tension
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  Title: Maximum Effective Tension 
+  Subtitle: Buoyancy Region
+  FileName: Effective_Tension_Max_Buoyancy
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Min
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 3400
+    - 5400
+  Variable: Effective Tension
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  Title: Minimum Effective Tension 
+  Subtitle: Buoyancy Region
+  FileName: Effective_Tension_Min_Buoyancy
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 3400
+    - 5400
+  Variable: API STD 2RD Method 1
+  xlabel: Arc Length (m)
+  ylabel: API STD 2RD Method 1
+  Title: API STD 2RD Method 1 Utilization
+  Subtitle: Buoyancy Region
+  FileName: API STD 2RD Method 1_Buoyancy
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 3400
+    - 5400
+  Variable: Bend Moment
+  xlabel: Arc Length (m)
+  ylabel: Bend Moment (kN.m)
+  Title: Maximum Bending Moment Utilization
+  Subtitle: Buoyancy Region
+  FileName: Maximum_Bending_Moment_Buoyancy
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 0
+    - 7000
+  Variable: Effective Tension
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  Title: Effective Tension at Top of Riser
+  Subtitle: All Riser
+  FileName: Effective_Tension
+  axhline: NULL
+
+Summary:
+-
+  SummaryFileName: Table_Top
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 50
+      Variable: Effective Tension
+      Label: Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 50
+      Variable: Bend Moment
+      Label: Bend. Moment
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 50
+      Variable: API STD 2RD Method 1
+      Label: API M1
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 50
+      Variable: Max von Mises Stress
+      Label: vM stress
+

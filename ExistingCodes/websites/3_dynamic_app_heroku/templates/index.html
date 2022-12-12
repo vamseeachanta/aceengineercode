@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>BSEE Data Interface</title>
+    {% if vars %}
+        <title>BSEE Data Interface | {{ vars.field_summary_df_dict[0]['Field Nickname'] }} </title>
+    {% endif %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="{{ url_for('static',filename='scripts/d3_reusables.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/d3.css') }}">
+    <style type="text/css">
+      .pagepadding {
+        padding-top: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
+
+      }
+    </style>
+ </head>
+ <body>
+
+  <p>Select a field</p>
+  <form method="post" action="/response">
+      <select name='FieldName' onchange='if(this.value != 0) { this.form.submit(); }'>
+           <option value=0></option>
+           <option value='Julia'>Julia</option>
+           <option value='Cascade-Chinook'>Cascade-Chinook</option>
+           <option value='2'>3rd Field</option>
+           <option value='3'>4th Field</option>
+      </select>
+  </form>
+
+  {% if vars %}
+  <h1>Displaying Field Data</h1>
+
+  <div id="#fieldWellsData" class="in">
+    <h4>Field Wells Data</h4>
+    {{vars.well_high_level_df_html  | safe }}
+  </div>
+
+  <div id="#chartProducersWellLocation">
+    <h4>Well Locations</h4>
+    <h5>Producing Well (Relative) Locations and Summary</h5>
+    <p>Bubble size proportional to production (MMBbl) to date. Hover on bubble for further well information</p>
+  </div>
+  <div id="#wellLocationStatistics">
+    <h5>Well Location Statistics</h5>
+    <p>All Wellheads, Max Distance (ft): {{vars.wellhead_distances_df_dict[0].wellhead_distances['All Wellheads, Max Distance (ft)'] }}</p>
+    <p>All Wells, Max Horizontal Departure (ft): {{vars.wellhead_distances_df_dict[0].wellhead_distances['All Wells, Max Horizontal Departure (ft)'] }}</p>
+    <p>Producing Wellheads, Max Distance (ft): {{vars.wellhead_distances_df_dict[0].wellhead_distances['Producing Wellheads, Max Distance (ft)']}}</p>
+    <p>Producing Wellheads, Min Distance (ft): {{vars.wellhead_distances_df_dict[0].wellhead_distances['Producing Wellheads, Min Distance (ft)'] }}</p>
+    <p>Producing Wellheads, Max Horizontal Departure (ft): {{vars.wellhead_distances_df_dict[0].wellhead_distances['Producing Wellheads, Max Horizontal Departure (ft)'] }}</p>
+  </div>
+  <div id="#chartProducersWellheadWithBottom">
+  </div>
+  <div id="#chartAllWellheadWithBottom">
+  </div>
+
+  {% endif %}
+
+  <script type="text/javascript">
+
+    var chartData = {{ vars['chartProducersWellLocation'] | safe }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartProducersWellheadWithBottom'] | safe }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartAllWellheadWithBottom'] | safe }}
+    addChartToDOM(chartData);
+
+  </script>
+
+ </body>
+
+</html>

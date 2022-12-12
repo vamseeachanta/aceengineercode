@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>Demo - Convert JSON to CSV</title>
+    <script type="text/javascript">
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>
+        JSON</h1>
+    <pre id="json"></pre>
+    <h1>
+        CSV</h1>
+    <pre id="csv"></pre>
+</body>
+
+<script type="text/javascript">
+<!--METHOD 1-->
+
+        downloadCSVFromJson = (filename, arrayOfJson) => {
+          // convert JSON to CSV
+          const replacer = (key, value) => value === null ? '' : value // specify how you want to handle null values here
+          const header = Object.keys(arrayOfJson[0])
+          let csv = arrayOfJson.map(row => header.map(fieldName =>
+          JSON.stringify(row[fieldName], replacer)).join(','))
+          csv.unshift(header.join(','))
+          csv = csv.join('\r\n')
+
+          // Create link and download
+          var link = document.createElement('a');
+          link.setAttribute('href', 'data:text/csv;charset=utf-8,%EF%BB%BF' + encodeURIComponent(csv));
+          link.setAttribute('download', filename);
+          link.style.visibility = 'hidden';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+        };
+
+
+
+
+        var items = [
+              { name: "Item 1", color: "Green", size: "X-Large" },
+              { name: "Item 2", color: "Green", size: "X-Large" },
+              { name: "Item 3", color: "Green", size: "X-Large" }];
+
+        // Convert Object to JSON
+        var jsonObject = JSON.stringify(items);
+        this.downloadCSVFromJson(`myCustomName.csv`, JSON.parse(jsonObject))
+
+<!--METHOD 2-->
+        function exportToCsv(filename, rows) {
+                var processRow = function (row) {
+                    var finalVal = '';
+                    for (var j = 0; j < row.length; j++) {
+                        var innerValue = row[j] === null ? '' : row[j].toString();
+                        if (row[j] instanceof Date) {
+                            innerValue = row[j].toLocaleString();
+                        };
+                        var result = innerValue.replace(/"/g, '""');
+                        if (result.search(/("|,|\n)/g) >= 0)
+                            result = '"' + result + '"';
+                        if (j > 0)
+                            finalVal += ',';
+                        finalVal += result;
+                    }
+                    return finalVal + '\n';
+                };
+
+                var csvFile = '';
+                for (var i = 0; i < rows.length; i++) {
+                    csvFile += processRow(rows[i]);
+                }
+
+                var blob = new Blob([csvFile], { type: 'text/csv;charset=utf-8;' });
+                if (navigator.msSaveBlob) { // IE 10+
+                    navigator.msSaveBlob(blob, filename);
+                } else {
+                    var link = document.createElement("a");
+                    if (link.download !== undefined) { // feature detection
+                        // Browsers that support HTML5 download attribute
+                        var url = URL.createObjectURL(blob);
+                        link.setAttribute("href", url);
+                        link.setAttribute("download", filename);
+                        link.style.visibility = 'hidden';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    }
+                }
+            }
+
+
+
+        exportToCsv('export.csv', [
+            ['name','description'],
+          ['david','123'],
+          ['jona','""'],
+          ['a','b'],
+
+        ])
+
+    </script>
+
+
+</html>

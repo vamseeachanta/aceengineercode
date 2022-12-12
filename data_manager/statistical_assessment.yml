@@ -1,0 +1,34 @@
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+
+results:
+
+files:
+  from_xlsx:
+    -
+      io: data_manager\data\2018-2019 Motor Runs - Duplicates - v3_To_Python.xlsx
+      sheet_name: Text to Colum
+      index_col: NULL
+      skiprows: 0
+      skipfooter: 0
+      label: BHA Power Section Data 1
+      columns: [Business Unit, OD, Lobes, STAGE, RPG, BEND]
+
+Analysis:
+  group_by:
+    -
+      columns: [Business Unit]
+      ylabel: Number of BHAs
+      title: BHA Usage in Year 2018
+      xticklabels: NULL
+    -
+      columns: [Business Unit, OD]
+      ylabel: Number of BHAs
+      title: BHA Usage in Year 2018 by OD
+      xticklabels: [Permian-EOR, Permian-NM, Permian-TX, Permian-TX Delaware]
+#    - [Business Unit, OD, Lobes]
+#    - [Business Unit, OD, Lobes, STAGE]
+

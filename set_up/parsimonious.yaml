@@ -1,0 +1,8 @@
+name: parsimonious
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.5
+  - pip:
+    - parsimonious

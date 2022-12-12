@@ -1,0 +1,30 @@
+Default:
+  Analysis: NULL
+  logLevel: DEBUG
+
+ModalReadingSets:
+  - 
+    io: K:\\0173 KM Extreme\\SLWR\\Modal\\LC\\LowConfig_Inline.mds
+    Label: Low Configuration, Inline Modes
+  - 
+    io: K:\\0173 KM Extreme\\SLWR\\Modal\\HC\\HighConfig_Inline.mds
+    Label: High Configuration, Inline Modes
+
+PlotSettings:
+  PltSupTitle: Frontier Deepwater Feasibility Analysis
+  PltTitle: Mode vs. Curvature, Inline Modes
+  PltXLabel: 
+    - Mode Frequency (Hz)
+    - Mode Number (#)
+  PltYLabel: Mode Curvature (1/m)
+  PltLabel:
+    - Top of Riser
+    - Riser, OD
+    - Riser, ID
+  LifeLimit: 25
+  XLimRanges: 
+    - [0, 50]
+    - [0, 7000]
+  YLimRanges: 
+    - [1, 1000]
+    - [1, 1000000]

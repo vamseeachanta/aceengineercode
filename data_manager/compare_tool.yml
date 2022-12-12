@@ -1,0 +1,44 @@
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+
+files:
+  -
+    file_type: yml
+    io: tests\data\compare_tool_orcaflex_analysis_fe_effective_tension.yml
+    label: Effective Tension, FE Analysis
+    extract_data:
+      - ['Analysis', 'Effective Tension']
+      - ['Analysis', 'X']
+  -
+    file_type: yml
+    io: tests\data\compare_tool_vertical_riser_fe_effective_tension.yml
+    label: Effective Tension, Hand Calculation
+    extract_data:
+      - ['Analysis', 'result', 'component_bottom_effective_tension']
+      - ['Analysis', 'result', 'component_bottom_elevation_from_end_A']
+
+plot:
+  -
+    file_suffix: QA_effective_tension
+    suptitle: Effective Tension Comparison
+    size: default
+    orientation: portrait
+    plt_kind: line
+    title: " "
+    grid: True
+    legend: True
+    legend_location: best
+    marker: NULL
+    ylim: NULL
+    xlabel: Effective Tension (kN)
+    ylabel: Distance from End A (m)
+    x_reverse: False
+    y_reverse: True
+    text_fields:
+      -
+        x : 2000
+        y: 11400
+        text: more records obtained by engine with query of bit_on_bottom = 1

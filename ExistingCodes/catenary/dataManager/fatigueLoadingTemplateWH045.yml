@@ -1,0 +1,118 @@
+default:
+  Constants:
+    g : 9.81
+  units:
+    WaveHeight: m
+    Tp: s
+    Probabiity: Percentage
+  Analysis: None
+
+WorkBook: 0173-CAL-010-01 Fatigue Data (Draft1).xlsx
+WorkSheet: Fatigue-Processed
+
+SimFilePrefix: SLWR_16OD_SE1200_HE1500_FatigueWH045_
+
+EnvironmentLoadTemplate:
+  Fatigue:
+    -
+      Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: Yes
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+          - Name: Hs=0.5, Tp=3
+            WaveType: JONSWAP
+            WaveDirection: 45
+            WaveHs: 0.5
+            WaveOrigin: [0, 0]
+            WaveTimeOrigin: 0
+            WaveNumberOfSpectralDirections: 1
+            WaveJONSWAPParameters: Partially Specified
+            WaveGamma: 2.2
+            WaveSeed: 1350834434
+            WaveTp: 3
+            WaveNumberOfComponents: 300
+            WaveSpectrumMinRelFrequency: 0.5
+            WaveSpectrumMaxRelFrequency: 10
+            WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+          - [0, 1.00, 0]
+          - [36.5, 1.00, 0]
+          - [64.5, 0.95, 0]
+          - [100, 0.77, -45]
+          - [400, 0.51, -45]
+          - [800, 0.40, -157.5]
+          - [1200, 0.32, -180]
+          - [1600, 0.32, -90]
+          - [2000, 0.37, -90]
+          - [2200, 0.37, -90]
+          - [4000, 0.37, -90]
+      CodeChecks:
+        APISTD2RDFd1: 0.8
+        APISTD2RDFd2: 0.8
+        APISTD2RDDelta: 0.01
+        APISTD2RDAlphaFab: 1
+        APISTD2RDk: 0.45
+
+SNCurves:
+  - SNcurveName: BS C Curve
+    SNcurveSpecificationMethod: Table
+    SNcurveTableN, SNcurveTableS:
+      - [1337, 1000000]
+      - [12050942, 74130]
+      - [13365955165, 10000]
+    SNcurveEnduranceLimit: 0
+    SNcurveMeanStressModel: None
+  - SNcurveName: BS D Curve
+    SNcurveSpecificationMethod: Table
+    SNcurveTableN, SNcurveTableS:
+      - [1519, 1000000]
+      - [3730079, 74130]
+      - [1519497535, 10000]
+    SNcurveEnduranceLimit: 0
+    SNcurveMeanStressModel: None
+  - SNcurveName: BS E Curve
+    SNcurveSpecificationMethod: Table
+    SNcurveTableN, SNcurveTableS:
+      - [1035, 1000000]
+      - [2541663, 74130]
+      - [1035380544, 10000]
+    SNcurveEnduranceLimit: 0
+    SNcurveMeanStressModel: None
+
+AnalysisData:
+  - ArcLengthInterval: [0, 9.144]
+    RadialPosition: Outer
+    SCF: 1.1
+    ThicknessCorrectionFactor: 1
+    AnalysisDataSNcurve: BS C Curve
+  - ArcLengthInterval: [9.144, 7000]
+    RadialPosition: Outer
+    SCF: 1.2
+    ThicknessCorrectionFactor: 1.12
+    AnalysisDataSNcurve: BS D Curve
+  - ArcLengthInterval: [9.144, 7000]
+    RadialPosition: Inner
+    SCF: 1.2
+    ThicknessCorrectionFactor: 1.12
+    AnalysisDataSNcurve: BS E Curve
+
+Outputs:
+  OutputLoadCaseTables: Yes
+  OutputDetailedLoadCaseTables: No
+  LoadCaseDamageUnits: Damage per year
+

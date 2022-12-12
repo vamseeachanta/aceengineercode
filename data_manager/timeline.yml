@@ -1,0 +1,28 @@
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+
+files:
+  -
+    file_type: csv
+    io: data_manager\TimeLine.csv
+
+plot:
+  -
+    file_suffix: example1
+    suptitle: " "
+    day_interval: 2
+    size:
+      length: 16
+      height: 10
+    orientation: landscape
+    plt_kind: time_line
+    xaxis_format: "%d %b"
+    title: " "
+    text_fields:
+      -
+        x : 2000
+        y: 11400
+        text: more records obtained by engine with query of bit_on_bottom = 1

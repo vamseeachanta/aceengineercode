@@ -1,0 +1,13 @@
+name: drawings
+channels:
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.7
+  - openpyxl
+  - yaml
+  - matplotlib
+  - pandas
+  - pip:
+    - pygame
+    - xlrd

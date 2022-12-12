@@ -1,0 +1,16 @@
+{% extends "data_manager/jinja2/layout.html" %}
+
+{% block content %}
+  <h3> This is the start of my child template</h3>
+  Your name is: {{ vars.name }}
+  <br>
+  <p>My string: {{vars.my_string}}</p>
+  <p>Value from the list: {{vars.my_list[3]}}</p>
+  <p>Loop through the list:</p>
+  <ul>
+    {% for n in vars.my_list %}
+    <li>{{n}}</li>
+    {% endfor %}
+  </ul>
+  <h3> This is the end of my child template</h3>
+{% endblock %}

@@ -1,0 +1,6 @@
+CALL python catenaryRiser.py 16OD_SE1200_HE1500_TSJ3p0in_12ft.yml
+CALL python catenaryRiser.py 16OD_SE1200_HE1500_TSJ3p0in_20ft.yml
+CALL python catenaryRiser.py 16OD_SE1200_HE1500_TSJ3p0in_30ft.yml
+CALL python catenaryRiser.py 16OD_SE1200_HE1500_TSJ2p25in_30ft.yml
+CALL python catenaryRiser.py 16OD_SE1200_HE1500_TSJ2p5in_30ft.yml
+CALL python catenaryRiser.py 16OD_SE1200_HE1500_TSJ2p0in_30ft.yml

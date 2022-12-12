@@ -1,0 +1,98 @@
+default:
+  logLevel: DEBUG
+  TrendPlot: True
+
+ymlFiles:
+  - 
+    io: results\Summary_12inGas_Nansen.yml
+    Label: 12inGas Nansen
+  - 
+    io: results\Summary_18inGas_Boomvang.yml
+    Label: 18inGas Boomvang
+  - 
+    io: results\Summary_16inGas_Gunnison.yml
+    Label: 16inGas Gunnison
+  - 
+    io: results\Summary_16inGas_Lucius.yml
+    Label: 16inGas Lucius
+  - 
+    io: results\Summary_16inGas_Heidelberg_R1.yml
+    Label: 16inGas Heidelberg_R1
+  - 
+    io: results\Summary_14inGas_Constitution.yml
+    Label: 14inGas Constitution
+  - 
+    io: results\Summary_16inGas_Holstein.yml
+    Label: 16inGas Holstein
+  - 
+    io: results\Summary_18inGas_MarcoPolo.yml
+    Label: 18inGas MarcoPolo
+  - 
+    io: results\Summary_10p75inGas_HornMountain.yml
+    Label: 10p75in Gas HornMountain
+  - 
+    io: results\Summary_14inGas_Marlin.yml
+    Label: 14inGas Marlin
+  - 
+    io: results\Summary_20inGas_IHUB.yml
+    Label: 20inGas IHUB
+
+dataFrame:
+  label: ASMEGasSummary
+  columns:
+    - FileName
+    - Nominal OD (inch)
+    - MAOP
+    - Minimum Wall Thickness (inch)
+    - D/tMinimum Ratio
+    - StressEquivalent
+    - StressLogitudinal
+
+  data:
+  -
+    L1: Geometry
+    L2: NominalOD
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: Design
+    L2: InternalPressure
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB318
+    L3: InternalPressure
+    L4: MinimumWallThickness
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB318
+    L3: InternalPressure
+    L4: D/TMin
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB318
+    L3: EquivalentStress
+    L4: Stress_Equivalent
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB318
+    L3: LogitudinalStress
+    L4: Stress_Logitudinal
+    L5: NULL
+
+PlotSettings:
+  Data:
+    PltSupTitle: GasExport
+    PltTitle: Measured Wall Thickness
+    PltXLabel: D/tMinimum Ratio
+    PltYLabel: MAOP
+  DbyT: [10, 15, 20, 25, 30]
+  SMYS: [60000, 65300]
+  DesignFactors:
+    Pressure : 0.60

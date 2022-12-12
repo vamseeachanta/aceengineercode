@@ -1,0 +1,52 @@
+Default:
+  logLevel: DEBUG
+  Analysis:
+    Code : API 579
+    GML:
+      Circumference: True
+      Length: True
+    LML: False
+  Units:
+    NominalID : inch
+    NominalOD : inch
+    ReadingSets: inch
+    Age: years
+
+ReadingSets:
+  - 
+    io: dataManager\API579\DefaultSample.xlsx
+    sheet_name: C-scans - Area 1
+    index_col: 0
+    skiprows: 107
+    skipfooter: 70
+    DataCorrectionFactor: 0.833
+  - 
+    io: dataManager\API579\DefaultSample.xlsx
+    sheet_name: C-scans - Area 2
+    index_col: 0
+    skiprows: 93
+    skipfooter: 56
+    DataCorrectionFactor: 0.833
+  - 
+    io: dataManager\API579\DefaultSample.xlsx
+    sheet_name: C-scans - Area 3
+    index_col: 0
+    skiprows: 67
+    skipfooter: 30
+    DataCorrectionFactor: 0.833
+
+API579Parameters:
+  RSFa: 0.9
+  Age: 10
+  FCARateFloor: 0.0118
+
+Geometry:
+   NominalID: NULL
+   NominalOD: 18
+   DesignWT : 0.75
+   StartWTFactor : 1
+   tmin: 0.538
+   AssessmentLengthCeilingFactor_Circumference: 0.25
+   AssessmentLengthCeilingFactor_Length: 0.5
+   CorrosionAllowance: 0.0
+

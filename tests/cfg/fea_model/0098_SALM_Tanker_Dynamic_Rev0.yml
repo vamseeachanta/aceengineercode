@@ -1,0 +1,496 @@
+---
+version: 0.1
+
+ProjectName: SALM Analysis
+
+FEAProgram:
+  name: OrcaFlex
+  version: 10.0e
+
+parameters:
+  StageDuration: &StageDuration [10, 600]
+  LoadVariationfile_name: &LoadVariationfile_name data_manager\data\metocean\0198_SALM_dynamic_No_Tanker.csv
+  fe_folder: &fe_folder K:\0198\withTanker\dynamic\
+
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+    CustomInputFile: NULL
+  data_source: NULL
+
+General:
+  UnitsSystem: SI
+  StaticsMethod: Whole System statics
+  BuoysIncludedInStatics: Individually Specified
+  StaticsMaxIterations: 800
+  DynamicsSolutionMethod: Implicit time domain
+  ImplicitUseVariableTimeStep: 'No'
+  ImplicitConstantTimeStep: 0.1
+  LogPrecision: Single
+  TargetLogSampleInterval: 0.1
+  StageDuration: *StageDuration
+
+Assets:
+  - purpose: VariableData
+    fea_type: AxialStiffness
+    cfg:
+      Name: AxialStiffnessProfile
+      IndependentValue, DependentValue:
+        - [0, 0]
+        - [5, 302.55]
+        - [9, 605.1]
+        - [13, 1210.2]
+        - [17, 1815.3]
+        - [18, 2420.4]
+        - [19.5, 3025.5]
+        - [20, 3630.6]
+        - [22, 4235.7]
+        - [23, 4840.8]
+        - [26, 5445.9]
+        - [29, 6051]
+
+  - purpose: Host
+    fea_type: buoy
+    cfg:
+      Mass: Calculated
+      Name: SALM
+      BuoyType: Spar Buoy
+      Connection: Free
+      DegreesOfFreedomInStatics: X,Y,Z
+      DampingRelativeTo: Earth
+      DisturbanceVessel: (none)
+      WaveCalculationMethod: Specified by Environment
+      InitialPosition: [1, 0, 0]
+      InitialAttitude: [0, 0, 0]
+      MomentsOfInertia: Calculated
+      CentreOfMass: Calculated
+      StackedBuoy:
+        StackBaseCentre: [0, 0, -13.5]
+        BulkModulus: Infinity
+        MunkMomentCoefficient: 0
+        NormalDragAreaCalculatedFromGeometry: "Yes"
+        StackedBuoyAddedMassAndDampingMethod: Values for each cylinder
+        Cylinders:
+          - CylinderOuterDiameter: 4.6
+            CylinderInnerDiameter: 0
+            CylinderLength: 2.5
+            Mass: 16.37
+            CylinderMassDiameter: 3.7
+            CentreOfMass: [0, 0, 0]
+            DragAreaMoment: Calculated
+            AddedMomentOfInertia: [20, 0]
+            MarineGrowthThickness: 0.0254
+          - CylinderOuterDiameter: 4.6
+            CylinderInnerDiameter: 0
+            CylinderLength: 2
+            Mass: 13.096
+            CylinderMassDiameter: 3.7
+            CentreOfMass: [0, 0, 0]
+            DragAreaMoment: Calculated
+            AddedMomentOfInertia: [20, 0]
+            MarineGrowthThickness: 0.0254
+          - CylinderOuterDiameter: 4.6
+            CylinderInnerDiameter: 0
+            CylinderLength: 2
+            Mass: 13.096
+            CylinderMassDiameter: 3.7
+            CentreOfMass: [0, 0, 0]
+            DragAreaMoment: Calculated
+            AddedMomentOfInertia: [20, 0]
+            MarineGrowthThickness: 0.0254
+          - CylinderOuterDiameter: 4.6
+            CylinderInnerDiameter: 0
+            CylinderLength: 2
+            Mass: 13.096
+            CylinderMassDiameter: 3.7
+            CentreOfMass: [0, 0, 0]
+            DragAreaMoment: Calculated
+            AddedMomentOfInertia: [20, 0]
+            MarineGrowthThickness: 0.0254
+          - CylinderOuterDiameter: 4.6
+            CylinderInnerDiameter: 0
+            CylinderLength: 2
+            Mass: 13.096
+            CylinderMassDiameter: 3.7
+            CentreOfMass: [0, 0, 0]
+            DragAreaMoment: Calculated
+            AddedMomentOfInertia: [20, 0]
+            MarineGrowthThickness: 0.0254
+          - CylinderOuterDiameter: 4.6
+            CylinderInnerDiameter: 0
+            CylinderLength: 2
+            Mass: 13.096
+            CylinderMassDiameter: 3.7
+            CentreOfMass: [0, 0, 0]
+            DragAreaMoment: Calculated
+            AddedMomentOfInertia: [20, 0]
+            MarineGrowthThickness: 0.0254
+          - CylinderOuterDiameter: 4.6
+            CylinderInnerDiameter: 0
+            CylinderLength: 2
+            Mass: 13.096
+            CylinderMassDiameter: 3.7
+            CentreOfMass: [0, 0, 0]
+            DragAreaMoment: Calculated
+            AddedMomentOfInertia: [20, 0]
+            MarineGrowthThickness: 0.0254
+          - CylinderOuterDiameter: 4.6
+            CylinderInnerDiameter: 0
+            CylinderLength: 2
+            Mass: 13.096
+            CylinderMassDiameter: 3.7
+            CentreOfMass: [0, 0, 0]
+            DragAreaMoment: Calculated
+            AddedMomentOfInertia: [20, 0]
+            MarineGrowthThickness: 0.0254
+  - purpose: SALM_Top
+    fea_type: buoy
+    cfg:
+      Mass: 0.001
+      Name: SALM_TOP
+      BuoyType: Spar Buoy
+      Connection: Rotation
+      DegreesOfFreedomInStatics: All
+      DampingRelativeTo: Earth
+      DisturbanceVessel: (none)
+      WaveCalculationMethod: Specified by Environment
+      InitialPosition: [0, 0, 0.5]
+      InitialAttitude: [0, 0, 0]
+      MomentsOfInertia: [0, 0, 0]
+      CentreOfMass: [0, 0, 0]
+      StackedBuoy:
+        StackBaseCentre: [0, 0, 0]
+        BulkModulus: Infinity
+        MunkMomentCoefficient: 0
+        NormalDragAreaCalculatedFromGeometry: "Yes"
+        StackedBuoyAddedMassAndDampingMethod: Values for each cylinder
+        Cylinders:
+        - CylinderOuterDiameter: 2.6
+          CylinderInnerDiameter: 0
+          CylinderLength: 1.5
+          CylinderAxialDragArea: 0
+          DragForceCoefficient: [0.7, 1.13]
+          DragAreaMoment: [0, 0]
+          DragMomentCoefficient: [0, 0]
+          CylinderSlamForceDataEntry: 0
+          CylinderSlamForceDataExit: 0
+          AddedMassForceCoefficient: [0, 0]
+          InertiaForceCoefficient: ["~", "~"]
+          AddedMomentOfInertia: [0, 0]
+          UnitDampingForce: [0, 0]
+          UnitDampingMoment: [0, 0]
+        - CylinderOuterDiameter: 0.5
+          CylinderInnerDiameter: 0
+          CylinderLength: 2
+          CylinderAxialDragArea: 0
+          DragForceCoefficient: [0.7, 1.13]
+          DragAreaMoment: [0, 0]
+          DragMomentCoefficient: [0, 0]
+          CylinderSlamForceDataEntry: 0
+          CylinderSlamForceDataExit: 0
+          AddedMassForceCoefficient: [0, 0]
+          InertiaForceCoefficient: ["~", "~"]
+          AddedMomentOfInertia: [0, 0]
+          UnitDampingForce: [0, 0]
+          UnitDampingMoment: [0, 0]
+        - CylinderOuterDiameter: 4.6
+          CylinderInnerDiameter: 0
+          CylinderLength: 1
+          CylinderAxialDragArea: 0
+          DragForceCoefficient: [0.7, 1.13]
+          DragAreaMoment: [0, 0]
+          DragMomentCoefficient: [0, 0]
+          CylinderSlamForceDataEntry: 0
+          CylinderSlamForceDataExit: 0
+          AddedMassForceCoefficient: [0.5, 0.92]
+          InertiaForceCoefficient: ["~", "~"]
+          AddedMomentOfInertia: [0, 0]
+          UnitDampingForce: [0, 0]
+          UnitDampingMoment: [0, 0]
+      Pen: [1, Solid, $80FFFF]
+
+  - purpose: AssetProperties
+    fea_type: vesselType
+    cfg:
+      Name: shuttleTanker
+      filename: data_manager\data\vessels\host_id_x_fatigue.yml
+
+  - purpose: ConnectingVessel
+    fea_type: vessel
+    cfg:
+      Name: shuttleTankerObject
+      VesselType: Vessel Type1
+      Draught: Draught1
+      Length: ~
+      Connection: Free
+      InitialPosition: [100, 0, 0]
+      Orientation: [0, 0, 180]
+      # Calculation
+      IncludedInStatics: None
+      PrimaryMotion: Calculated (6 DOF)
+      SuperimposedMotion: None
+      IncludeAppliedLoads: No
+      IncludeWaveLoad1stOrder: Yes
+      IncludeWaveDriftLoad2ndOrder: Yes
+      IncludeWaveDriftDamping: Yes
+      IncludeSumFrequencyLoad: No
+      IncludeAddedMassAndDamping: Yes
+      IncludeManoeuvringLoad: No
+      IncludeOtherDamping: No
+      IncludeCurrentLoad: Yes
+      IncludeWindLoad: Yes
+      PrimaryMotionIsTreatedAs: Both low and wave frequency
+      PrimaryMotionDividingPeriod: 80
+      CalculationMode: Filtering
+      # Shaded drawing
+      ShadedDrawingCullingMode: Anticlockwise
+
+  - purpose: AssetProperties
+    fea_type: lineType
+    cfg:
+      Name: topUnijoint
+      OD: 0.10
+      EI: [1e6, '~']
+      EA: 1.6738e6
+      MassPerUnitLength: 5.19
+      Material: steel
+  - purpose: AssetProperties
+    fea_type: lineType
+    cfg:
+      Name: chainLeg
+      OD: 0.252
+      ID: 0
+      CG: [0, 0]
+      BulkModulus: Infinity
+      MassPerUnitLength: 0.39004
+      CompressionIsLimited: Yes
+      AllowableTension: ~
+      MinRadius: ['~', '~']
+      EI: [0.001, '~']
+      EA: 1.6738e6
+      PoissonRatio: 0
+      GJ: 10
+      TensionTorqueCoupling: 0
+      ContactDiameter: 0.469
+      ClashStiffness: 0
+      Ca: [1, '~', 0.5]
+      Cm: ['~', '~', '~']
+      Cs: 0
+      Ce: 0
+      Cd: [2.4, '~', 1.15]
+      Cl: 0
+      NormalDragLiftDiameter: 0.14
+      AxialDragLiftDiameter: 0.04456
+      StressOD: ~
+      StressID: ~
+      AllowableStress: ~
+      TensileStressLoadingFactor: 1
+      BendingStressLoadingFactor: 1
+      ShearStressLoadingFactor: 1
+      TorsionalStressLoadingFactor: 1
+      SeabedNormalFrictionCoefficient: 0.5
+      SeabedAxialFrictionCoefficient: ~
+      RayleighDampingCoefficients: (no damping)
+      Material: steel
+      MarineGrowthThickness: 0.02
+  - purpose: AssetProperties
+    fea_type: lineType
+    cfg:
+      Name: bottomUnijoint
+      OD: 0.10
+      EI: [1e6, '~']
+      EA: 1.6738e6
+      Material: steel
+      MassPerUnitLength: 1.68
+  - purpose: AssetProperties
+    fea_type: lineType
+    cfg:
+      Name: hawser
+      Category: General
+      OD: 0.168
+      ID: 0
+      CG: [0, 0]
+      BulkModulus: Infinity
+      CompressionIsLimited: No
+      AllowableTension: "~"
+      MinRadius: ["~", "~"]
+      EI: [42.231, "~"]
+      EA: AxialStiffnessProfile
+      Material: Nylon
+      PoissonRatio: 0.42
+      GJ: 29.74
+      MassPerUnitLength: 0.01719
+  - purpose: AssetProperties
+    fea_type: lineType
+    cfg:
+      Name: hawserEndChain
+      OD: 0.252
+      ID: 0
+      CG: [0, 0]
+      BulkModulus: Infinity
+      MassPerUnitLength: 0.39004
+      CompressionIsLimited: Yes
+      AllowableTension: ~
+      MinRadius: ['~', '~']
+      EI: [0.001, '~']
+      EA: 1.6738e6
+      PoissonRatio: 0
+      GJ: 10
+      TensionTorqueCoupling: 0
+      ContactDiameter: 0.469
+      ClashStiffness: 0
+      Ca: [1, '~', 0.5]
+      Cm: ['~', '~', '~']
+      Cs: 0
+      Ce: 0
+      Cd: [2.4, '~', 1.15]
+      Cl: 0
+      NormalDragLiftDiameter: 0.14
+      AxialDragLiftDiameter: 0.04456
+      StressOD: ~
+      StressID: ~
+      AllowableStress: ~
+      TensileStressLoadingFactor: 1
+      BendingStressLoadingFactor: 1
+      ShearStressLoadingFactor: 1
+      TorsionalStressLoadingFactor: 1
+      SeabedNormalFrictionCoefficient: 0.5
+      SeabedAxialFrictionCoefficient: ~
+      RayleighDampingCoefficients: (no damping)
+      Material: steel
+      MarineGrowthThickness: 0.02
+  - purpose: Mooring
+    fea_type: line
+    cfg:
+      Name: riserChain
+      connectionData:
+        Connection, ConnectionX, ConnectionY, ConnectionZ, ConnectionAzm, ConnectionDec, ConnectionGamma, ReleaseStage, ConnectionzRelativeTo:
+          - [SALM, 0.0, 0, -13.78, 0, 180, 0, "~"]
+          - [Anchored, 0, 0, 3.56, 0, 180, 0, "~"]
+      sections:
+        LineType, Length, TargetSegmentLength:
+          - [topUnijoint, 2.15, 0.2]
+          - [chainLeg, 7.154, 0.2]
+          - [bottomUnijoint, 1.35, 0.2]
+      statics:
+        LayAzimuth: 0
+
+  - purpose: Mooring
+    fea_type: line
+    cfg:
+      Name: hawserLine
+      connectionData:
+        Connection, ConnectionX, ConnectionY, ConnectionZ, ConnectionAzm, ConnectionDec, ConnectionGamma, ReleaseStage, ConnectionzRelativeTo:
+          - [SALM_TOP, 2.3, 0, 0.75, 0, 0, 0, "~"]
+          - [shuttleTankerObject, 52, 0, 7.0, 0, 0, -180, "~"]
+      sections:
+        LineType, Length, TargetSegmentLength:
+          - [hawserEndChain, 4, 0.3]
+          - [hawser, 39.72, 0.5]
+          - [hawserEndChain, 2, 0.3]
+      statics:
+        LayAzimuth: 180
+
+  - purpose: Foundation
+    fea_type: shape
+    cfg: NULL
+  - purpose: Constraint
+    fea_type: constraint
+    cfg:
+      Name: Rotation
+      Connection: SALM
+      InitialPosition: [ 0, 0, 1.75 ]
+      InitialAttitude: [ 0, 0, 0 ]
+      ConstraintType: Calculated DOFs
+      CalculatedModelType: Cartesian
+      OutFrameReleaseStage: ~
+      DOFFree, DOFInitialValue:
+        - ["No"]
+        - ["No"]
+        - ["No"]
+        - ["No"]
+        - ["No"]
+        - ["Yes",0]
+      TranslationalStiffness: 0
+      RotationalStiffness: 0
+      TranslationalDamping: 0
+      RotationalDamping: 0
+      CharacteristicLength: ~
+      CharacteristicForce: ~
+      Hidden: Yes
+      HideAfterOutFrameRelease: No
+  - purpose: Interface
+    fea_type: group
+    cfg: NULL
+
+Environment:
+  WaterDepth: 28
+  Wave:
+    -
+      SimulationTimeOrigin: 0
+      KinematicStretchingMethod: Vertical Stretching
+      UserSpecifiedRandomWaveSeeds: Yes
+      WaveFrequencySpectrumDiscretisationMethod: Equal energy
+      WaveTrains:
+      - Name: Wave1
+        WaveType: JONSWAP
+        WaveDirection: 0
+        WaveHs: 0.001
+        WaveOrigin: [0, 0]
+        WaveTimeOrigin: 0
+        WaveNumberOfSpectralDirections: 1
+        WaveJONSWAPParameters: Partially Specified
+        WaveGamma: Calculated
+        WaveTp: 6
+        WaveNumberOfComponents: 300
+        WaveSpectrumMinRelFrequency: 0.5
+        WaveSpectrumMaxRelFrequency: 10
+        WaveSpectrumMaxComponentFrequencyRange: 0.05
+      WaveKinematicsCutoffDepth: 200
+      WaveCalculationMethod: Instantaneous Position (exact)
+      WaveCalculationTimeInterval: 0
+      WaveCalculationSpatialInterval: 0
+
+  Current:
+    -
+      MultipleCurrentDataCanBeDefined: "Yes"
+      Name: Current1
+      CurrentRamp: "Yes"
+      HorizontalCurrentFactor: '~'
+      CurrentMethod: Interpolated
+      RefCurrentSpeed: 0.35
+      RefCurrentDirection: 0
+      CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1, 0]
+        - [28, 0.173, 0]
+
+  Wind:
+    -
+      IncludeVesselWindLoads: "Yes"
+      IncludeLineWindLoads: "Yes"
+      IncludeBuoyWingWindLoads: "Yes"
+      VerticalWindVariationFactor: "~"
+      AirDensity: 0.00128
+      WindType: "Constant"
+      WindSpeed: 8
+      WindDirection: 0
+
+  LoadVariation:
+    flag: True
+    source: csv
+    file_name: *LoadVariationfile_name
+
+db:
+  server_type: mssql
+  server: localhost\SQLEXPRESS
+  user: NULL
+  password: NULL
+  database: master
+
+Analysis:
+  fe_folder: *fe_folder
+  drop_basename: True
+  fe_file_prefix: LC_
+  fe_batch_file: True

@@ -1,0 +1,31 @@
+name: oda
+channels:
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.6
+  - pip
+  - pyyaml=3.13
+  - yaml
+  - xlrd
+  - openpyxl
+  - pandas
+  - numpy
+  - setuptools
+  - scipy
+  - matplotlib
+  - pymssql
+  - requests
+  - pip:
+    - oyaml
+    - pyparsing
+    - six
+    - openpyxl
+    - python_dateutil
+    - sqlalchemy
+    - pyodbc
+    - suds
+#    - python-dateutil pytz --force-reinstall --upgrade
+# Additional batch file instructions below:
+# pip install python-dateutil pytz --force-reinstall --upgrade
+# https://stackoverflow.com/questions/42193030/dateutil-pytz-missing-dependencies-python

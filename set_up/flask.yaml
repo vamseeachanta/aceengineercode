@@ -1,0 +1,16 @@
+name: flask
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8.3
+  - pytest
+  - pip
+  - pip:
+    - Flask==1.1.2
+    - WTForms==2.3.1
+    - flask-wtf==0.14.3
+    - gunicorn==20.0.4
+    - flask-httpauth==4.1.0
+    - flask_restful==0.3.8
+    - flask-flatpages==0.7.2

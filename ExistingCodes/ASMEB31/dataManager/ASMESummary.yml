@@ -1,0 +1,65 @@
+default:
+  logLevel: DEBUG
+
+ymlFiles:
+  - 
+    io: results\Summary_10p5inGas_HornMountain.yml
+    Label: 10p5in Gas HornMountain
+  - 
+    io: results\Summary_14inGas_Constitution.yml
+    Label: 14inGas_Constitution
+  - 
+    io: results\Summary_12inGas_Nansen.yml
+    Label: 12inGas_Nansen
+  - 
+    io: results\Summary_16inGas_Gunnison.yml
+    Label: 16inGas_Gunnison
+  - 
+    io: results\Summary_14inGas_Marlin.yml
+    Label: 14inGas_Marlin
+  - 
+    io: results\Summary_16inGas_Heidelberg_R1.yml
+    Label: 16inGas_Heidelberg_R1
+  - 
+    io: results\Summary_16inGas_Lucius.yml
+    Label: 16inGas_Lucius
+  - 
+    io: results\Summary_16inGas_Holstein.yml
+    Label: 16inGas_Holstein
+  - 
+    io: results\Summary_18inGas_MarcoPolo.yml
+    Label: 18inGas_MarcoPolo
+  - 
+    io: results\Summary_18inGas_Boomvang.yml
+    Label: 18inGas_Boomvang
+  - 
+    io: results\Summary_20inGas_IHUB.yml
+    Label: 20inGas_IHUB
+
+dataFrame:
+  label: ASMEGasSummary
+  columns:
+    - FileName
+    - Nominal OD (inch)
+    - Nominal Wall Thickness (inch)
+    - InternalPressure
+
+
+  data:
+  -
+    L1: Geometry
+    L2: NominalOD
+    L3: NULL
+
+  -
+    L1: Geometry
+    L2: DesignWT
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: Design
+    L2: InternalPressure
+    L3: NULL
+
+ 

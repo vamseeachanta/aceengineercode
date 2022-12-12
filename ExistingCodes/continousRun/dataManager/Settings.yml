@@ -1,0 +1,14 @@
+Default:
+  LogLevel: DEBUG
+  email: support@aceengineer.com
+
+LiveRun: dataManager\LiveRun.yml
+
+
+# ActivateEnvironment : 'C:\ProgramData\Anaconda3\scripts\activate.bat orcaFlex_env'
+ActivateEnvironment : 'C:\ProgramData\Anaconda3\scripts\activate.bat catenary'
+
+TrigToRun:
+- 'K:\0173 KM Extreme\SLWR\PostProcess\D8-Rotated\runBatch_Temp.bat'
+- 'K:\0173 KM Extreme\SLWR\PostProcess\D8-Rotated\runBatch_Temp2.bat'
+

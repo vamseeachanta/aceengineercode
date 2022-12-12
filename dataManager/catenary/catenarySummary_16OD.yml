@@ -1,0 +1,145 @@
+default:
+  logLevel: DEBUG
+
+ymlFiles:
+  - 
+    io: results\SLWR_Summary_16OD_SE500_HE800.yml
+    Label: 16OD SE500 HE800
+  - 
+    io: results\SLWR_Summary_16OD_SE900_HE1200.yml
+    Label: 16OD SE900 HE1200
+  - 
+    io: results\SLWR_Summary_16OD_SE1200_HE1500.yml
+    Label: 16OD SE1200 HE1500 
+
+
+
+dataFrame:
+  label: SLWRSummary_16OD
+  columns:
+    - FileName
+    - Nominal OD (inch)
+    - Nominal Wall Thickness (inch)
+    - Sag Bend Elevation (m)
+    - Hog Bend Elevation (m)
+    - LSWR, Fv, Fluid (N)
+    - LSWR, Fh, Fluid (N)
+    - SCR, Fv, Empty (N)
+    - SCR, Fv, Fluid Filled (N)
+    - SCR, Fv, Water Filled (N)
+    - Buoyancy Factor (#)
+    - Discrete Buoyancy Coverage (%)
+    - Buoyancy Length (m)
+    - Discrete Buoyancy Thickness (inch)
+    - Total Buoyancy (kg/m)
+  data:
+  -
+    L1: geometry
+    L2: NominalOD
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: geometry
+    L2: DesignWT
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: SagBendElevationAboveSeabed
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: HogBendAboveSeabed
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: Summary
+    L3: Fv
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: Summary
+    L3: Fh
+    L4: NULL
+    L5: NULL
+  -
+    L1: catenaryResult
+    L2: Empty
+    L3: Fv
+    L4: NULL
+    L5: NULL
+  -
+    L1: catenaryResult
+    L2: FluidFilled
+    L3: Fv
+    L4: NULL
+    L5: NULL
+  -
+    L1: catenaryResult
+    L2: SeaWaterFilled
+    L3: Fv
+    L4: NULL
+    L5: NULL
+  -
+    L1: LazyWaveCatenaryDefinition
+    L2: UniformBuoyancy
+    L3: BuoyancyFactor
+    L4: NULL
+    L5: NULL
+  -
+    L1: LazyWaveCatenaryDefinition
+    L2: DiscreteBuoyancy
+    L3: BuoyancyCoverage
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: Summary
+    L3: Buoyancy
+    L4: S
+    L5: NULL
+  -
+    L1: LazyWaveCatenaryDefinition
+    L2: DiscreteBuoyancy
+    L3: Thickness
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: TotalBuoyancy
+    L3: NULL
+    L4: NULL
+    L5: NULL
+
+plot:
+  columns:
+    - FileName
+    - HangOffToBuoyancy
+    - Buoyancy
+    - BuoyancyToTouchDown
+  data:
+  -
+    L1: lazyWaveCatenaryResult
+    L2: Summary
+    L3: HangOffToBuoyancy
+    L4: PlotData
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: Summary
+    L3: Buoyancy
+    L4: PlotData
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: Summary
+    L3: BuoyancyToTouchDown
+    L4: PlotData
+    L5: NULL

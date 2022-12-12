@@ -1,0 +1,33 @@
+---
+version: 0.1
+
+parameters:
+  boem_fields: &boem_fields "'WR627'"
+  well_type: &well_type "'D'"
+  wellhead_plot_title: &wellhead_plot_suptitle "JULIA Subsea Wellhead Locations"
+  wellhead_plot_subtitle: &wellhead_plot_title "Development Wells, BOEM Field WR627, Feb 2020"
+  production_plot_suptitle: &production_plot_suptitle "JULIA Production Rate (BOPD) by Completion"
+  cum_production_plot_suptitle: &cum_production_plot_suptitle "JULIA Cummulative Production Rate (BOPD)"
+
+ProjectName: BSEE Interface Tool
+
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+    CustomInputFile: NULL
+
+  analysis:
+    run_example: False
+    skip_wells_with_zero_production: True
+
+  data_source: db
+
+db:
+  server_type: mssql
+  server: localhost\SQLEXPRESS
+  user: NULL
+  password: NULL
+  database: master
+

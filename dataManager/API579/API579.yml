@@ -1,0 +1,163 @@
+Default:
+  logLevel: DEBUG
+  Analysis:
+    Code : API 579
+    GML:
+      Circumference: True
+      Length: True
+    LML: False
+    B31G: False
+
+  Units:
+    NominalID : inch
+    NominalOD : inch
+    ReadingSets: inch
+    Age: years
+
+ReadingSets:
+  - 
+    io: dataManager\API579\DefaultSample.xlsx
+    sheet_name: Sheet1
+    index_col: 0
+    skiprows: 0
+    skipfooter: 0
+    DataCorrectionFactor: 0.833
+    Label: Area Above Weld
+    Contour: 
+      xlim: NULL
+      ylim: NULL
+      zlim: [0.828, 0.942] 
+    FCARate: Historical
+    FCA:
+      - 0.00
+      - 0.02
+      - 0.04
+      - 0.06
+      - 0.08
+      - 0.10
+      - 0.12
+      - 0.14
+      - 0.16      
+  - 
+    io: dataManager\API579\DefaultSample.xlsx
+    sheet_name: Sheet1
+    index_col: 0
+    skiprows: 0
+    skipfooter: 0
+    DataCorrectionFactor: 0.833
+    Label: Area Above Weld
+    Contour: 
+      xlim: NULL
+      ylim: NULL
+      zlim: [0.828, 0.942]
+    FCARate: Historical
+    FCA:
+      - 0.00
+      - 0.02
+      - 0.04
+      - 0.06
+      - 0.08
+      - 0.10
+      - 0.12
+      - 0.14
+      - 0.16
+  - 
+    io: dataManager\API579\DefaultSample.xlsx
+    sheet_name: Sheet1
+    index_col: 0
+    skiprows: 0
+    skipfooter: 0
+    DataCorrectionFactor: 0.833
+    Label: Area Above XXX
+    Contour: 
+      xlim: NULL
+      ylim: NULL
+      zlim: [0.828, 0.942]
+    FCARate: Historical
+    FCA:
+      - 0.00
+      - 0.02
+      - 0.04
+      - 0.06
+      - 0.08
+      - 0.10
+      - 0.12
+      - 0.14
+      - 0.16
+
+API579Parameters:
+  RSFa: 0.9
+  Age: 10
+  FCARateFloor: 0.0118
+  
+Design:
+  InternalPressure: 3565
+  ExternalPressure: 0
+  Temperature:
+    Ambient: 50
+    Operating: 90
+    Maximum: null
+  BendingMoment: 0
+  AxialForce: 0
+  Torsion: 0
+  Condition: Restrained
+
+Geometry:
+   NominalID: NULL
+   NominalOD: 18
+   DesignWT : 0.75
+   StartWTFactor : 1
+   tmin: 0.538
+   AssessmentLengthCeilingFactor_Circumference: 0.25
+   AssessmentLengthCeilingFactor_Length: 0.5
+   CorrosionAllowance: 0.0
+Material:
+  E: 30000000.0
+  rho: 7800
+  Poissionsratio: 0.3
+  SMYS: 65000
+  SMUS: null
+  ThermalExpansionCoefficient: 6.5e-06
+  WeldFactor:
+    Seamless: 1.0
+DesignFactors:
+  Pressure: 0.5
+  Longitudinal: 0.9
+  EquivalentStress: 0.9
+  Logitudinal: 0.9
+  TemperatureDerating: 1.0
+   
+PlotSettings:
+  Data:
+    PltSupTitle: Holstein Piping, Oil Export Riser FFS
+    PltTitle: Measured Wall Thickness
+    PltXLabel: Circumference (inch)
+    PltYLabel: Length (inch)
+  LML:
+    PltSupTitle: Holstein Piping, Oil Export Riser FFS
+    PltTitle: Local Metal Loss, Levels 1 & 2
+    PltXLabel: Future Corrosion Allowance (inch)
+    PltYLabel: Maximum Allowable Working Pressure (psi)
+  GML:
+    PltSupTitle: Holstein Piping, Oil Export Riser FFS
+    PltTitle: General Metal Loss, Level 2
+    PltXLabel: Future Corrosion Allowance (inch)
+    PltYLabel: Maximum Allowable Working Pressure (psi)
+  B31G:
+    PltSupTitle: Holstein Piping, Oil Export Riser FFS
+    PltTitle: Acceptable Flaw Dimensions, ASME B31.G, 2012
+    PltXLabel: Flaw Depth (inch)
+    PltYLabel: Acceptable Length (inch)
+   
+B31G:
+  - 
+    io: dataManager\API579\ASME B31.G 3-4 Table.xlsx
+    sheet_name: Sheet1
+    index_col: 0
+    skiprows: 0
+    skipfooter: 0
+    DataCorrectionFactor: 1.00
+    Label: 16 inch Pipe
+    LengthLimit: 6
+
+

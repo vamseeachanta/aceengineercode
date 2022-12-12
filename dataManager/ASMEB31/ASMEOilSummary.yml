@@ -1,0 +1,92 @@
+default:
+  logLevel: DEBUG
+
+ymlFiles:
+  - 
+    io: results\Summary_12inOil_Nansen.yml
+    Label: 12inOil_Nansen
+  - 
+    io: results\Summary_16inOil_Boomvang.yml
+    Label: 16inOil_Boomvang
+  - 
+    io: results\Summary_18inOil_Gunnison.yml
+    Label: 18inOil_Gunnison
+  - 
+    io: results\Summary_16inOil_Lucius.yml
+    Label: 16inOil_Lucius
+  - 
+    io: results\Summary_16inOil_Heidelberg_R1.yml
+    Label: 16inOil_Heidelberg_R1
+  - 
+    io: results\Summary_14inOil_Constitution.yml
+    Label: 14inOil_Constitution
+  - 
+    io: results\Summary_24inOil_Holstein.yml
+    Label: 24inOil_Holstein
+  - 
+    io: results\Summary_12p75inOil_MarcoPolo.yml
+    Label: 12p75inOil_MarcoPolo
+  - 
+    io: results\Summary_12p75inOil_HornMountain.yml
+    Label: 12p75in Oil HornMountain
+  - 
+    io: results\Summary_10p75inOil_Marlin.yml
+    Label: 10p75inOil_Marlin
+
+dataFrame:
+  label: ASMEOilSummary
+  columns:
+    - FileName
+    - Nominal OD (inch)
+    - MAOP
+    - Minimum Wall Thickness (inch)
+    - D/tMinimum Ratio
+    - StressEquivalent
+    - StressLogitudinal
+
+  data:
+  -
+    L1: Geometry
+    L2: NominalOD
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: Design
+    L2: InternalPressure
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB314
+    L3: InternalPressure
+    L4: MinimumWallThickness_Pressure
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB314
+    L3: InternalPressure
+    L4: D/TMin
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB314
+    L3: EquivalentStress
+    L4: Stress_Equivalent
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB314
+    L3: LogitudinalStress
+    L4: Stress_Logitudinal
+    L5: NULL
+
+PlotSettings:
+  Data:
+    PltSupTitle: Oil Riser Export
+    PltTitle: Measured Wall Thickness
+    PltXLabel: D/tMinimum Ratio
+    PltYLabel: MAOP
+ 
+ 

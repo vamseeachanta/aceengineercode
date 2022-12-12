@@ -1,0 +1,372 @@
+default:
+  Constants:
+    g : 9.81
+  units:
+    WaveHeight: m
+    Tp: s
+    Probabiity: Percentage
+  Analysis: None
+
+WorkBook: 0173-CAL-010-01 Fatigue Data (Draft1).xlsx
+WorkSheet: Fatigue-Processed
+
+SimFilePrefix: SLWR_16OD_SE1200_HE1500_FatigueWH045_
+
+FEASettings:
+  SimulationPeriod:
+    From: 20
+    To: 600
+  LoadCaseLineName: SLWR
+
+EnvironmentLoadTemplate:
+  Fatigue:
+    -
+      Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: Yes
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+          - Name: Hs=0.5, Tp=3
+            WaveType: JONSWAP
+            WaveDirection: 180
+            WaveHs: 0.5
+            WaveOrigin: [0, 0]
+            WaveTimeOrigin: 0
+            WaveNumberOfSpectralDirections: 1
+            WaveJONSWAPParameters: Partially Specified
+            WaveGamma: 2.2
+            WaveSeed: 1350834434
+            WaveTp: 3
+            WaveNumberOfComponents: 300
+            WaveSpectrumMinRelFrequency: 0.5
+            WaveSpectrumMaxRelFrequency: 10
+            WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+          - [0, 1.00, 0]
+          - [36.5, 1.00, 0]
+          - [64.5, 0.95, 0]
+          - [100, 0.77, -45]
+          - [400, 0.51, -45]
+          - [800, 0.40, -157.5]
+          - [1200, 0.32, -180]
+          - [1600, 0.32, -90]
+          - [2000, 0.37, -90]
+          - [2200, 0.37, -90]
+          - [4000, 0.37, -90]
+      CodeChecks:
+        APISTD2RDFd1: 0.8
+        APISTD2RDFd2: 0.8
+        APISTD2RDDelta: 0.01
+        APISTD2RDAlphaFab: 1
+        APISTD2RDk: 0.45
+
+SNCurves:
+  - SNcurveName: C Curve
+    SNcurveSpecificationMethod: Table
+    SNcurveTableN, SNcurveTableS:
+      - [1556, 1E6]
+      - [1E6, 115.9E3]
+    SNcurveEnduranceLimit: 0
+    SNcurveMeanStressModel: None
+  - SNcurveName: D Curve
+    SNcurveSpecificationMethod: Table
+    SNcurveTableN, SNcurveTableS:
+      - [580.76, 1E6]
+      - [1E6, 83.41E3]
+    SNcurveEnduranceLimit: 0
+    SNcurveMeanStressModel: None
+  - SNcurveName: E Curve
+    SNcurveSpecificationMethod: Table
+    SNcurveTableN, SNcurveTableS:
+      - [407.38, 1E6]
+      - [1E6, 74.13E3]
+    SNcurveEnduranceLimit: 0
+    SNcurveMeanStressModel: None
+
+AnalysisData:
+  - ArcLengthInterval: [0, 9.144]
+    RadialPosition: Outer
+    SCF: 1.1
+    ThicknessCorrectionFactor: 1
+    AnalysisDataSNcurve: C Curve
+  - ArcLengthInterval: [9.144, 7000]
+    RadialPosition: Outer
+    SCF: 1.2
+    ThicknessCorrectionFactor: 1.12
+    AnalysisDataSNcurve: D Curve
+  - ArcLengthInterval: [9.144, 7000]
+    RadialPosition: Inner
+    SCF: 1.2
+    ThicknessCorrectionFactor: 1.12
+    AnalysisDataSNcurve: E Curve
+
+Outputs:
+  OutputLoadCaseTables: Yes
+  OutputDetailedLoadCaseTables: No
+  LoadCaseDamageUnits: Damage per year
+
+RANDOM250:
+  - 71573
+  - 47469
+  - 2101
+  - 24226
+  - 1003
+  - 61328
+  - 8844
+  - 74522
+  - 67166
+  - 57162
+  - 82243
+  - 22609
+  - 4407
+  - 22620
+  - 90496
+  - 84067
+  - 95023
+  - 10675
+  - 37071
+  - 57066
+  - 40096
+  - 4809
+  - 94889
+  - 70525
+  - 20763
+  - 71270
+  - 39810
+  - 64103
+  - 76676
+  - 50968
+  - 34295
+  - 81292
+  - 49028
+  - 1913
+  - 23763
+  - 16701
+  - 19735
+  - 60514
+  - 39880
+  - 61915
+  - 75295
+  - 89760
+  - 35494
+  - 51408
+  - 20894
+  - 9524
+  - 53662
+  - 49828
+  - 77384
+  - 83080
+  - 15104
+  - 39913
+  - 5015
+  - 13435
+  - 78165
+  - 71138
+  - 19838
+  - 2907
+  - 96222
+  - 97356
+  - 63028
+  - 13354
+  - 72688
+  - 7570
+  - 32077
+  - 15743
+  - 30949
+  - 75546
+  - 2593
+  - 60385
+  - 81437
+  - 512
+  - 68508
+  - 23447
+  - 84103
+  - 58410
+  - 70195
+  - 59068
+  - 17664
+  - 42227
+  - 96934
+  - 63363
+  - 76203
+  - 76666
+  - 38708
+  - 77903
+  - 38110
+  - 31560
+  - 34545
+  - 98463
+  - 98328
+  - 28992
+  - 93033
+  - 62385
+  - 5233
+  - 67067
+  - 38445
+  - 56974
+  - 12124
+  - 8170
+  - 20693
+  - 65667
+  - 67935
+  - 13804
+  - 33288
+  - 46999
+  - 62317
+  - 11471
+  - 92147
+  - 68867
+  - 35000
+  - 90556
+  - 26658
+  - 36037
+  - 34420
+  - 28121
+  - 44573
+  - 54655
+  - 56227
+  - 338
+  - 46516
+  - 42757
+  - 31704
+  - 98216
+  - 45249
+  - 58940
+  - 68899
+  - 62301
+  - 60098
+  - 33153
+  - 39338
+  - 92157
+  - 58418
+  - 39727
+  - 11586
+  - 31887
+  - 81630
+  - 85246
+  - 29301
+  - 23683
+  - 53723
+  - 94081
+  - 29036
+  - 56701
+  - 51035
+  - 67489
+  - 60488
+  - 51957
+  - 93495
+  - 67976
+  - 3046
+  - 45418
+  - 28889
+  - 92061
+  - 71410
+  - 56345
+  - 74564
+  - 4779
+  - 8882
+  - 26128
+  - 61113
+  - 67372
+  - 50612
+  - 9382
+  - 31008
+  - 53433
+  - 83503
+  - 5665
+  - 39107
+  - 60284
+  - 82944
+  - 13057
+  - 16056
+  - 7213
+  - 63881
+  - 67788
+  - 36001
+  - 8632
+  - 72305
+  - 62988
+  - 71558
+  - 8213
+  - 14936
+  - 92826
+  - 5908
+  - 17331
+  - 38666
+  - 8250
+  - 25456
+  - 74190
+  - 75144
+  - 49191
+  - 30614
+  - 46072
+  - 36655
+  - 53259
+  - 1837
+  - 44213
+  - 14342
+  - 25910
+  - 29553
+  - 14956
+  - 75856
+  - 2086
+  - 76508
+  - 45502
+  - 23283
+  - 97753
+  - 88192
+  - 74511
+  - 76976
+  - 13389
+  - 17200
+  - 85827
+  - 55174
+  - 9064
+  - 62523
+  - 11179
+  - 26904
+  - 11719
+  - 65177
+  - 42145
+  - 11387
+  - 32605
+  - 51630
+  - 13068
+  - 44163
+  - 29028
+  - 45864
+  - 99436
+  - 6590
+  - 52262
+  - 31125
+  - 68102
+  - 70232
+  - 49846
+  - 87977
+  - 69540
+  - 8285
+  - 89295
+  - 41561
+  - 97943
+  - 30046
+  - 13232
+  - 1231
+  - 57640
+  - 60157
+  - 38078
+  - 84295
+  - 24446

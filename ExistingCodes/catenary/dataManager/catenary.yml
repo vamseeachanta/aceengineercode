@@ -1,0 +1,241 @@
+default:
+  Constants:
+    g : 9.81
+  units:
+    verticalDistance: m
+    declinationAngle: deg with vertical
+    Temperature: deg F
+    Pressure: psi
+    EffectiveTension: kN
+    BendingMoment: kNm
+    YieldStrength: psi
+    E: psi
+    NominalID: inch
+    NominalOD: inch
+    NominalWT: inch
+    Rho: kg/m3
+    MassPerUnitLength: kg/m
+    WeightPerUnitLength: N/m
+    SoilStiffness: kN/m/m
+    BuoyancyCoverage: Percentage
+  logLevel: DEBUG
+  Analysis:
+    SCR : False
+    Jumper : False
+    SLWR : True
+    Extreme: True
+    Fatigue: False
+
+simpleCatenaryDefinition:
+  axialLineForce : NULL
+  verticalDistance : 1874.64
+  declinationAngle : 8
+
+LazyWaveCatenaryDefinition:
+  VerticalDistance : 1874.64
+  TDPToAnchor : 1500
+  HangoffBelowMeanSeaLevel : 0
+  HangoffAboveKeel : 11.21
+  SagBendElevationAboveSeabed : 731.52
+  HogBendAboveSeabed : 1097.28
+  declinationAngle : 8
+  UniformBuoyancy : 
+    Thickness: NULL
+    BuoyancyFactor: 2
+  DiscreteBuoyancy: 
+    Thickness: NULL
+    BuoyancyFactor: NULL
+    BuoyancyCoverage: 100
+  Spacing:
+    10
+  TaperJoint:
+    L: 3.66
+    ThickendThickness: 2.5
+    
+geometry:
+  waterDepth: 1347.2
+  NominalID: NULL
+  NominalOD: 8.625
+  DesignWT : 1.000
+  CorrosionAllowance: 0.236
+  ExternalCoating:
+    Thickness: 2.953
+  Strakes:
+    BaseThickness: 0.5906
+    Area: NULL
+  MarineGrowth:
+    Thickness: NULL
+
+Material:
+  Steel:
+    Rho: 7850
+    PoissionsRatio: 0.30
+    SMYS: 65300
+    SMUS: 77600
+    E: 30000000.00
+    G: 11538461.54
+  Fluid: 
+    Rho: 400.4616
+  SeaWater: 
+    Rho: 1025
+  ExternalCoating:
+    Rho: 800.9
+  Buoyancy:
+    Rho: 650
+  Strakes:
+    MassPerUnitLength: 21.5787
+    WeightPerUnitLength: -42.3375
+    Density: NULL
+  MarineGrowth:
+    Density: NULL
+
+plotSettings:
+  pltXLabel : 'Thickness (inch)'
+  pltYLabel : 'Pressure (psi)'
+  pltSupTitle : 'Design Pressure With Thickness'
+  pltTitle: API STD 2RD, X-65, {2} of {0} inch, Corrosion Allowance {1} inch
+  label: Design Pressure Limit
+  plotFileName: OD_{0}
+  yLim:
+    - 0
+    - 12500
+
+FEASettings:
+  AnchorAdjustment: 54.36
+  Seabed:
+    FrictionCoefficient:
+      Normal: 0.6
+      Axial: 0.45
+    Stiffness:
+      Extreme: 10000
+      Fatigue: 1000
+  DesignPressure:
+    Surface: 750
+    TDP: NULL
+  Hydrodynamic:
+    Extreme:
+      MainPipe:
+        Ca: [1.5, '~', 0]
+        Cd: [1.5, '~', 0.008]
+      BuoyPipe:
+        Ca: [1, '~', 0.001]
+        Cd: [1, '~', 0.001]
+      BuoyPipeStartEnd:
+        Ca: [1, '~', 0.053570901]
+        Cd: [1, '~', 0.080356352]
+    Fatigue:
+      MainPipe:
+        Ca: [1.5, '~', 0]
+        Cd: [1.35, '~', 0.008]
+      BuoyPipe:
+        Ca: [1, '~', 0.001]
+        Cd: [0.9, '~', 0.001]
+      BuoyPipeStartEnd:
+        Ca: [1, '~', 0.053570901]
+        Cd: [1, '~', 0.080356352]
+  CorrosionAllowance:
+    Extreme: 0.236
+    Fatigue: 0.118
+
+  Damping:
+    Extreme:
+      Name: SteelDamping
+      Mode: Stiffness Proportional
+      DampingRatio: 0.5
+      Period1: '~'
+      ApplyToGeometricStiffness: No
+    Fatigue:
+      Name: SteelDamping
+      Mode: Stiffness Proportional
+      DampingRatio: 0.5
+      Period1: '~'
+      ApplyToGeometricStiffness: No
+  Mesh:
+    Top:
+      L: 25
+      Size: 0.5
+    Buoyancy:
+      L: NULL
+      Size: 2
+    BeforeTDP:
+      L: 250
+      Size: 1
+    AfterTDP:
+      L: 250
+      Size: 1
+  Stage:
+    Extreme:
+      Duration:
+        - 8
+        - 120
+      TargetLogSampleInterval: 0.3
+      ImplicitConstantTimeStep: 0.02
+    Fatigue:
+      Duration:
+        - 8
+        - 600
+      TargetLogSampleInterval: 0.3
+      ImplicitConstantTimeStep: 0.2
+  FlexJointStiffness:
+    ConnectionLabel: FJProfile
+    Extreme:
+      - [0.00, 0.00]
+      - [0.01, 7.36]
+      - [0.02, 11.40]
+      - [0.03, 14.72]
+      - [0.04, 17.65]
+      - [0.05, 20.33]
+      - [0.06, 22.81]
+      - [0.07, 25.14]
+      - [0.08, 27.35]
+      - [0.09, 29.46]
+      - [0.10, 31.49]
+      - [0.20, 48.78]
+      - [0.30, 63.01]
+      - [0.40, 75.56]
+      - [0.50, 87.00]
+      - [0.60, 97.61]
+      - [0.70, 107.59]
+      - [0.80, 117.05]
+      - [0.90, 126.10]
+      - [1.00, 134.77]
+      - [1.50, 174.10]
+      - [2.00, 208.77]
+      - [3.00, 269.67]
+      - [4.00, 323.41]
+      - [6.00, 417.78]
+      - [8.00, 501.02]
+      - [10.00, 576.77]
+      - [12.00, 647.16]
+      - [13.25, 688.96]
+      - [22.00, 1143.94]
+    Fatigue:
+      - [0.00, 0.00]
+      - [0.01, 4.28]
+      - [0.02, 6.77]
+      - [0.03, 8.85]
+      - [0.04, 10.70]
+      - [0.05, 12.40]
+      - [0.06, 13.99]
+      - [0.07, 15.49]
+      - [0.08, 16.91]
+      - [0.09, 18.28]
+      - [0.10, 19.60]
+      - [0.20, 30.99]
+      - [0.30, 40.51]
+      - [0.40, 48.99]
+      - [0.50, 56.77]
+      - [0.60, 64.04]
+      - [0.70, 70.91]
+      - [0.80, 77.44]
+      - [0.90, 83.71]
+      - [1.00, 89.75]
+      - [1.50, 117.31]
+      - [2.00, 141.87]
+      - [3.00, 185.49]
+      - [4.00, 224.33]
+      - [6.00, 293.27]
+      - [8.00, 354.54]
+      - [10.00, 410.96]
+      - [11.80, 458.33]
+

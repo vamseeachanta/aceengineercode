@@ -1,0 +1,36 @@
+name: molenotebook_368
+channels:
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.6.8
+  - numpy
+  - pandas==0.23.4
+  - pymssql==2.1.4
+  - setuptools==41.0.1
+  - scipy==1.0.0
+  - xmltodict==0.11.0
+  - pytest==4.0.1
+  - matplotlib
+# For converting into a notebook
+  - ipykernel
+  - ipython
+  - jupyter_client
+  - jupyter_core
+  - traitlets
+  - ipython_genutils
+
+  - pip:
+    - suds-py3
+    - python_dateutil==2.8.0
+    - pydevd==1.6.1
+    - suds_jurko==0.6
+    - keras_applications
+    - requests
+    - applicationinsights
+    - tensorflow==2.0.0
+
+#    - python-dateutil pytz --force-reinstall --upgrade
+# Additional batch file instructions below:
+# pip install python-dateutil pytz --force-reinstall --upgrade
+# https://stackoverflow.com/questions/42193030/dateutil-pytz-missing-dependencies-python

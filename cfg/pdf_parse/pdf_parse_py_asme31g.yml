@@ -1,0 +1,7 @@
+files:
+  from_pdf:
+    -
+      io: data_manager\data\ASME31G.pdf
+      page: [26]
+      label: ASME31G
+      save: True

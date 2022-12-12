@@ -1,0 +1,183 @@
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+
+ymlFiles:
+  - 
+    io: tests\cfg\results\app_catenary_riser_SLWR_06OD_GI_20lbft3.yml
+    riser_type: SLWR
+    label: 6 inch Gas Injection
+  - 
+    io: tests\cfg\results\app_catenary_riser_SLWR_12OD_WI_64lbft3.yml
+    riser_type: SLWR
+    label: 12 inch Water Injection
+
+dataFrame:
+  label: SLWRSummary_ALL_OD
+  columns:
+    - FileName
+    - Nominal OD (inch)
+    - Nominal Wall Thickness (inch)
+    - Sag Bend Elevation (m)
+    - Hog Bend Elevation (m)
+    - LSWR, Fv, Fluid (N)
+    - LSWR, Fh, Fluid (N)
+    - SCR, Fv, Empty (N)
+    - SCR, Fv, Fluid Filled (N)
+    - SCR, Fv, Water Filled (N)
+    - Buoyancy Factor (#)
+    - Discrete Buoyancy Coverage (%)
+    - Buoyancy Length (m)
+    - Discrete Buoyancy Thickness (inch)
+    - Total Buoyancy (kg/m)
+    - Uniform Buoyancy Thickness (inch)
+    - Uniform Buoyancy Diameter (inch)
+  data:
+  -
+    L1: geometry
+    L2: NominalOD
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: geometry
+    L2: DesignWT
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: SagBendElevationAboveSeabed
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: HogBendAboveSeabed
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: Summary
+    L3: Fv
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: Summary
+    L3: Fh
+    L4: NULL
+    L5: NULL
+  -
+    L1: catenaryResult
+    L2: Empty
+    L3: Fv
+    L4: NULL
+    L5: NULL
+  -
+    L1: catenaryResult
+    L2: FluidFilled
+    L3: Fv
+    L4: NULL
+    L5: NULL
+  -
+    L1: catenaryResult
+    L2: SeaWaterFilled
+    L3: Fv
+    L4: NULL
+    L5: NULL
+  -
+    L1: LazyWaveCatenaryDefinition
+    L2: UniformBuoyancy
+    L3: BuoyancyFactor
+    L4: NULL
+    L5: NULL
+  -
+    L1: LazyWaveCatenaryDefinition
+    L2: DiscreteBuoyancy
+    L3: BuoyancyCoverage
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: Summary
+    L3: Buoyancy
+    L4: S
+    L5: NULL
+  -
+    L1: LazyWaveCatenaryDefinition
+    L2: DiscreteBuoyancy
+    L3: Thickness
+    L4: NULL
+    L5: NULL
+  -
+    L1: lazyWaveCatenaryResult
+    L2: TotalBuoyancy
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: LazyWaveCatenaryDefinition
+    L2: UniformBuoyancy
+    L3: Thickness
+    L4: NULL
+    L5: NULL
+  -
+    L1: LazyWaveCatenaryDefinition
+    L2: UniformBuoyancy
+    L3: BuoyancyFactor
+    L4: NULL
+    L5: NULL
+
+plot:
+  columns:
+    SLWR:
+      - FileName
+      - riser_type
+      - Label
+      - HangOffToBuoyancy
+      - Buoyancy
+      - BuoyancyToTouchDown
+    SCR:
+      - FileName
+      - riser_type
+      - Label
+      - Catenary
+  data:
+    SLWR:
+      -
+        L1: lazyWaveCatenaryResult
+        L2: Summary
+        L3: HangOffToBuoyancy
+        L4: PlotData
+        L5: NULL
+      -
+        L1: lazyWaveCatenaryResult
+        L2: Summary
+        L3: Buoyancy
+        L4: PlotData
+        L5: NULL
+      -
+        L1: lazyWaveCatenaryResult
+        L2: Summary
+        L3: BuoyancyToTouchDown
+        L4: PlotData
+        L5: NULL
+    SCR:
+      -
+        L1: catenaryResult
+        L2: PlotData
+        L3: NULL
+        L4: NULL
+        L5: NULL
+
+  settings:
+    linewidth:
+      - 1.5
+      - 1.5
+    linestyle:
+      - '-'
+      - ':'

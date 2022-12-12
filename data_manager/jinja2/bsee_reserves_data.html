@@ -1,0 +1,42 @@
+{% extends "data_manager/jinja2/ong_fd_layout.html" %}
+{% block content %}
+
+  <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}FieldData.html">Field Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}ProductionData.html">Production Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}WellData.html">Well Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="{{ vars.file_prefix }}Reserves.html">Reserves</a>
+      </li>
+  </ul>
+
+  <h4>Field Reserves</h4>
+  <div id="#oilReserves">
+  </div>
+  <div id="#fieldReserves">
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#reserves">Reserves Data</button>
+  <div> <br> </div>
+  <div id="reserves" class="collapse">
+    {{vars.reserves_html}}
+  </div>
+
+
+  <script type="text/javascript">
+
+    var chartData = {{ vars['oilReserves'] }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['fieldReserves'] }}
+    addChartToDOM(chartData);
+
+  </script>
+
+{% endblock %}

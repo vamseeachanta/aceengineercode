@@ -1,0 +1,10 @@
+name: Fatiguecurve
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - pandas
+  - numpy
+  - xlrd
+  - pip:
+    - openpyxl

@@ -1,0 +1,7 @@
+name: StressStrainCurvesCal
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - pip:
+    - xlrd

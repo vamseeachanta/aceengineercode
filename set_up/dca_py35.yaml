@@ -1,0 +1,25 @@
+name: dca_py35
+channels:
+  - defaults
+  - anaconda
+  - conda-forge
+dependencies:
+  - python==3.5.2
+  - pandas==0.23.4
+  - numpy==1.13.1
+  - matplotlib
+  - seaborn
+  - psutil
+  - pip
+  - pip:
+    - ipykernel
+
+## For converting into a notebook
+#  - ipykernel
+#  - ipython
+#  - jupyter_client
+#  - jupyter_core
+#  - traitlets
+#  - ipython_genutils
+#
+## Not working smoothly. Decouple ipython to link from outside

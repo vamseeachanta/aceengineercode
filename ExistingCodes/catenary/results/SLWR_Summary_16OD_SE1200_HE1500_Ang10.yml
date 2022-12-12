@@ -1,0 +1,708 @@
+default:
+  Constants:
+    g: 9.81
+  units:
+    verticalDistance: m
+    declinationAngle: deg with vertical
+    Temperature: deg F
+    Pressure: psi
+    EffectiveTension: kN
+    BendingMoment: kNm
+    YieldStrength: psi
+    E: psi
+    NominalID: inch
+    NominalOD: inch
+    NominalWT: inch
+    Rho: kg/m3
+    MassPerUnitLength: kg/m
+    WeightPerUnitLength: N/m
+    SoilStiffness: kN/m/m
+    BuoyancyCoverage: Percentage
+  logLevel: DEBUG
+  Analysis:
+    SCR: false
+    Jumper: false
+    SLWR: true
+    Extreme: true
+    Fatigue: true
+simpleCatenaryDefinition:
+  axialLineForce: null
+  verticalDistance: 4000
+  declinationAngle: 8
+LazyWaveCatenaryDefinition:
+  VerticalDistance: 4000
+  TDPToAnchor: 800
+  HangoffBelowMeanSeaLevel: 0
+  HangoffAboveKeel: 11.21
+  SagBendElevationAboveSeabed: 1200
+  HogBendAboveSeabed: 1500
+  declinationAngle: 10
+  configurationFluid: FluidFilled
+  UniformBuoyancy:
+    Thickness: 15.503614121736916
+    BuoyancyFactor: 2
+    Diameter: 53.00722824347383
+  DiscreteBuoyancy:
+    Thickness: 48.22619875187894
+    BuoyancyFactor: null
+    BuoyancyCoverage: 100
+  Spacing: 10
+  TaperJoint:
+    L: 9.144
+    ThickendThickness: 3.0
+geometry:
+  waterDepth: 4000
+  NominalID: 12.54
+  NominalOD: 16
+  DesignWT: 1.73
+  CorrosionAllowance: 0.236
+  ExternalCoating:
+    Thickness: 3
+  Strakes:
+    BaseThickness: 0.5906
+    Area: null
+  MarineGrowth:
+    Thickness: null
+Material:
+  Steel:
+    Rho: 7850
+    PoissionsRatio: 0.3
+    SMYS: 65300
+    SMUS: 77600
+    E: 30000000.0
+    G: 11538461.54
+  Fluid:
+    Rho: 400.4616
+  SeaWater:
+    Rho: 1025
+  ExternalCoating:
+    Rho: 704.8
+  Buoyancy:
+    Rho: 600
+  Strakes:
+    MassPerUnitLength: 21.5787
+    WeightPerUnitLength: -42.3375
+    Density: null
+  MarineGrowth:
+    Density: null
+plotSettings:
+  pltXLabel: Thickness (inch)
+  pltYLabel: Pressure (psi)
+  pltSupTitle: Design Pressure With Thickness
+  pltTitle: API STD 2RD, X-65, {2} of {0} inch, Corrosion Allowance {1} inch
+  label: Design Pressure Limit
+  plotFileName: OD_{0}
+  yLim:
+  - 0
+  - 12500
+FEASettings:
+  AnchorAdjustment: 13.0
+  Seabed:
+    FrictionCoefficient:
+      Normal: 0.6
+      Axial: 0.45
+    Stiffness:
+      Extreme: 10000
+      Fatigue: 1000
+  DesignPressure:
+    Surface: 750
+    TDP: null
+  Hydrodynamic:
+    Extreme:
+      MainPipe:
+        Ca:
+        - 1.5
+        - '~'
+        - 0
+        Cd:
+        - 1.5
+        - '~'
+        - 0.008
+      BuoyPipe:
+        Ca:
+        - 1
+        - '~'
+        - 0.001
+        Cd:
+        - 1
+        - '~'
+        - 0.001
+      BuoyPipeStartEnd:
+        Ca:
+        - 1
+        - '~'
+        - 0.053570901
+        Cd:
+        - 1
+        - '~'
+        - 0.080356352
+    Fatigue:
+      MainPipe:
+        Ca:
+        - 1.5
+        - '~'
+        - 0
+        Cd:
+        - 1.35
+        - '~'
+        - 0.008
+      BuoyPipe:
+        Ca:
+        - 1
+        - '~'
+        - 0.001
+        Cd:
+        - 0.9
+        - '~'
+        - 0.001
+      BuoyPipeStartEnd:
+        Ca:
+        - 1
+        - '~'
+        - 0.053570901
+        Cd:
+        - 1
+        - '~'
+        - 0.080356352
+  CorrosionAllowance:
+    Extreme: 0.236
+    Fatigue: 0.118
+  Damping:
+    Extreme:
+      Name: SteelDamping
+      Mode: Stiffness Proportional
+      DampingRatio: 0.5
+      Period1: '~'
+      ApplyToGeometricStiffness: false
+    Fatigue:
+      Name: SteelDamping
+      Mode: Stiffness Proportional
+      DampingRatio: 0.5
+      Period1: '~'
+      ApplyToGeometricStiffness: false
+  Mesh:
+    Top:
+      L: 25
+      Size: 0.5
+    Buoyancy:
+      L: null
+      Size: 2
+    BeforeTDP:
+      L: 250
+      Size: 1
+    AfterTDP:
+      L: 250
+      Size: 1
+  Stage:
+    Extreme:
+      Duration:
+      - 5
+      - 100
+      TargetLogSampleInterval: 0.3
+      ImplicitConstantTimeStep: 0.02
+    Fatigue:
+      Duration:
+      - 5
+      - 5
+      TargetLogSampleInterval: 0.3
+      ImplicitConstantTimeStep: 0.2
+  FlexJointStiffness:
+    ConnectionLabel: FJProfile
+    Extreme:
+    - - 0.0
+      - 0.0
+    - - 0.01
+      - 7.36
+    - - 0.02
+      - 11.4
+    - - 0.03
+      - 14.72
+    - - 0.04
+      - 17.65
+    - - 0.05
+      - 20.33
+    - - 0.06
+      - 22.81
+    - - 0.07
+      - 25.14
+    - - 0.08
+      - 27.35
+    - - 0.09
+      - 29.46
+    - - 0.1
+      - 31.49
+    - - 0.2
+      - 48.78
+    - - 0.3
+      - 63.01
+    - - 0.4
+      - 75.56
+    - - 0.5
+      - 87.0
+    - - 0.6
+      - 97.61
+    - - 0.7
+      - 107.59
+    - - 0.8
+      - 117.05
+    - - 0.9
+      - 126.1
+    - - 1.0
+      - 134.77
+    - - 1.5
+      - 174.1
+    - - 2.0
+      - 208.77
+    - - 3.0
+      - 269.67
+    - - 4.0
+      - 323.41
+    - - 6.0
+      - 417.78
+    - - 8.0
+      - 501.02
+    - - 10.0
+      - 576.77
+    - - 12.0
+      - 647.16
+    - - 13.25
+      - 688.96
+    - - 22.0
+      - 1143.94
+    Fatigue:
+    - - 0.0
+      - 0.0
+    - - 0.01
+      - 4.28
+    - - 0.02
+      - 6.77
+    - - 0.03
+      - 8.85
+    - - 0.04
+      - 10.7
+    - - 0.05
+      - 12.4
+    - - 0.06
+      - 13.99
+    - - 0.07
+      - 15.49
+    - - 0.08
+      - 16.91
+    - - 0.09
+      - 18.28
+    - - 0.1
+      - 19.6
+    - - 0.2
+      - 30.99
+    - - 0.3
+      - 40.51
+    - - 0.4
+      - 48.99
+    - - 0.5
+      - 56.77
+    - - 0.6
+      - 64.04
+    - - 0.7
+      - 70.91
+    - - 0.8
+      - 77.44
+    - - 0.9
+      - 83.71
+    - - 1.0
+      - 89.75
+    - - 1.5
+      - 117.31
+    - - 2.0
+      - 141.87
+    - - 3.0
+      - 185.49
+    - - 4.0
+      - 224.33
+    - - 6.0
+      - 293.27
+    - - 8.0
+      - 354.54
+    - - 10.0
+      - 410.96
+    - - 11.8
+      - 458.33
+EnvironmentLoad:
+  Extreme:
+  - Wave:
+      SimulationTimeOrigin: 700.5
+      KinematicStretchingMethod: Vertical Stretching
+      UserSpecifiedRandomWaveSeeds: true
+      WaveFrequencySpectrumDiscretisationMethod: Equal energy
+      WaveTrains:
+      - Name: GA2_Driving
+        WaveType: JONSWAP
+        WaveDirection: 180
+        WaveHs: 7.2
+        WaveTz: 10.7966699960142
+        WaveOrigin:
+        - 0
+        - 0
+        WaveTimeOrigin: 0
+        WaveNumberOfSpectralDirections: 1
+        WaveJONSWAPParameters: Partially Specified
+        WaveGamma: 3
+        WaveSeed: 848251
+        WaveNumberOfComponents: 100
+        WaveSpectrumMinRelFrequency: 0.5
+        WaveSpectrumMaxRelFrequency: 10
+        WaveSpectrumMaxComponentFrequencyRange: 0.05
+      WaveKinematicsCutoffDepth: 200
+      WaveCalculationMethod: Instantaneous Position (exact)
+      WaveCalculationTimeInterval: 0
+      WaveCalculationSpatialInterval: 0
+    Vessel:
+      Orientation:
+      - 0
+      - 0
+      - 270
+      Draft: Ballast
+      InitialPosition:
+      - 0
+      - 0
+      - -24.5
+      Offset: None
+      OffsetPercentWD: 6
+    Current:
+      RefCurrentSpeed: 1.0
+      RefCurrentDirection: 180
+      CurrentDepth, CurrentFactor, CurrentRotation:
+      - - 0
+        - 0.94
+        - 0
+      - - 50
+        - 0.92
+        - 0
+      - - 100
+        - 0.88
+        - 0
+      - - 150
+        - 0.82
+        - 0
+      - - 200
+        - 0.7
+        - 0
+      - - 250
+        - 0.6
+        - 0
+      - - 300
+        - 0.55
+        - 0
+      - - 350
+        - 0.49
+        - 0
+      - - 375
+        - 0.47
+        - 0
+      - - 800
+        - 0.28
+        - 22.5
+      - - 1200
+        - 0.23
+        - 22.5
+      - - 1600
+        - 0.2
+        - 22.5
+      - - 2000
+        - 0.2
+        - 22.5
+      - - 2200
+        - 0.2
+        - 22.5
+      - - 4000
+        - 0.2
+        - 22.5
+    CodeChecks:
+      APISTD2RDFd1: 0.8
+      APISTD2RDFd2: 0.8
+      APISTD2RDDelta: 0.01
+      APISTD2RDAlphaFab: 1
+      APISTD2RDk: 0.45
+  Fatigue:
+  - Wave:
+      SimulationTimeOrigin: 0
+      KinematicStretchingMethod: Vertical Stretching
+      UserSpecifiedRandomWaveSeeds: true
+      WaveFrequencySpectrumDiscretisationMethod: Equal energy
+      WaveTrains:
+      - Name: No Load, No Offset
+        WaveType: JONSWAP
+        WaveDirection: 180
+        WaveHs: 0.0
+        WaveTz: 11.979821458663
+        WaveOrigin:
+        - 0
+        - 0
+        WaveTimeOrigin: 0
+        WaveNumberOfSpectralDirections: 1
+        WaveJONSWAPParameters: Partially Specified
+        WaveGamma: 3
+        WaveSeed: 1087
+        WaveNumberOfComponents: 100
+        WaveSpectrumMinRelFrequency: 0.5
+        WaveSpectrumMaxRelFrequency: 10
+        WaveSpectrumMaxComponentFrequencyRange: 0.05
+      WaveKinematicsCutoffDepth: 200
+      WaveCalculationMethod: Instantaneous Position (exact)
+      WaveCalculationTimeInterval: 0
+      WaveCalculationSpatialInterval: 0
+    Vessel:
+      Orientation:
+      - 0
+      - 0
+      - 270
+      Draft: Full
+      InitialPosition:
+      - 0
+      - 0
+      - -24.5
+      Offset: None
+      OffsetPercentWD: 0
+    Current:
+      RefCurrentSpeed: 0.0
+      RefCurrentDirection: 180
+      CurrentDepth, CurrentFactor, CurrentRotation:
+      - - 0
+        - 1.0
+        - 0
+      - - 36.5
+        - 1.0
+        - 0
+      - - 64.5
+        - 0.95
+        - 0
+      - - 100
+        - 0.77
+        - -45
+      - - 400
+        - 0.51
+        - -45
+      - - 800
+        - 0.4
+        - -157.5
+      - - 1200
+        - 0.32
+        - -180
+      - - 1600
+        - 0.32
+        - -90
+      - - 2000
+        - 0.37
+        - -90
+      - - 2200
+        - 0.37
+        - -90
+      - - 4000
+        - 0.37
+        - -90
+    CodeChecks:
+      APISTD2RDFd1: 0.8
+      APISTD2RDFd2: 0.8
+      APISTD2RDDelta: 0.01
+      APISTD2RDAlphaFab: 1
+      APISTD2RDk: 0.45
+FileName: 16OD_SE1200_HE1500_Ang10
+catenaryResult:
+  d: 4000
+  F: null
+  q: 8
+  S: 4601.473628884037
+  X: 1720.4065239521278
+  BendRadius: 646.6949446644049
+  FluidFilled:
+    weightPerUnitLength: 2456.695439714344
+    S: 4601.473628884037
+    q: 8
+    Fv: 11304419.280045226
+    F: 11415514.280300735
+    Fh: 1588732.5214433633
+  SeaWaterFilled:
+    weightPerUnitLength: 2944.8760672041453
+    S: 4601.473628884037
+    q: 8
+    Fv: 13550769.56357161
+    F: 13683940.734140692
+    Fh: 1904436.465324115
+  Empty:
+    weightPerUnitLength: 2143.668097963108
+    S: 4601.473628884037
+    q: 8
+    Fv: 9864032.221857242
+    F: 9960971.71384353
+    Fh: 1386299.3219911018
+SteelSection: &id001
+  OD: 16
+  ID: 12.54
+  A: 77.5568119984366
+  Ai: 123.50511783131016
+  Ao: 201.06192982974676
+  I: 2003.15479057832
+InsulationSection: &id003
+  OD: 22
+  ID: 16
+  A: 179.0707812546182
+  Ai: 201.06192982974676
+  Ao: 380.132711084365
+  I: 8282.023633026092
+BuoyancySection: &id002
+  OD: 53.00722824347383
+  ID: 22
+  A: 1826.652538143948
+  Ai: 380.132711084365
+  Ao: 2206.785249228313
+  I: 376035.4045881602
+equivalentPipe: &id004
+  weightPerUnitLength: -2727.3852814655784
+  massPerUnitLength: 1181.3018849414088
+lazyWaveCatenaryResult:
+  WeightPerUnitLengthWithOutBuoyancy: 2456.695439714344
+  WeightPerUnitLengthWithBuoyancy: -2456.695439714344
+  SagBendElevationAboveSeabed: 1200
+  HogBendAboveSeabed: 1500
+  HangOff:
+    d: 2800
+    q: 10
+    F: null
+    S: 3336.9100592637874
+    X: 1433.4561783484453
+    BendRadius: 588.3872756456889
+  SagToBuoyancy:
+    d: 150.0
+    S: 446.11229829910155
+    X: 411.68886986019845
+    BendRadius: 588.3872756456889
+  BuoyancyToHog:
+    d: 150.0
+    S: 446.11229829910155
+    X: 411.68886986019845
+    BendRadius: 588.3872756456889
+  HogToBuoyancy:
+    d: 750.0
+    S: 1202.1151831120567
+    X: 860.652776278982
+    BendRadius: 588.3872756456889
+  BuoyancyToTouchDown:
+    d: 750.0
+    S: 1202.1151831120567
+    X: 860.652776278982
+    BendRadius: 588.3872756456889
+  Summary:
+    HangOffToBuoyancy:
+      S: 3783.022357562889
+      X: 1845.1450482086439
+      PlotData:
+        X:
+        - 0.0
+        - 184.51450482086437
+        - 369.02900964172875
+        - 553.5435144625932
+        - 738.0580192834575
+        - 922.5725241043219
+        - 1107.0870289251864
+        - 1291.6015337460508
+        - 1476.116038566915
+        - 1660.6305433877794
+        - 1845.1450482086439
+        Y:
+        - -9.094947017729282e-13
+        - -895.691008359599
+        - -1544.2323613306191
+        - -2009.9266271784454
+        - -2338.9471720011597
+        - -2563.9162271295104
+        - -2707.1393679269167
+        - -2782.8171010320348
+        - -2798.4528378724763
+        - -2755.596854357334
+        - -2650.0
+    Buoyancy:
+      S: 1648.2274814111584
+      X: 1272.3416461391803
+      PlotData:
+        X:
+        - 1845.1450482086439
+        - 1972.3792128225618
+        - 2099.61337743648
+        - 2226.847542050398
+        - 2354.081706664316
+        - 2481.315871278234
+        - 2608.5500358921518
+        - 2735.78420050607
+        - 2863.018365119988
+        - 2990.252529733906
+        - 3117.486694347824
+        Y:
+        - -2650.0
+        - -2570.109237752467
+        - -2521.130403119866
+        - -2500.7642733120665
+        - -2508.054797207147
+        - -2543.344215260957
+        - -2608.289125366205
+        - -2705.9382488437873
+        - -2840.875547150117
+        - -3019.43540765541
+        - -3250.0
+    BuoyancyToTouchDown:
+      S: 1202.1151831120567
+      X: 860.652776278982
+      PlotData:
+        X:
+        - 3117.486694347824
+        - 3203.551971975722
+        - 3289.6172496036206
+        - 3375.6825272315186
+        - 3461.747804859417
+        - 3547.813082487315
+        - 3633.8783601152136
+        - 3719.9436377431116
+        - 3806.0089153710096
+        - 3892.074192998908
+        - 3978.139470626806
+        Y:
+        - -3250.0
+        - -3412.121403064998
+        - -3549.030701317505
+        - -3663.662411228506
+        - -3758.473551021926
+        - -3835.496304449401
+        - -3896.3815786549953
+        - -3942.434389749938
+        - -3974.6418345524753
+        - -3993.6942480396165
+        - -4000.0
+    HangoffToTDP:
+      S: 6633.365022086104
+      X: 3978.139470626806
+    Fh: 1445488.3368647106
+    Fv: 9643260.062194979
+  TotalBuoyancy: -8098385.874389303
+MainPipe:
+  SteelSection:
+    OD: 16
+    ID: 12.54
+    A: 77.5568119984366
+    Ai: 123.50511783131016
+    Ao: 201.06192982974676
+    I: 2003.15479057832
+  BuoyancySection: null
+  InsulationSection:
+    OD: 22
+    ID: 16
+    A: 179.0707812546182
+    Ai: 201.06192982974676
+    Ao: 380.132711084365
+    I: 8282.023633026092
+  equivalentPipe:
+    weightPerUnitLength: 2143.668097963108
+    massPerUnitLength: 495.7906940360391
+BuoyPipe:
+  SteelSection: *id001
+  BuoyancySection: *id002
+  InsulationSection: *id003
+  equivalentPipe: *id004
+fileName: results\FEA\Fatigue\SLWR_16OD_SE1200_HE1500_Ang10_No Load, No Offset.yml

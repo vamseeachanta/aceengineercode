@@ -1,0 +1,17 @@
+name: API579
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.6
+  - pyyaml
+  - yaml
+  - oyaml
+  - matplotlib
+  - scipy
+  - pandas
+  - python-docx
+  - pip:
+    - imgkit
+    - openpyxl
+    - xlrd

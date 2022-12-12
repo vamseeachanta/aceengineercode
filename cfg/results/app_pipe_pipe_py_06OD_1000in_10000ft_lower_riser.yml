@@ -1,0 +1,338 @@
+&id003 !!python/object/new:common.data.AttributeDict
+dictitems:
+  default:
+    Constants:
+      g:
+        m/s2: 9.81
+        in/s2: 386.09
+        ft/s2: 32.174
+    units:
+      Distance: ft
+      declinationAngle: deg with vertical
+      Temperature: deg F
+      Pressure: psi
+      EffectiveTension: kN
+      AxialForce: kN
+      BendingMoment: kNm
+      YieldStrength: psi
+      E: psi
+      NominalID: inch
+      NominalOD: inch
+      NominalWT: inch
+      Rho: lb/inch3
+      MassPerUnitLength: lb/ft
+      WeightPerUnitLength: lb/ft
+      SoilStiffness: kN/m/m
+      BuoyancyCoverage: Percentage
+      ThermalExpansionCoefficient: in/in/deg F
+    log_level: DEBUG
+    config:
+      overwrite:
+        output: true
+    db:
+      dev:
+        server_type: postgresql
+        server: localhost
+        user: postgres
+        password: docker
+        database: acedb
+        port: 5000
+  General:
+    Water Depth: 2460.63
+  Outer_Pipe:
+    Geometry: &id001
+      Nominal_OD: 6.5
+      Nominal_ID: -1.0078125
+      Design_WT: 3.75390625
+      Corrosion_Allowance: 0.0
+    Material:
+      Material: Steel
+      Material_Grade: API 5L X80
+      WeldFactor:
+        Seamless: 1.0
+      Insulation: null
+      Buoyancy: null
+      E: 30000000.0
+      Rho: 0.2817929
+      Poissionsratio: 0.3
+      ThermalExpansionCoefficient: 6.5e-06
+      Grades: &id002
+        ASTM A106 Grade A:
+          SMYS: 30000
+          SMUS: 48000
+          Reference: https://www.amerpipe.com/steel-pipe-products/carbon-pipe/a106/a106-specifications/
+        ASTM A106 Grade B:
+          SMYS: 35000
+          SMUS: 60000
+          Reference: https://www.amerpipe.com/steel-pipe-products/carbon-pipe/a106/a106-specifications/
+        ASTM A106 Grade C:
+          SMYS: 40000
+          SMUS: 70000
+          Reference: https://www.amerpipe.com/steel-pipe-products/carbon-pipe/a106/a106-specifications/
+        API 5L X60:
+          SMYS: 60000
+          SMUS: null
+          Reference: null
+        API 5L X70:
+          SMYS: 70300
+          SMUS: null
+          Reference: null
+        API 5L X65:
+          SMYS: 65300
+          SMUS: 77500
+          Reference: null
+        API 5L X80:
+          SMYS: 80000
+          SMUS: 95000
+          Reference: Assumed
+        P110:
+          SMYS: 110000
+          SMUS: 125000
+          Reference: Assumed
+        S125:
+          SMYS: 125000
+          SMUS: 140000
+          Reference: Assumed
+      SMYS: 80000
+      SMUS: 95000
+      Reference: Assumed
+    Manufacturing:
+      Coupling Mass Ratio: 0.1
+    section_properties:
+      pipe:
+        geometry: *id001
+        Ao: 33.18307240354219
+        Ai: 0.7977179466001548
+        Io: 87.6240505656036
+        Ii: 0.05063943614720603
+        Jo: 175.2481011312072
+        Ji: 0.10127887229441206
+        A: 32.38535445694204
+        I: 87.57341112945639
+        J: 175.14682225891278
+        MassPerUnitLength: 9.125962949949622
+        EI: 2627202333.883692
+        EA: 971560633.7082611
+        GJ: 2020924872.2182243
+        E: 30000000.0
+        SMYS: 80000
+        SMUS: 95000
+        PoissonRatio: 0.3
+  Design:
+  - Load Condition:
+      Outer_Pipe: internal_pressure
+    InternalPressure:
+      Outer_Pipe: 15000
+    ExternalPressure:
+      Outer_Pipe: 4445
+    BendingMoment: 0
+    EffectiveTension: 0
+    AxialForce: null
+    InternalFluid:
+      Outer_Pipe: 0.03703047
+    ExternalFluid:
+      Outer_Pipe: 0.03703047
+    Temperature:
+      Ambient:
+        Outer_Pipe: 50
+      Operating:
+        Outer_Pipe: 82
+      Maximum: null
+    Torsion: 0
+    Condition: Restrained
+    allowable_stress_to_yield_ratio: 0.67
+    Code:
+    - Outer_Pipe: API RP 16Q-2017
+    Material:
+      temperature_derating:
+        Outer_Pipe:
+          API RP 16Q-2017: 1
+    mass:
+      pipe: 58.42838129526838
+      Coupling: 5.842838129526839
+      internal_fluid: 7.067330140041866
+      dry: 71.33854956483708
+      buoyancy: 14.745417205766364
+      wet: 56.593132359070715
+  - Load Condition:
+      Outer_Pipe: external_pressure
+    ExternalPressure:
+      Outer_Pipe: 4445
+    InternalPressure:
+      Outer_Pipe: 0
+    AxialForce: null
+    EffectiveTension: 0
+    InternalFluid:
+      Outer_Pipe: 0.0
+    ExternalFluid:
+      Outer_Pipe: 0.03703047
+    Temperature:
+      Ambient:
+        Outer_Pipe: 50
+      Operating:
+        Outer_Pipe: 82
+      Maximum: null
+    BendingMoment: 0
+    Torsion: 0
+    Condition: Restrained
+    Code:
+    - Outer_Pipe: API TR 5C3-2018
+    Material:
+      temperature_derating:
+        Outer_Pipe:
+          API TR 5C3-2018: 1
+    mass:
+      pipe: 58.42838129526838
+      Coupling: 5.842838129526839
+      internal_fluid: 0.0
+      dry: 64.27121942479522
+      buoyancy: 14.745417205766364
+      wet: 49.525802219028854
+  Inner_Pipe: null
+  DesignFactors:
+    ASME B31.4-2016 Chapter IX Pipeline:
+      internal_pressure: 0.72
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    ASME B31.4-2016 Chapter IX Platform Piping:
+      internal_pressure: 0.6
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    ASME B31.4-2016 Chapter IX Risers:
+      internal_pressure: 0.6
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    ASME B31.8-2016 Chapter VIII Pipeline:
+      internal_pressure: 0.72
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    ASME B31.8-2016 Chapter VIII Platform Piping:
+      internal_pressure: 0.5
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    ASME B31.8-2016 Chapter VIII Risers:
+      internal_pressure: 0.5
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    API RP 16Q-1993:
+      external_pressure:
+        Fd: null
+        section: 5.5
+        cross_reference: API TR 5C3-2018
+    API RP 16Q-2017:
+      internal_pressure:
+        Fd: 0.67
+    API STD 2RD-2013 Section 5:
+      internal_pressure:
+        Fd: 0.6
+        k:
+          API 5L: 0.45
+          API 5CT: 0.45
+          ASME: 0.45
+      external_pressure:
+        Fd: 0.7
+    API RP 1111-2009 Risers:
+      internal_pressure:
+        Fd: 0.6
+      collapse_propagation:
+        Fp: 0.8
+      D_over_T_Trasition_Ratio: 15
+    API RP 1111-2009 Pipelines:
+      internal_pressure:
+        Fd: 0.72
+      collapse_propagation:
+        Fp: 0.8
+      D_over_T_Trasition_Ratio: 30
+    API TR 5C3-2018:
+      internal_pressure:
+        Fd: 0.67
+    API RP 16Q:
+      1993: null
+      release_date: 1993
+      external_pressure:
+        Fd: null
+        section: 5.5
+        cross_reference: API TR 5C3-2018
+    30 CFR Part 250:
+      2019: null
+      release_date: 2019
+      internal_pressure:
+        Fd: 0.6
+  Fatigue:
+    serviceLife: null
+    singleULSEvent: null
+    singleALSEvent: null
+  Material:
+    Steel:
+      E: 30000000.0
+      Rho: 0.2817929
+      Poissionsratio: 0.3
+      ThermalExpansionCoefficient: 6.5e-06
+      Grades: *id002
+      G: 11538461.538461538
+  Manufacturing:
+    Weld_Factor:
+      Seamless: 1.0
+  Result:
+    Outer_Pipe:
+      internal_pressure:
+        API RP 16Q-2017:
+          thickness:
+            Zero Corrosion Allowance: 1.0
+            With Corrosion Allowance: 1.9375
+          Design_WT_Max_Pressure:
+            Zero Corrosion Allowance: 26912.49449504898
+            With Corrosion Allowance: 29250.0
+          minimum_thickness:
+            Zero Corrosion Allowance: 0.5321094611146424
+            With Corrosion Allowance: 0.5448595633879871
+      external_pressure:
+        API TR 5C3-2018:
+          thickness:
+            Zero Corrosion Allowance: 3.75390625
+            With Corrosion Allowance: 3.75390625
+          Design_WT_Max_Pressure:
+            Zero Corrosion Allowance: 50668936.35031658
+            With Corrosion Allowance: 50668936.35031658
+          minimum_thickness:
+            Zero Corrosion Allowance: 0.28737666531638767
+            With Corrosion Allowance: 0.28737666531638767
+    Inner_Pipe: null
+  cfg_variations:
+    pre_analysis: null
+    post_analysis: null
+  Analysis:
+    file_name: app_pipe_pipe_py_06OD_1000in_10000ft_lower_riser
+    file_name_for_overwrite: app_pipe_pipe_py_06OD_1000in_10000ft_lower_riser
+    result_folder: C:\Users\achantv\Documents\Utilities\aceengineer\tests\cfg\results\
+    log_folder: C:\Users\achantv\Documents\Utilities\aceengineer\tests\cfg\logs\
+    start_time: 2019-12-02 08:49:45.022447
+    cfg_array_file_names: null
+  equivalent_pipe:
+    section_properties:
+      pipe:
+        geometry: *id001
+        Ao: 33.18307240354219
+        Ai: 15.904312808798327
+        Io: 87.6240505656036
+        Ii: 20.128895898635385
+        Jo: 175.2481011312072
+        Ji: 40.25779179727077
+        A: 17.278759594743864
+        I: 67.4951546669682
+        J: 134.9903093339364
+        MassPerUnitLength: 4.869031774605698
+        EI: 2024854640.009046
+        EA: 518362787.8423159
+        GJ: 1557580492.3146508
+        E: 30000000.0
+        SMYS: 80000
+        SMUS: 95000
+        PoissonRatio: 0.3
+state: *id003

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 dimple Tutorial</title>
+</head>
+<body>
+
+<h1>dimple chart using js data source</h1>
+
+<div id="chartContainer">
+    <script src="lib/d3.v4.3.0.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+    <script type="text/javascript">
+
+        var scatter_data = [{
+        x: 1,
+        y: 5
+        }, {
+        x: 20,
+        y: 20
+        }, {
+        x: 40,
+        y: 10
+        }, {
+        x: 60,
+        y: 40
+        }, {
+        x: 80,
+        y: 5
+        }, {
+        x: 100,
+        y: 60
+        }];
+
+        var x_title = "x";
+        var y_title = "y";
+
+        var example_scatter = {
+        data: scatter_data,
+        x: "x",
+        y: "y",
+        x_title: "x",
+        y_title: "y"
+        };
+
+        d3.select("body");
+        var svg = dimple.newSvg("#chartContainer", 590, 400);
+        d3.tsv("", function (data) {
+        var myChart = new dimple.chart(svg, example_scatter.data);
+        myChart.setBounds(60, 30, 500, 330)
+        myChart.addMeasureAxis("x", example_scatter.x_title);
+        myChart.addMeasureAxis("y", example_scatter.y_title);
+        myChart.addSeries([example_scatter.x, example_scatter.y], dimple.plot.bubble);
+        // myChart.addLegend(200, 10, 360, 20, "right");
+        myChart.draw();
+      });
+
+    </script>
+</div>
+
+</body>
+</html>

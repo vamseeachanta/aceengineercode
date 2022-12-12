@@ -1,0 +1,383 @@
+default:
+  Analysis:
+    AddMinimumToSummary: True
+    AddMaximumToSummary: True
+    AddMeanToSummary: True
+
+Files: 
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed1\\GA-04a_H_SubCase-1.sim
+    Label: Seed1, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed1\\GA-04a_R_SubCase-1.sim
+    Label: Seed1, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed1\\GA-04a_R_SubCase-2.sim
+    Label: Seed1, SC2
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed1\\GA-04a_R_SubCase-3.sim
+    Label: Seed1, SC3
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed1\\GA-04a_R_SubCase-4.sim
+    Label:  Seed1, SC4
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed1\\GA-04b_H_R_SubCase-1.sim
+    Label: Seed1, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed1\\GA-04b_H_R_SubCase-2.sim
+    Label: Seed1, SC2
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed2\\GA-04a_H_SubCase-1.sim
+    Label: Seed2, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed2\\GA-04a_R_SubCase-1.sim
+    Label:  Seed2, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed2\\GA-04a_R_SubCase-2.sim
+    Label: Seed2, SC2
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed2\\GA-04a_R_SubCase-3.sim
+    Label: Seed2, SC3
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed2\\GA-04b_H_R_SubCase-1.sim
+    Label: Seed2, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed3\\GA-04a_H_SubCase-1.sim
+    Label: Seed3, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed3\\GA-04a_H_SubCase-2.sim
+    Label: Seed3, SC2
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed3\\GA-04a_R_SubCase-1.sim
+    Label: Seed3, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed3\\GA-04b_H_R_SubCase-1.sim
+    Label: Seed3, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed3\\GA-04b_H_R_SubCase-2.sim
+    Label: Seed3, SC2
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed4\\GA-04a_H_SubCase-1.sim
+    Label: Seed4, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed4\\GA-04a_R_SubCase-1.sim
+    Label: Seed4, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed4\\GA-04b_H_R_SubCase-1.sim
+    Label: Seed4, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed4\\GA-04b_H_R_SubCase-2.sim
+    Label: Seed4, SC2
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed5\\GA-04a_H_SubCase-1.sim
+    Label: Seed5, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed5\\GA-04a_R_SubCase-1.sim
+    Label: Seed5, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed5\\GA-04a_R_SubCase-2.sim
+    Label: Seed5, SC2
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed5\\GA-04a_R_SubCase-3.sim
+    Label: Seed5, SC3
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed5\\GA-04b_H_R_SubCase-1.sim
+    Label: Seed5, SC1
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed5\\GA-04b_H_R_SubCase-2.sim
+    Label: Seed5, SC2
+
+
+PlotSettings:
+  Name: Screening Response
+  SupTitle: Frontier Deepwater Feasibility Analysis
+  Title: SLWR, 100 yr Wave, 10yr Current, Far, 750 psi at top
+
+RangeGraph:
+-
+  Command: Range Graph
+  ObjectName: Line1
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+  ArcLength:
+    - 0
+    - 50
+  Variable: Effective Tension
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  suptitle: Effective Tension Response
+  FileName: Top_Effective_Tension
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: Line1
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+  ArcLength:
+    - 0
+    - 50
+  Variable: Bend Moment
+  xlabel: Arc Length (m)
+  ylabel: Bend Moment (kN.m)
+  suptitle: Bending Moment Response
+  FileName: Top_Bending_Moment
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: Line1
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+  ArcLength:
+    - 0
+    - 50
+  Variable: Max von Mises Stress
+  xlabel: Arc Length (m)
+  ylabel: Max von Mises Stress
+  suptitle: Max von Mises Stress Response
+  FileName: Top_Max von Mises Stress
+  axhline: 449537.4
+-
+  Command: Range Graph
+  ObjectName: Line1
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+  ArcLength:
+    - 0
+    - 50
+  Variable: API STD 2RD Method 1
+  xlabel: Arc Length (m)
+  ylabel: API STD 2RD Method 1
+  suptitle: API STD 2RD Method 1 Response
+  FileName: Top_API STD 2RD Method 1
+  axhline: 1.0
+-
+  Command: Range Graph
+  ObjectName: Line1
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+  ArcLength:
+    - 0
+    - 7000
+  Variable: Effective Tension
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  suptitle: Effective Tension Response
+  FileName: Effective_Tension
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: Line1
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+  ArcLength:
+    - 0
+    - 7000
+  Variable: Bend Moment
+  xlabel: Arc Length (m)
+  ylabel: Bend Moment (kN.m)
+  suptitle: Bending Moment Response
+  FileName: Bending_Moment
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: Line1
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+  ArcLength:
+    - 0
+    - 7000
+  Variable: Max von Mises Stress
+  xlabel: Arc Length (m)
+  ylabel: Max von Mises Stress
+  suptitle: Max von Mises Stress Response
+  FileName: Max von Mises Stress
+  axhline: 449537.4
+-
+  Command: Range Graph
+  ObjectName: Line1
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+  ArcLength:
+    - 0
+    - 7000
+  Variable: API STD 2RD Method 1
+  xlabel: Arc Length (m)
+  ylabel: API STD 2RD Method 1
+  suptitle: API STD 2RD Method 1 Response
+  FileName: API STD 2RD Method 1
+  axhline: 1.0
+
+Summary:
+-
+  SummaryFileName: Table_Top
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: Effective Tension
+      Label: Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: Bend Moment
+      Label: Bend. Moment
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: API STD 2RD Method 1
+      Label: API M1
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: Max von Mises Stress
+      Label: vM stress
+
+-
+  SummaryFileName: Table_RestOfRiser
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Effective Tension
+      Label: Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Bend Moment
+      Label: Bend. Moment
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: API STD 2RD Method 1
+      Label: API M1
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Max von Mises Stress
+      Label: vM stress
+
+-
+  SummaryFileName: Table_Disp
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: X
+      Label: X
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Y
+      Label: Y
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Z
+      Label: Z
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Dynamic x
+      Label: Dynamic x
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Dynamic y
+      Label: Dynamic y
+    -
+      Command: Range Graph
+      ObjectName: Line1
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(10.0, 100.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Dynamic z
+      Label: Dynamic z

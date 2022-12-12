@@ -1,0 +1,193 @@
+,component,service_life,flaw_geometry,flaw_orientation,flaw_location,flaw_theta,initial_flaw_depth,initial_flaw_length,final_flaw_depth,final_flaw_length,K_r,L_r,K_r_allowable
+0,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,9.1,5,45.890094965558326,5,0.6322353893486732,1.0161489077846215,0.5428825851798948
+1,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,7.300000000000001,10,23.631043560318037,10,0.45356010697818305,1.0523131348509867,0.38193131682159315
+2,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,6.9,15,20.223181463907824,15,0.41958657358171203,1.0700081657601235,0.32297055301092714
+3,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,6.5,20,17.28060092445354,20,0.3878640823449381,1.0730843980356195,0.31377798786629013
+4,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,6.2,25,15.350758714294583,25,0.3655673830913097,1.0770843468893263,0.3022572777921613
+5,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,5.9,30,13.623286205789167,30,0.3443862129845965,1.0651146420373931,0.33820612128932015
+6,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,5.800000000000001,35,13.086845756550069,35,0.3375383022316043,1.0879207740226255,0.2733125516220754
+7,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,5.6000000000000005,40,12.072096007521342,40,0.32418908836698357,1.0795068146150835,0.2955054513345717
+8,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,5.4,50,11.124970959561763,50,0.31121316257065107,1.0926091661523971,0.2617460212103365
+9,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,5.2,60,10.24767929926373,60,0.2986913913905921,1.0907902673363963,0.2661677803601165
+10,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,5.0,80,9.43446677384721,80,0.28659593233628233,1.1071122433611733,0.0
+11,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,4.800000000000001,100,8.678255716181477,100,0.274871010656651,1.101680145883075,0.0
+12,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,4.7,120,8.320606213479772,120,0.2691478286325628,1.1074253412857855,0.0
+13,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,4.6,150,7.973482587263261,150,0.2634742022967073,1.1140310559645479,0.0
+14,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,4.4,180,7.3172840016263265,180,0.2524005893439189,1.0881669256489397,0.2726900570259127
+15,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,internal_surface,90,4.4,200,7.3172840016263265,200,0.2524005893439189,1.0979609874475935,0.0
+16,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,7.0,5,25.20161232991508,5,0.47973231463511573,1.0324873942298844,0.46243207904229033
+17,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,6.9,10,24.169722395862756,10,0.469702967865497,1.0873200993935153,0.2748340586899025
+18,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,6.5,15,20.355569693969716,15,0.43105549898292095,1.0697053752373709,0.3238911293193105
+19,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,6.1000000000000005,20,17.083525771649256,20,0.3948973744613823,1.0618366881842376,0.34884958899212076
+20,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,5.800000000000001,25,14.984201347596136,25,0.3698410289540142,1.058708203591401,0.35935823925850335
+21,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,5.6000000000000005,30,13.721656170464989,30,0.35391858120477565,1.0644611579473078,0.3402988112094217
+22,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,5.5,35,13.131695708925045,35,0.34622736197086335,1.0847137464378815,0.2815484630967801
+23,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,5.3,40,12.016121850447501,40,0.3311958520706917,1.07169284018286,0.31790190644202043
+24,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,5.1000000000000005,50,10.980036080022538,50,0.31659666192445696,1.0795937437463048,0.2952654620192689
+25,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,5.0,60,10.49589343535449,60,0.30953872936714305,1.0988503601495343,0.0
+26,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,4.7,80,9.161432768037347,80,0.28919411424699976,1.0854084657136476,0.27974001892121214
+27,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,4.6,100,8.755888126414968,100,0.28272137695343214,1.1018476372592538,0.0
+28,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,4.4,120,7.981942561158973,120,0.269938252642245,1.0811189194426274,0.2911054840349715
+29,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,4.4,150,7.981942561158973,150,0.269938252642245,1.110984284785452,0.0
+30,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,4.300000000000001,180,7.617499874906162,180,0.26370425923337876,1.1062920344527991,0.0
+31,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,external_surface,90,4.2,200,7.267629760371371,200,0.25757759841730704,1.0917748781686585,0.2637634553115332
+32,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,6.5,5,21.723159069346046,5,0.2835246513977089,1.1290613314140707,0.0
+33,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,6.4,10,11.647531707033716,10,0.2598807204033364,1.059473915867151,0.35675531787396375
+34,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,3.3000000000000003,15,9.361227348599181,15,0.309477767345124,1.1045662215633993,0.0
+35,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,2.6,20,7.748091005967788,20,0.34373287437668115,1.0890118597742202,0.27057013054026813
+36,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,2.3,25,6.710257991004578,25,0.3571638517307501,1.0684202798368796,0.3278269996293192
+37,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,2.1,30,5.864659657138791,30,0.3568754563114944,1.0326542691170524,0.46167937238031587
+38,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,2.1,35,6.3437415146909295,35,0.38294747641484195,1.1560234173346016,0.0
+39,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,2.0,40,5.960762687638317,40,0.38366221338773693,1.148005342194172,0.0
+40,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,1.8,50,5.00373888047117,50,0.3653074101604494,1.0658761028500463,0.3357836424486398
+41,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,1.7000000000000002,60,4.765920988028553,60,0.36624321593950093,1.0731217058423859,0.31366780564359026
+42,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,1.6,80,5.098073098941496,80,0.40160646625586555,1.2087801756509347,0.0
+43,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,1.4,100,4.233133428708026,100,0.37284391047885473,1.079644499665913,0.2951253377798663
+44,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,1.2,120,3.215414696015512,120,0.3225674096557091,0.9217933221788366,0.7172177803153248
+45,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,1.2,150,5.512529313500925,150,0.4953672231211502,1.4786869839831844,0.0
+46,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,1.0,180,4.341783387957896,180,0.4525374916446811,1.1904014518480406,0.0
+47,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",1,thin_pipe,axial,embedded,90,1.0,200,8.514207413915129,200,0.7436777043939388,3.073688417848017,0.0
+48,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.8,5,56.63710766640399,5,0.7015492884924823,1.1405486310851933,0.0
+49,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.6,10,28.869254952283406,10,0.5012452310543875,1.0058391607236012,0.601506338575434
+50,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.5,15,21.49727301623367,15,0.432339452570028,1.1199314162612255,0.0
+51,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.4000000000000004,20,16.15410325000106,20,0.37490018410779735,1.0345761347492408,0.45312683181074404
+52,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.4000000000000004,25,16.15410325000106,25,0.37480425903977466,1.1091860238276503,0.0
+53,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.3,30,12.38004536136694,30,0.32833343108276336,1.0173461576042244,0.53649428311349
+54,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.3,35,12.38004536136694,35,0.3281327687584457,1.0563699059658427,0.36743556788598747
+55,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.3,40,12.38004536136694,40,0.3281327687584457,1.0936158057309233,0.03739616981651375
+56,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.1,50,7.647004245063753,50,0.25854248029309007,0.9419293961676003,0.6980314854291287
+57,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.1,60,7.647004245063753,60,0.25840634481598795,0.9669021348043788,0.6729687664254014
+58,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.1,80,7.647004245063753,80,0.2581710899851629,1.007867625570564,0.5894450646746957
+59,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.1,100,7.647004245063753,100,0.2579808848978803,1.0392650138978643,0.4329842738931448
+60,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.1,120,7.647004245063753,120,0.25791390530990305,1.063623669055358,0.34300182746089003
+61,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.1,150,7.647004245063753,150,0.25791390530990305,1.0909971681590798,0.26565984146136506
+62,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.1,180,7.647004245063753,180,0.25791390530990305,1.110996526395382,0.0
+63,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,internal_surface,90,2.0,200,6.181511539713016,200,0.23206725648170257,1.022149498927344,0.5116752072319912
+64,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.6,5,63.20887746138669,5,0.7588327986377608,1.239436998266075,0.0
+65,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.5,10,42.022321486579756,10,0.6188157050501134,1.4024605065745728,0.0
+66,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.3,15,20.68494894081132,15,0.43425142542679374,1.0805145869788817,0.29274506175894227
+67,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.1,20,11.172968505943858,20,0.32001072569462574,0.9066048988013379,0.731060844416245
+68,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.1,25,11.172968505943858,25,0.31983290928551256,0.94099096435879,0.6989536040958612
+69,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.1,30,11.172968505943858,30,0.3196540219765777,0.973684231717616,0.6659300840351371
+70,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.1,35,11.172968505943858,35,0.3194751453723245,1.004776134317352,0.6079335577381921
+71,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.1,40,11.172968505943858,40,0.31929741385348887,1.034314117914149,0.45428521264954613
+72,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.1,50,11.172968505943858,50,0.3191999769039495,1.0888427459158867,0.27099443456190025
+73,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.0,60,8.478790732260483,60,0.2783931933259208,0.9983586042172358,0.6395518056617799
+74,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.0,80,8.478790732260483,80,0.2781018960649931,1.0465701945707193,0.40353832451574534
+75,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.0,100,8.478790732260483,100,0.27808041099762787,1.0839547281754007,0.2835374040703106
+76,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,2.0,120,8.478790732260483,120,0.27808041099762787,1.1132179941780083,0.0
+77,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,1.9,150,6.611674003786436,150,0.2457417765688881,1.0225214578891513,0.5098015892031018
+78,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,1.9,180,6.611674003786436,180,0.24564345216843844,1.038607994557455,0.43574731741503075
+79,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,external_surface,90,1.9,200,6.611674003786436,200,0.24559071541748942,1.0470896922165154,0.40152884233499375
+80,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,2.7,5,24.73545511821752,5,0.2933987891139954,1.2643556184319562,0.0
+81,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.3,10,15.686742647627046,10,0.28720380536039886,1.3797835546696369,0.0
+82,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,15,12.169016325550785,15,0.3089539566194959,1.4094815339493456,0.0
+83,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,20,17.677910545463035,20,0.35642488820611284,3.2681016791666457,0.0
+84,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,25,23.692222760708884,25,0.39549374585860697,6.8067472685741315,0.0
+85,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,30,30.284937118824153,30,0.4297029222136308,4.638985962261903,0.0
+86,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,35,37.85276202393597,35,0.4701030108405461,2.1564631219158232,0.0
+87,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,40,46.094457727776195,40,0.5056839630113358,1.1873454634652365,0.0
+88,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,50,64.93214211784458,50,0.5628195271910458,0.5262796901167649,0.9319931337030446
+89,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,60,84.78033817323646,60,0.5971947787266755,0.3156099871054795,0.9757317936387614
+90,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,80,118.08870899025881,80,0.6306167494150055,0.1799984821732058,0.9919883784629271
+91,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,100,138.844415221999,100,0.6663850503640729,0.13788829919230053,0.9952745162515987
+92,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,120,154.54157315106522,120,0.709397936077355,0.11612555859296482,0.9966392507820757
+93,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,150,164.12500412053373,150,0.8227135534057461,0.10364300813005342,0.9973193169642163
+94,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,180,169.92052151657663,180,0.971327271289978,0.09670009584700034,0.9976648022718375
+95,"75ft Buoyancy Jt. 2500 ft rating, OuterDia, max_dam, @avg elev 380.4",5,thin_pipe,axial,embedded,90,1.0,200,173.2703048858279,200,1.0927526892551902,0.09316775729812368,0.997831499251088
+96,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,14.9,5,22.18782891714719,5,0.44061347264768647,0.8544145573452613,0.7745540719797329
+97,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,14.9,10,22.18782891714719,10,0.4398999512039679,0.9924307335350606,0.6459957326230528
+98,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,13.8,15,19.511321352077655,15,0.41221048315248693,1.0466524963045094,0.40321866962868586
+99,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,12.5,20,16.690182059915635,20,0.3812277436697832,1.0527482833912565,0.38034739398757994
+100,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,11.600000000000001,25,14.931158778801922,25,0.36057945904684163,1.0611798986380245,0.3510291080107217
+101,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,10.9,30,13.656058892421433,30,0.34483959098214145,1.06657490833515,0.3335753403038644
+102,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,10.3,35,12.62495021492853,35,0.33156558241847023,1.0674949822379038,0.33069542897072723
+103,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,9.9,40,11.967498353175063,40,0.32281701013224007,1.0747467849080834,0.3089336715041849
+104,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,9.200000000000001,50,10.868993268233757,50,0.3076448061399231,1.0795544004277704,0.2953740789575053
+105,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,8.7,60,10.121142253679329,60,0.2968724110075877,1.0839917264994536,0.28344003984529986
+106,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,8.0,80,9.120197634796689,80,0.2818106548497496,1.0882434748660967,0.27249799623909965
+107,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,7.6000000000000005,100,8.570172502555248,100,0.2731810277682746,1.0949057622073886,0.0
+108,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,7.300000000000001,120,8.167304372828767,120,0.26668311140288453,1.0973268516396946,0.0
+109,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,7.0,150,7.772241786768886,150,0.2601534962190804,1.1000974267443788,0.0
+110,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,6.7,180,7.38458666071908,180,0.2535829014907803,1.0929416696444123,0.22525894327221313
+111,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,internal_surface,90,6.6000000000000005,200,7.2569484907259865,200,0.25138190098235674,1.0937680171885078,0.0
+112,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,14.9,5,23.73731568167922,5,0.4665281349520521,0.8724545240007735,0.7602429568271131
+113,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,14.8,10,23.44502571236558,10,0.462771352730967,1.0347048463667217,0.45255855994731714
+114,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,13.4,15,19.674776236406135,15,0.42386047806422195,1.0475687710203303,0.399686460743627
+115,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,12.200000000000001,20,16.853635311297353,20,0.39228311537861427,1.0542011560515554,0.3751084757485885
+116,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,11.3,25,14.961506042947637,25,0.36960750303725437,1.058011345430402,0.3617433853079952
+117,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,10.700000000000001,30,13.794612500262707,30,0.35490169635236357,1.0675499819804202,0.3305247866305933
+118,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,10.1,35,12.69354954715239,35,0.34044351271099565,1.065580651756503,0.3367188307145116
+119,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,9.700000000000001,40,11.995613509816332,40,0.33095190573717,1.0708826339092987,0.3203286054612085
+120,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,9.1,50,10.998694835351259,50,0.31690159735959095,1.0806631032460594,0.2923399576487908
+121,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,8.600000000000001,60,10.20935173565521,60,0.30531848646288134,1.0832647580472061,0.2853574885394076
+122,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,7.9,80,9.160441313588496,80,0.2892094300618066,1.0854653738082607,0.27959309486548994
+123,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,7.5,100,8.587609412594917,100,0.28002095222648327,1.091322382597515,0.26486683102151254
+124,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,7.2,120,8.16954764504251,120,0.2731202102878574,1.0933130748744773,0.12175874799700381
+125,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,6.9,150,7.760795913887499,150,0.2662002158742329,1.0958157121479177,0.0
+126,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,6.7,180,7.493211024802907,180,0.2615709646335044,1.097603866641907,0.0
+127,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,external_surface,90,6.6000000000000005,200,7.360838328166917,200,0.2592503363633981,1.0984862140001557,0.0
+128,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,11.9,5,20.8844422283861,5,0.2804855742049809,1.094592201031725,0.0
+129,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,10.9,10,12.155967676390125,10,0.26386600517268494,1.0943565138143148,0.0
+130,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,7.6000000000000005,15,9.065077172849994,15,0.3089756275785486,1.0776738112881632,0.3005983283543463
+131,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,6.0,20,7.645464729822961,20,0.342787526637248,1.0782228683422768,0.2990641514528284
+132,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,5.2,25,6.770575454233267,25,0.3582504519813521,1.0758880579457912,0.3056522562806958
+133,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,4.7,30,6.143276538625962,30,0.36376192107137706,1.0682497128151829,0.32835573067302354
+134,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,4.4,35,5.764191243704277,35,0.3669295042917271,1.0714855191816486,0.318520141079831
+135,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,4.2,40,5.520141023869091,40,0.3695308271806123,1.0801993466229762,0.29360704597552234
+136,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,3.8000000000000003,50,4.963818181449551,50,0.363742366841934,1.0599002178397423,0.355312734202825
+137,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,3.6,60,4.739347010146218,60,0.3651138556687407,1.0689776303065868,0.3261154640404452
+138,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,3.3000000000000003,80,4.437275287982456,80,0.36826441244357744,1.078180997950069,0.29918086097270946
+139,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,3.1,100,4.32095768598124,100,0.37805411798307037,1.0972517158081818,0.0
+140,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,2.9000000000000004,120,4.206101488912386,120,0.3873107499360638,1.103619402231257,0.0
+141,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,2.6,150,4.040364952846307,150,0.401856224850827,1.0996032115842451,0.0
+142,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,2.3,180,3.8782209876684863,180,0.41809023558741015,1.0856190822248317,0.27919625388680686
+143,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",1,thin_pipe,axial,embedded,90,2.1,200,3.76055472912398,200,0.4294313693626881,1.070617369549497,0.3211273186193344
+144,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,9.1,5,46.46131947990115,5,0.6361711675413274,1.0219969895203609,0.512443869234385
+145,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,7.9,10,24.118624776477905,10,0.458243836493032,1.093165675790302,0.16283472851792374
+146,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,7.5,15,19.75773031187163,15,0.4147549003155596,1.0544052218217035,0.3743771306313715
+147,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,7.2,20,17.144896503130674,20,0.3863600421415994,1.0683244871583784,0.3281239419243735
+148,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,6.9,25,14.977664150974677,25,0.3611174093932205,1.0628509007711016,0.34551666228543315
+149,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,6.7,30,13.727041212529347,30,0.34571311278180394,1.0694098241718377,0.32478969545134745
+150,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,6.5,35,12.622292878377612,35,0.33151062084747357,1.0673134401247315,0.33126367157341574
+151,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,6.4,40,12.119450934379401,40,0.324840549943156,1.0817932925858809,0.2892850602845959
+152,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,6.2,50,11.198161822577509,50,0.31225038416902007,1.0965063349753028,0.0
+153,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,6.0,60,10.372973403508425,60,0.3005259945561032,1.0977939782346455,0.0
+154,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,5.7,80,9.282053077161763,80,0.2842847470715896,1.0978680536621708,0.0
+155,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,5.5,100,8.635410957973523,100,0.2742049175524366,1.0989942395749073,0.0
+156,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,5.4,120,8.332702377269891,120,0.2693569249499851,1.1082954154260034,0.0
+157,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,5.2,150,7.763706233138104,150,0.2599994642430062,1.0994640085831022,0.0
+158,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,5.1000000000000005,180,7.495747201842381,180,0.25547393925780126,1.1007142617251553,0.0
+159,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,internal_surface,90,5.0,200,7.23782501114758,200,0.25104081865858685,1.092375000286214,0.2623116221830958
+160,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,8.4,5,44.63553628602058,5,0.6386116635434091,1.0041725817371665,0.6116226325160568
+161,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,7.4,10,24.156366974499917,10,0.46960495235878724,1.0862445812902783,0.2775813542812119
+162,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,7.1000000000000005,15,20.359188067807697,15,0.43112133900494604,1.069921197763631,0.32323496246612005
+163,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,6.800000000000001,20,17.31964797832828,20,0.3976408548445446,1.070115774750991,0.32264338858496955
+164,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,6.6000000000000005,25,15.633780366178307,25,0.37779376840540846,1.0835795954774887,0.2845245975538898
+165,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,6.4,30,14.154771535974417,30,0.359480598382612,1.082394130240835,0.28767334855835835
+166,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,6.2,35,12.854679015097124,35,0.34257510756798254,1.0724881748341526,0.31553883105855496
+167,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,6.1000000000000005,40,12.269966796621144,40,0.33469361372040096,1.0835565806796,0.2845851629448253
+168,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,5.9,50,11.216044294882495,50,0.3199975271242056,1.0917313331506326,0.2638696364948295
+169,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,5.7,60,10.290783965994956,60,0.30651515761708564,1.0876084960397048,0.27410355083381926
+170,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,5.5,80,9.470007792700805,80,0.294038226954954,1.1039091399990308,0.0
+171,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,5.3,100,8.735428314997451,100,0.28240447968972304,1.1005957126980708,0.0
+172,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,5.1000000000000005,120,8.072602947284508,120,0.2714808593834243,1.0869762941514522,0.2757100409586044
+173,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,5.0,150,7.764476743899846,150,0.26625033533532866,1.0960148817213606,0.0
+174,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,4.9,180,7.470246979378598,180,0.26115785143725456,1.0959454077149087,0.0
+175,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,external_surface,90,4.800000000000001,200,7.188843881156489,200,0.25619259624169144,1.0863122864900718,0.2774080815896857
+176,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,6.9,5,23.09268232801729,5,0.28827596814560574,1.1892193809187113,0.0
+177,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,6.800000000000001,10,10.122142956741676,10,0.24731607926649896,0.9637083711081358,0.676246928387294
+178,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,4.1,15,9.14139954299766,15,0.30911764254225244,1.0844700012911457,0.2821837973869774
+179,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,3.2,20,7.791563701587166,20,0.34414142375132994,1.0938412568268827,0.0
+180,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,2.8,25,6.698043820449338,25,0.35696763351171656,1.067092459430529,0.33195536036464557
+181,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,2.6,30,6.150558095764979,30,0.3639084913927402,1.06903850429139,0.3259285858953142
+182,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,2.5,35,6.029080032571022,35,0.3744885575254221,1.1090624536174842,0.0
+183,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,2.4000000000000004,40,5.791340726657582,40,0.37837576455288047,1.1213242965778454,0.0
+184,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,2.2,50,5.1085106306323,50,0.36962047164473477,1.082782118137591,0.2866398050180658
+185,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,2.1,60,5.039204549450124,60,0.3785719478098995,1.1208715050130327,0.0
+186,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,1.9,80,4.728206355776895,80,0.38329904797142234,1.1332658167863976,0.0
+187,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,1.7000000000000002,100,4.216685914544613,100,0.37194214783141194,1.076654760537325,0.30347227152688716
+188,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,1.6,120,4.677492877158764,120,0.41568105527013854,1.2063831872063568,0.0
+189,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,1.4,150,4.760862824582636,150,0.44949273903576037,1.267411730245917,0.0
+190,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,1.2,180,4.378702765703335,180,0.4553413583253195,1.1997488452336547,0.0
+191,"75ft Bare jt.  - protected, OuterDia, max_dam, @avg elev 48.9",5,thin_pipe,axial,embedded,90,1.0,200,2.4452172604888878,200,0.31299326388490933,0.8331574271369496,0.79047681796171

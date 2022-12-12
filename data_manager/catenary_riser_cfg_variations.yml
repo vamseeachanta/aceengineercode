@@ -1,0 +1,32 @@
+cfg_variations:
+  pre_analysis:
+    -
+      FEASettings:
+        AnchorAdjustment:
+          SLWR: 10
+          SCR: 10
+      cfg_variations:
+        label: AA_P10
+    -
+      FEASettings:
+        AnchorAdjustment:
+          SLWR: 20
+          SCR: 20
+      cfg_variations:
+        label: AA_P20
+    -
+      FEASettings:
+        AnchorAdjustment:
+          SLWR: -10
+          SCR: -10
+      cfg_variations:
+        label: AA_N10
+    -
+      FEASettings:
+        AnchorAdjustment:
+          SLWR: -20
+          SCR: -20
+      cfg_variations:
+        label: AA_N20
+
+  post_analysis:

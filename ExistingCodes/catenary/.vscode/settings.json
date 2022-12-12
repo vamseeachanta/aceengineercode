@@ -1,0 +1,8 @@
+{
+//  For Server2
+    // "python.pythonpath": "C:\\ProgramData\\Anaconda3\\envs\\catenary\\python.exe"
+//  For VA
+    // "python.pythonpath": "C:\\Program Files\\Anaconda3\\envs\\catenary\\python.exe",
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\catenary\\python.exe",
+    "python.linting.pylintEnabled": false,
+}

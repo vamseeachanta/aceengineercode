@@ -1,0 +1,4182 @@
+default:
+  Analysis:
+    SCR : False
+    Jumper : False
+    SLWR : True
+    Extreme: False
+    Fatigue: True
+
+simpleCatenaryDefinition:
+  axialLineForce : NULL
+  verticalDistance : 4000
+  declinationAngle : 8
+
+LazyWaveCatenaryDefinition:
+  VerticalDistance : 4000
+  TDPToAnchor : 800
+  HangoffBelowMeanSeaLevel : 0
+  SagBendElevationAboveSeabed : 1200
+  HogBendAboveSeabed : 1500
+  declinationAngle : 8
+  UniformBuoyancy :
+    Thickness: NULL
+    BuoyancyFactor: 2
+  TaperJoint:
+    L: 9.144
+    ThickendThickness: 3.0
+
+geometry:
+  waterDepth: 4000
+  NominalID: NULL
+  NominalOD: 16
+  DesignWT : 1.73
+  ExternalCoating:
+    Thickness: 3
+  Strakes:
+    BaseThickness: 0.5906
+    Area: NULL
+  MarineGrowth:
+    Thickness: NULL
+
+Material:
+  Fluid:
+    Rho: 400.4616
+  ExternalCoating:
+    Rho: 704.8
+  Buoyancy:
+    Rho: 600
+  Strakes:
+    MassPerUnitLength: 21.5787
+    WeightPerUnitLength: -42.3375
+    Density: NULL
+
+EnvironmentLoad:
+  Fatigue:
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=0.5 m, Tp=3 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 0.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 71573
+          WaveTp: 3.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.0 m, Tp=3 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 47469
+          WaveTp: 3.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=0.5 m, Tp=5 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 0.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 2101
+          WaveTp: 5.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.0 m, Tp=5 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 24226
+          WaveTp: 5.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.5 m, Tp=5 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 1003
+          WaveTp: 5.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.0 m, Tp=5 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 61328
+          WaveTp: 5.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.5 m, Tp=5 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 8844
+          WaveTp: 5.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=0.5 m, Tp=7 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 0.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 74522
+          WaveTp: 7.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.0 m, Tp=7 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 67166
+          WaveTp: 7.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.5 m, Tp=7 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 57162
+          WaveTp: 7.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.0 m, Tp=7 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 82243
+          WaveTp: 7.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.5 m, Tp=7 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 22609
+          WaveTp: 7.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.0 m, Tp=7 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 4407
+          WaveTp: 7.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.5 m, Tp=7 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 22620
+          WaveTp: 7.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.0 m, Tp=7 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 90496
+          WaveTp: 7.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=0.5 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 0.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 84067
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.0 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 95023
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.5 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 10675
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.0 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 37071
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.5 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 57066
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.0 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 40096
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.5 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 4809
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.0 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 94889
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.5 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 70525
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=5.0 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 5.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 20763
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=5.5 m, Tp=9 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 5.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 71270
+          WaveTp: 9.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=0.5 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 0.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 39810
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.0 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 64103
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.5 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 76676
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.0 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 50968
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.5 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 34295
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.0 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 81292
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.5 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 49028
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.0 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 1913
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.5 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 23763
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=5.0 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 5.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 16701
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=5.5 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 5.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 19735
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=6.0 m, Tp=11 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 6.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 60514
+          WaveTp: 11.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=0.5 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 0.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 39880
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.0 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 61915
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.5 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 75295
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.0 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 89760
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.5 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 35494
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.0 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 51408
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.5 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 20894
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.0 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 9524
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.5 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 53662
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=5.0 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 5.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 49828
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=5.5 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 5.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 77384
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=6.0 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 6.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 83080
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=6.5 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 6.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 15104
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=7.0 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 7.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 39913
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=7.5 m, Tp=13 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 7.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 5015
+          WaveTp: 13.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=0.5 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 0.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 13435
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.0 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 78165
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.5 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 71138
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.0 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 19838
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.5 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 2907
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.0 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 96222
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.5 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 97356
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.0 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 63028
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.5 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 13354
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=5.0 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 5.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 72688
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=5.5 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 5.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 7570
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=6.0 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 6.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 32077
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=6.5 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 6.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 15743
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=7.0 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 7.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 30949
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=7.5 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 7.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 75546
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=8.0 m, Tp=15 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 8.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 2593
+          WaveTp: 15.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=0.5 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 0.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 60385
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.0 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 81437
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.5 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 512
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.0 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 68508
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.5 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 23447
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.0 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 84103
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.5 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 58410
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.0 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 70195
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=4.5 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 4.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 59068
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=5.0 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 5.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 17664
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=5.5 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 5.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 42227
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=6.0 m, Tp=17 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 6.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 96934
+          WaveTp: 17.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=1.5 m, Tp=19 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 1.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 63363
+          WaveTp: 19.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.0 m, Tp=19 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 76203
+          WaveTp: 19.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=2.5 m, Tp=19 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 2.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 76666
+          WaveTp: 19.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.0 m, Tp=19 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.0
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 38708
+          WaveTp: 19.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}
+    - Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: true
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+        - Name: WH45 Hs=3.5 m, Tp=19 s
+          WaveType: JONSWAP
+          WaveDirection: 45
+          WaveHs: 3.5
+          WaveOrigin: [0, 0]
+          WaveTimeOrigin: 0
+          WaveNumberOfSpectralDirections: 1
+          WaveJONSWAPParameters: Partially Specified
+          WaveGamma: 2.2
+          WaveSeed: 77903
+          WaveTp: 19.0
+          WaveNumberOfComponents: 300
+          WaveSpectrumMinRelFrequency: 0.5
+          WaveSpectrumMaxRelFrequency: 10
+          WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+        - [0, 1.0, 0]
+        - [36.5, 1.0, 0]
+        - [64.5, 0.95, 0]
+        - [100, 0.77, -45]
+        - [400, 0.51, -45]
+        - [800, 0.4, -157.5]
+        - [1200, 0.32, -180]
+        - [1600, 0.32, -90]
+        - [2000, 0.37, -90]
+        - [2200, 0.37, -90]
+        - [4000, 0.37, -90]
+      CodeChecks: {APISTD2RDFd1: 0.8, APISTD2RDFd2: 0.8, APISTD2RDDelta: 0.01, APISTD2RDAlphaFab: 1,
+        APISTD2RDk: 0.45}

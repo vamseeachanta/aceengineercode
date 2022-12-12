@@ -1,0 +1,335 @@
+&id004 !!python/object/new:common.data.AttributeDict
+dictitems:
+  default:
+    Constants:
+      g:
+        m/s2: 9.81
+        in/s2: 386.09
+        ft/s2: 32.174
+    units:
+      Distance: ft
+      declinationAngle: deg with vertical
+      Temperature: deg F
+      Pressure: psi
+      EffectiveTension: kN
+      AxialForce: kN
+      BendingMoment: kNm
+      YieldStrength: psi
+      E: psi
+      NominalID: inch
+      NominalOD: inch
+      NominalWT: inch
+      Rho: lb/inch3
+      MassPerUnitLength: lb/ft
+      WeightPerUnitLength: lb/ft
+      SoilStiffness: kN/m/m
+      BuoyancyCoverage: Percentage
+      ThermalExpansionCoefficient: in/in/deg F
+    log_level: DEBUG
+    config:
+      overwrite:
+        output: true
+    Analysis:
+      GML:
+        Circumference: true
+        Length: false
+      LML: false
+      B31G: false
+    Units: inch
+  General:
+    Water Depth: 2460.63
+  Outer_Pipe:
+    Geometry: &id001
+      Nominal_OD: 10.75
+      Nominal_ID: 9.5
+      Design_WT: 0.625
+      Corrosion_Allowance: 0
+    Material:
+      Material: Steel
+      Material_Grade: API 5L X65
+      WeldFactor:
+        Seamless: 1.0
+      Insulation: null
+      Buoyancy: null
+      E: 30000000.0
+      Rho: 0.2817929
+      Poissionsratio: 0.3
+      ThermalExpansionCoefficient: 6.5e-06
+      Grades: &id002
+        ASTM A106 Grade A:
+          SMYS: 30000
+          SMUS: 48000
+          Reference: https://www.amerpipe.com/steel-pipe-products/carbon-pipe/a106/a106-specifications/
+        ASTM A106 Grade B:
+          SMYS: 35000
+          SMUS: 60000
+          Reference: https://www.amerpipe.com/steel-pipe-products/carbon-pipe/a106/a106-specifications/
+        ASTM A106 Grade C:
+          SMYS: 40000
+          SMUS: 70000
+          Reference: https://www.amerpipe.com/steel-pipe-products/carbon-pipe/a106/a106-specifications/
+        API 5L X60:
+          SMYS: 60000
+          SMUS: null
+          Reference: null
+        API 5L X70:
+          SMYS: 70300
+          SMUS: null
+          Reference: null
+        API 5L X65:
+          SMYS: 65300
+          SMUS: 77500
+          Reference: null
+        API 5L X80:
+          SMYS: 80000
+          SMUS: 95000
+          Reference: Assumed
+        P110:
+          SMYS: 110000
+          SMUS: 125000
+          Reference: Assumed
+        S125:
+          SMYS: 125000
+          SMUS: 140000
+          Reference: Assumed
+      SMYS: 65300
+      SMUS: 77500
+      Reference: null
+    Manufacturing:
+      Coupling Mass Ratio: 0.0
+    Code:
+    - ASME B31.4-2016 Chapter IX Risers
+    section_properties: &id003
+      pipe:
+        geometry: *id001
+        Ao: 90.76257525761761
+        Ai: 70.8821842466197
+        Io: 655.5468814505273
+        Ii: 399.8198205160893
+        Jo: 1311.0937629010546
+        Ji: 799.6396410321786
+        A: 19.88039101099791
+        I: 255.727060934438
+        J: 511.454121868876
+        MassPerUnitLength: 5.602153036123034
+        EI: 7671811828.033139
+        EA: 596411730.3299373
+        GJ: 5901393713.871646
+        E: 30000000.0
+        SMYS: 65300
+        SMUS: 77500
+        PoissonRatio: 0.3
+  Design:
+  - Load Condition:
+      Outer_Pipe: internal_pressure
+    InternalPressure:
+      Outer_Pipe: 2200
+    InternalFluid:
+      Outer_Pipe: 0.03703047
+    ExternalPressure:
+      Outer_Pipe: 0
+    ExternalFluid:
+      Outer_Pipe: 0.03703047
+    Temperature:
+      Ambient:
+        Outer_Pipe: 50
+      Operating:
+        Outer_Pipe: 82
+      Maximum: null
+    BendingMoment: 0
+    AxialForce: 0
+    Torsion: 0
+    Condition: Restrained
+    Code:
+    - Outer_Pipe: ASME B31.4-2016 Chapter IX Risers
+    Material:
+      temperature_derating:
+        Outer_Pipe:
+          ASME B31.4-2016 Chapter IX Risers: 1
+    mass:
+      pipe: 67.2258364334764
+      Coupling: 0.0
+      internal_fluid: 31.497607167347084
+      dry: 98.72344360082349
+      buoyancy: 40.33176984239942
+      wet: 58.39167375842407
+  Inner_Pipe: null
+  DesignFactors:
+    ASME B31.4-2016 Chapter IX Pipeline:
+      internal_pressure: 0.72
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    ASME B31.4-2016 Chapter IX Platform Piping:
+      internal_pressure: 0.6
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    ASME B31.4-2016 Chapter IX Risers:
+      internal_pressure: 0.6
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    ASME B31.8-2016 Chapter VIII Pipeline:
+      internal_pressure: 0.72
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    ASME B31.8-2016 Chapter VIII Platform Piping:
+      internal_pressure: 0.5
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    ASME B31.8-2016 Chapter VIII Risers:
+      internal_pressure: 0.5
+      Longitudinal: 0.8
+      EquivalentStress: 0.9
+      D_over_T_Trasition_Ratio: 30
+    API RP 16Q-1993:
+      external_pressure:
+        Fd: null
+        section: 5.5
+        cross_reference: API TR 5C3-2018
+    API RP 16Q-2017:
+      internal_pressure:
+        Fd: 0.67
+    API STD 2RD-2013 Section 5:
+      internal_pressure:
+        Fd: 0.6
+        k:
+          API 5L: 0.45
+          API 5CT: 0.45
+          ASME: 0.45
+      external_pressure:
+        Fd: 0.7
+    API RP 1111-2009 Risers:
+      internal_pressure:
+        Fd: 0.6
+      collapse_propagation:
+        Fp: 0.8
+      D_over_T_Trasition_Ratio: 15
+    API RP 1111-2009 Pipelines:
+      internal_pressure:
+        Fd: 0.72
+      collapse_propagation:
+        Fp: 0.8
+      D_over_T_Trasition_Ratio: 30
+    API TR 5C3-2018:
+      internal_pressure:
+        Fd: 0.67
+    API RP 16Q:
+      1993: null
+      release_date: 1993
+      external_pressure:
+        Fd: null
+        section: 5.5
+        cross_reference: API TR 5C3-2018
+    30 CFR Part 250:
+      2019: null
+      release_date: 2019
+      internal_pressure:
+        Fd: 0.6
+  Fatigue:
+    serviceLife: null
+    singleULSEvent: null
+    singleALSEvent: null
+  Material:
+    Steel:
+      E: 30000000.0
+      Rho: 0.2817929
+      Poissionsratio: 0.3
+      ThermalExpansionCoefficient: 6.5e-06
+      Grades: *id002
+      G: 11538461.538461538
+  Manufacturing:
+    Weld_Factor:
+      Seamless: 1.0
+  Result:
+    Outer_Pipe:
+      internal_pressure:
+        ASME B31.4-2016 Chapter IX Risers:
+          thickness:
+            Zero Corrosion Allowance: 0.625
+            With Corrosion Allowance: 0.625
+          Design_WT_Max_Pressure:
+            Zero Corrosion Allowance: 4837.037037037037
+            With Corrosion Allowance: 4837.037037037037
+          minimum_thickness:
+            Zero Corrosion Allowance: 0.2935700099304866
+            With Corrosion Allowance: 0.2935700099304866
+    Inner_Pipe: null
+  API579Parameters:
+    Age: 15
+    FCARateFloor: 0.00118
+  Geometry:
+    NominalID: null
+    NominalOD: 10.75
+    DesignWT: 0.625
+    StartWTFactor: 1
+    tmin: 0.74977
+    AssessmentLengthCeilingFactor_Circumference: null
+    AssessmentLengthCeilingFactor_Length: 1.0
+    CorrosionAllowance: 0.0
+  ReadingSets:
+  - io: tests\data\518_north_for_analysis.xlsx
+    sheet_name: C-scans - scan 1
+    index_col: 0
+    skiprows: 71
+    skipfooter: 34
+    DataCorrectionFactor: 1.0
+    DataFill: true
+    Label: Area 1
+    Contour:
+      xlim: null
+      ylim: null
+      zlim:
+      - 0.675
+      - 0.9
+    FCARate: Historical
+    FCA:
+    - 0.0
+    - 0.04
+    - 0.08
+    - 0.12
+    - 0.16
+    - 0.2
+    - 0.24
+    - 0.28
+    - 0.32
+    - 0.36
+    - 0.4
+  PlotSettings:
+    Data:
+      PltSupTitle: Marco Polo, GC 518, 6 inch FFS
+      PltTitle: Measured WT
+      PltXLabel: Circumference (inch)
+      PltYLabel: Length (inch)
+    LML:
+      PltSupTitle: Marco Polo, GC 518, 6 inch FFS
+      PltTitle: Local Metal Loss, Levels 1 & 2
+      PltXLabel: Future Corrosion Allowance (inch)
+      PltYLabel: Maximum Allowable Working Pressure (psi)
+      ylim:
+      - 5000
+      - 12000
+    GML:
+      PltSupTitle: Marco Polo, GC 518, 6 inch FFS
+      PltTitle: General Metal Loss, Level 2
+      PltXLabel: Future Corrosion Allowance (inch)
+      PltYLabel: Maximum Allowable Working Pressure (psi)
+      ylim:
+      - 5000
+      - 12000
+  cfg_variations:
+    pre_analysis: null
+    post_analysis: null
+  Analysis:
+    file_name: app_pipe_pipe_py_10in_matterhorn_p4_Code_B314_2016
+    file_name_for_overwrite: app_pipe_pipe_py_10in_matterhorn_p4_Code_B314_2016
+    result_folder: C:\Users\achantv\Documents\Utilities\aceengineer\tests\cfg\results\
+    log_folder: C:\Users\achantv\Documents\Utilities\aceengineer\tests\cfg\logs\
+    start_time: 2019-10-22 12:36:55.534491
+    cfg_array_file_names: null
+  equivalent_pipe:
+    section_properties: *id003
+state: *id004

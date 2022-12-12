@@ -1,0 +1,15 @@
+default:
+  Constants:
+    g : 9.81
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+
+files:
+  from_pdf:
+    -
+      io: tests\data\118910_0130_R5.pdf
+      page: [87, 88, 89, 90]
+      label: Horn_mountain, 100yr_current
+      save: True

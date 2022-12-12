@@ -1,0 +1,4 @@
+{"web-content": "<h1 style='color:red;'>Hello World !</h1>",
+  "image":"https://www.gstatic.com/webp/gallery/1.jpg",
+  "para":"<p>Calling the Web data from JSON into Python Flask application</p>",
+ "title": "Flask Tests"}

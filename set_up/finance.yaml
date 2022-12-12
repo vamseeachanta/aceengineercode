@@ -1,0 +1,24 @@
+name: finance
+channels:
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.7
+  - pip
+  - pyyaml=3.13
+  - yaml
+  - xlrd
+  - openpyxl
+  - pandas
+  - matplotlib
+  - pandas-datareader
+  - pip:
+    - oyaml
+    - pyparsing
+    - six
+    - openpyxl
+
+#    - python-dateutil pytz --force-reinstall --upgrade
+# Additional batch file instructions below:
+# pip install python-dateutil pytz --force-reinstall --upgrade
+# https://stackoverflow.com/questions/42193030/dateutil-pytz-missing-dependencies-python

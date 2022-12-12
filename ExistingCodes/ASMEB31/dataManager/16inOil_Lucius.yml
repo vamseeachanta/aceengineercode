@@ -1,0 +1,37 @@
+Default:
+  Analysis:
+    Code : ASME B31.8
+    Extreme: True
+
+Geometry:
+   NominalID: NULL
+   NominalOD: 16
+   DesignWT : 0.938
+   CorrosionAllowance: 0.0
+
+Design:
+   InternalPressure: 3639
+   ExternalPressure: 0
+   Temperature:
+    Ambient: 50
+    Operating: 140
+    Maximum: NULL
+   BendingMoment: 0
+   AxialForce: 0
+   Torsion: 0
+   Condition: Restrained
+
+Material:
+   E: 30000000.00
+   rho: 7800
+   Poissionsratio: 0.30
+   SMYS: 65300
+   SMUS: NULL
+   WeldFactor:
+      Seamless: 1.0
+
+DesignFactors:
+   Pressure : 0.50
+   Logitudinal : 0.90
+   EquivalentStress : 0.90
+

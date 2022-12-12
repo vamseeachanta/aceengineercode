@@ -1,0 +1,27 @@
+{% extends "data_manager/jinja2/ong_fd_layout.html" %}
+
+{% block content %}
+  <h3> Field Name : {{ vars.field_summary_df_dict['Field Nickname'] }} </h3>
+  <br>
+  <p>Boem Field Codes: {{vars.field_summary_df_dict['BOEM_FIELDS'] }}</p>
+  <br>
+  <h3> Wells High-level Summary </h3>
+  <body>
+    {{vars.well_high_level_df_html}}
+
+  <h3> Wells Locations </h3>
+  <p>Max Distance, Producing Wellheads (ft): {{vars.field_summary_df_dict['Max Distance, Producing Wellheads'] }}</p>
+  <p>Max Well Horizontal Departure (ft): {{vars.field_summary_df_dict['Max Well Horizontal Departure'] }}</p>
+  <p>Max Distance, All Wellheads (ft): {{vars.field_summary_df_dict['Max Distance, All Wellheads'] }}</p>
+  <body>
+    {{vars.well_location_df_html}}
+
+  <h3> Wells Drill Information </h3>
+  <body>
+    {{vars.well_drill_info_df_html}}
+
+  <h3> Wells Production Information </h3>
+  <body>
+    {{vars.well_production_summary_df_html}}
+
+{% endblock %}

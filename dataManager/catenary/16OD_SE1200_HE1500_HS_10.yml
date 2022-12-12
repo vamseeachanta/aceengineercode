@@ -1,0 +1,178 @@
+default:
+  Analysis:
+    SCR : False
+    Jumper : False
+    SLWR : True
+    Extreme: True
+    Fatigue: True
+
+simpleCatenaryDefinition:
+  axialLineForce : NULL
+  verticalDistance : 4000
+  declinationAngle : 8
+
+LazyWaveCatenaryDefinition:
+  VerticalDistance : 4000
+  TDPToAnchor : 800
+  HangoffBelowMeanSeaLevel : 0
+  SagBendElevationAboveSeabed : 1200
+  HogBendAboveSeabed : 1500
+  declinationAngle : 8
+  UniformBuoyancy :
+    Thickness: NULL
+    BuoyancyFactor: 2
+  TaperJoint:
+    L: 9.144
+    ThickendThickness: 3.0
+
+geometry:
+  waterDepth: 4000
+  NominalID: NULL
+  NominalOD: 16
+  DesignWT : 1.73
+  ExternalCoating:
+    Thickness: 3
+  Strakes:
+    BaseThickness: 0.5906
+    Area: NULL
+  MarineGrowth:
+    Thickness: NULL
+
+Material:
+  Fluid:
+    Rho: 400.4616
+  ExternalCoating:
+    Rho: 704.8
+  Buoyancy:
+    Rho: 600
+  Strakes:
+    MassPerUnitLength: 21.5787
+    WeightPerUnitLength: -42.3375
+    Density: NULL
+
+FEASettings:
+  AnchorAdjustment: 13.0
+  Stage:
+    Extreme:
+      Duration:
+        - 5
+        - 100
+    Fatigue:
+      Duration:
+        - 5
+        - 5
+
+EnvironmentLoad:
+  Extreme:
+    -
+      Wave:
+        SimulationTimeOrigin: 700.5
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: Yes
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+          - Name: GA2_Driving
+            WaveType: JONSWAP
+            WaveDirection: 180
+            WaveHs: 10
+            WaveTz: 10.7966699960142
+            WaveOrigin: [0, 0]
+            WaveTimeOrigin: 0
+            WaveNumberOfSpectralDirections: 1
+            WaveJONSWAPParameters: Partially Specified
+            WaveGamma: 3
+            WaveSeed: 848251
+            WaveNumberOfComponents: 100
+            WaveSpectrumMinRelFrequency: 0.5
+            WaveSpectrumMaxRelFrequency: 10
+            WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Ballast
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 6
+      Current:
+        RefCurrentSpeed: 1.0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+          - [0, 0.94, 0]
+          - [50, 0.92, 0]
+          - [100, 0.88, 0]
+          - [150, 0.82, 0]
+          - [200, 0.7, 0]
+          - [250, 0.6, 0]
+          - [300, 0.55, 0]
+          - [350, 0.49, 0]
+          - [375, 0.47, 0]
+          - [800, 0.28, 22.5]
+          - [1200, 0.23, 22.5]
+          - [1600, 0.2, 22.5]
+          - [2000, 0.2, 22.5]
+          - [2200, 0.2, 22.5]
+          - [4000, 0.2, 22.5]
+      CodeChecks:
+        APISTD2RDFd1: 0.8
+        APISTD2RDFd2: 0.8
+        APISTD2RDDelta: 0.01
+        APISTD2RDAlphaFab: 1
+        APISTD2RDk: 0.45
+
+  Fatigue:
+    -
+      Wave:
+        SimulationTimeOrigin: 0
+        KinematicStretchingMethod: Vertical Stretching
+        UserSpecifiedRandomWaveSeeds: Yes
+        WaveFrequencySpectrumDiscretisationMethod: Equal energy
+        WaveTrains:
+          - Name: No Load, No Offset
+            WaveType: JONSWAP
+            WaveDirection: 180
+            WaveHs: 0.0
+            WaveTz: 11.979821458663
+            WaveOrigin: [0, 0]
+            WaveTimeOrigin: 0
+            WaveNumberOfSpectralDirections: 1
+            WaveJONSWAPParameters: Partially Specified
+            WaveGamma: 3
+            WaveSeed: 1087
+            WaveNumberOfComponents: 100
+            WaveSpectrumMinRelFrequency: 0.5
+            WaveSpectrumMaxRelFrequency: 10
+            WaveSpectrumMaxComponentFrequencyRange: 0.05
+        WaveKinematicsCutoffDepth: 200
+        WaveCalculationMethod: Instantaneous Position (exact)
+        WaveCalculationTimeInterval: 0
+        WaveCalculationSpatialInterval: 0
+      Vessel:
+        Orientation: [0, 0, 270]
+        Draft: Full
+        InitialPosition: [0, 0, -24.5]
+        Offset: None
+        OffsetPercentWD: 0
+      Current:
+        RefCurrentSpeed: 0.0
+        RefCurrentDirection: 180
+        CurrentDepth, CurrentFactor, CurrentRotation:
+          - [0, 1.00, 0]
+          - [36.5, 1.00, 0]
+          - [64.5, 0.95, 0]
+          - [100, 0.77, -45]
+          - [400, 0.51, -45]
+          - [800, 0.40, -157.5]
+          - [1200, 0.32, -180]
+          - [1600, 0.32, -90]
+          - [2000, 0.37, -90]
+          - [2200, 0.37, -90]
+          - [4000, 0.37, -90]
+      CodeChecks:
+        APISTD2RDFd1: 0.8
+        APISTD2RDFd2: 0.8
+        APISTD2RDDelta: 0.01
+        APISTD2RDAlphaFab: 1
+        APISTD2RDk: 0.45

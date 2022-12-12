@@ -1,0 +1,12 @@
+name: statistical_assessment
+channels:
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.7
+  - pyyaml
+  - yaml
+  - xlrd
+#  - oyaml
+  - matplotlib
+  - pandas

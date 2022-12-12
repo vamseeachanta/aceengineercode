@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 chart</title>
+    <script src="https://d3js.org/d3.v3.js"></script>
+
+</head>
+
+<style>
+// body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+path {stroke: steelblue; fill: none; stroke-width: 2;}
+</style>
+
+<body>
+
+<h1>First d3 chart with external data</h1>
+
+<div>
+    <script type="text/javascript">
+
+        var svg = d3.select("body").append("svg").attr({"width":450,"height":400});
+        //data values
+        var data_values = [10,20,30,40,50,5,2,12,70,26];
+        //create rectangles
+        var bars = svg.selectAll("rect")
+             .data(data_values)
+             .enter()
+             .append("rect")
+             .attr("width","25px")
+             .attr("height", function(d){ return d; });
+
+        // Create a linear scale
+        var normalize = d3.scale.linear().domain([0,50]).range([0,1]);
+
+        //create an svg element
+        var svgElement = d3.select("body")
+        .append("svg")
+        .attr({"width" : 500, "height" : 500});
+        //create a linear scale to map data to pixels, domain is [0,50] and range is [10,400]
+        var xScale = d3.scale.linear().domain([0,50]).range([10,400]);
+        //create a axis based on the scale
+        var xAxis = d3.svg.axis().scale(xScale)
+        .ticks(5) //limit number of ticks to 5
+        .orient("bottom"); //horizontal axis with labels to  the bottom
+        //create a new group to hold the axis
+        var x = svgElement.append("g")
+        .call(xAxis);
+
+
+        var xAxis = d3.svg.axis().scale(xScale)
+        .ticks(5) //limit number of ticks to 5
+        .orient("bottom"); //horizontal axis with labels to the bottom
+
+        var x = svgElement.append("g")
+        .call(xAxis);
+
+        // Data reading details
+        // direct link (not working): https://github.com/mohdsanadzakirizvi/d3js/blob/master/data.tsv
+        // raw data (working): https://raw.githubusercontent.com/mohdsanadzakirizvi/d3js/master/data.tsv
+        d3.tsv("https://raw.githubusercontent.com/mohdsanadzakirizvi/d3js/master/data.tsv", function(error, data){
+        if(error)
+        // If error, print the error message in the console
+        console.log(error);
+        else
+        // Print the data as a table in the console
+        console.table(data);
+        });
+
+        //Create a date parser
+        var ParseDate = d3.time.format("%d-%b-%y").parse;
+
+        //Read TSV file and format the date
+        d3.tsv("https://raw.githubusercontent.com/mohdsanadzakirizvi/d3js/master/data.tsv", function(error, data){
+        //Parse Data into useable format
+        data.forEach(function(d){
+        d.date = ParseDate(d.date);
+        d.close = +d.close;
+        //the + sign converts numeric string to number
+        });
+
+        //Print the data as a table in the console
+        console.table(data);
+
+        var margin = {
+        top: 20,
+        bottom: 50,
+        right: 30,
+        left: 50
+        };
+        var width = 700 - margin.left - margin.right;
+        var height = 500 - margin.top - margin.bottom;
+
+
+        var xScale = d3.time.scale().range([0, width]);
+        var yScale = d3.scale.linear().range([height, 0]);
+
+        //Create x and y axes
+        var xAxis = d3.svg.axis().scale(xScale)
+        .orient("bottom")
+        .ticks(5);
+        var yAxis = d3.svg.axis().scale(yScale)
+        .orient("left")
+        .ticks(5);
+
+        //Create a line generator
+        var valueline = d3.svg.line()
+        .x(function(d){
+        return xScale(d.date);
+        })
+
+        .y(function(d){
+        return yScale(d.close);
+        });
+
+        //Set the domains of our scales
+        xScale.domain(d3.extent(data, function(d){ return d.date; }));
+        yScale.domain([0, d3.max(data, function(d){ return d.close; })]);
+
+        //append the svg path
+        var path = svgElement.append("path")
+        .attr("d", valueline(data));
+
+        //Add X Axis
+        var x = svgElement.append("g")
+        .attr("transform", "translate(0,"+height+")")
+        .call(xAxis);
+
+        //Add Y Axis
+        var y = svgElement.append("g")
+        .call(yAxis);
+
+        //Add label to y axis
+        y.append("text")
+        .attr("fill", "#000")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", "0.71em")
+        .attr("text-anchor", "end")
+        .text("Price ($)");
+
+        });
+
+    </script>
+</div>
+
+</body>
+</html>

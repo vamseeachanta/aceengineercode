@@ -1,0 +1,22 @@
+name: fea_model
+channels:
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.7
+  - pyyaml=3.13
+  - openpyxl
+  - yaml
+  - matplotlib
+  - pandas
+  - psycopg2
+  - scipy
+  - pymssql
+  - sqlalchemy
+  - pyodbc
+  - pip
+  - pip:
+    - oyaml
+    - pyparsing
+    - pytest
+    - pytest-cov

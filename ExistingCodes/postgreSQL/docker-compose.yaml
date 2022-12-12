@@ -1,0 +1,24 @@
+version: "3.4"
+services:
+  posgresql:
+    restart: always
+    image: posgresql:12-alpine
+
+    volumes:
+      postgressqlVolume:/var/lib/postgresql/data
+
+    ports:
+      #The host machine's port 1258 will host the API
+      - "5432:5432"
+
+volumes:
+  postgressqlVolume:
+    external: true
+
+networks:
+  default:
+    external: false
+    driver: bridge
+
+
+docker run --rm --name pg-docker -e POSTGRES_PASSWORD=docker

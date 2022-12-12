@@ -1,0 +1,17 @@
+name: orcaflex_analysis
+channels:
+  - defaults
+dependencies:
+  - python==3.7
+  - pyyaml==3.13
+  - yaml
+  - matplotlib
+  - plotly
+  - scipy
+  - pandas
+  - numpy
+  - pip
+  - pip:
+    - oyaml
+    - OrcFxAPI==11.0.2
+    - openpyxl

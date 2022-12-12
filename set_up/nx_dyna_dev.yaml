@@ -1,0 +1,20 @@
+name: nx_dyna_dev
+channels:
+  - defaults
+  - anaconda
+  - conda-forge
+dependencies:
+  - python==3.6
+  - pandas==0.23.3
+  - scipy==1.4.1
+  - numpy==1.18.1
+  - psutil
+  - matplotlib
+  - numba==0.48.0
+  - xlrd
+#  - pip:
+
+#    - python-dateutil pytz --force-reinstall --upgrade
+# Additional batch file instructions below:
+# pip install python-dateutil pytz --force-reinstall --upgrade
+# https://stackoverflow.com/questions/42193030/dateutil-pytz-missing-dependencies-python

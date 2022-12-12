@@ -1,0 +1,52 @@
+default:
+  config:
+    overwrite:
+      output: False
+  analysis:
+    file_count: True
+    line_contents: False
+  log_level: DEBUG
+
+files:
+  folder:
+    - Q:\projects\Mole\log_files
+    - Y:\projects\Mole\log_files
+    - Y:\projects\archive\20190920_10h06m\Mole\log_files
+    - Y:\projects\archive\20190918_12h52m\Mole\log_files
+    - Y:\projects\archive\20190917_14h06m\Mole\log_files
+
+  label:
+    - staging
+    - development
+    - development
+    - development
+    - development
+    - development
+    - development
+  file_type: .log
+  oda_logs: True
+
+
+plot:
+  -
+    file_name: NULL
+    file_extension: frequency
+    array_label: [[1126 kips], [1006 kips], [886 kips]]
+    label: NULL
+    x: [Mode Number]
+    y: [Frequency]
+    size: half_letter
+    orientation: portrait
+    plt_kind: scatter
+    xlabel: Mode Number (#)
+    ylabel: Frequency (Hz)
+    suptitle: Horn Mountain TTR VIV Analysis
+    title: Frequency with Mode Number
+    xticklabels: NULL
+    grid: True
+    legend: True
+    legend_location: best
+    marker: NULL
+    ylim: NULL
+    xscale:
+      log: False

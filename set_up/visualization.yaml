@@ -1,0 +1,25 @@
+name: visualization
+channels:
+  - defaults
+  - anaconda
+  - pyviz
+  - plotly
+dependencies:
+  - python=3.6
+  - yaml
+  - pyyaml
+  - openpyxl
+  - pyviz
+  - psycopg2
+  - pymssql
+  - sqlalchemy
+  - pyodbc
+  - pip
+  - plotly
+  - plotly-orca
+  - pyproj
+  - pip:
+    - python-dateutil
+    - pytz
+    - pyparsing
+    - cairocffi

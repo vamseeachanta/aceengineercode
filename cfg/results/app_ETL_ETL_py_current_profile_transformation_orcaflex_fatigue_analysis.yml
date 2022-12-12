@@ -1,0 +1,137 @@
+﻿%YAML 1.1
+# Type: Fatigue
+# Program: OrcaFlex 10.0e
+---
+Title: ECS Drilling Riser Analysis
+DamageCalculation: Homogeneous pipe stress
+AnalysisType: Rainflow
+# Units
+UnitsSystem: SI
+CriticalDamageFactor: 0.1
+ThetaCount: 16
+# Results
+OutputLoadCaseTables: Yes
+OutputDetailedLoadCaseTables: No
+LoadCaseDamageUnits: Damage per year
+SNCurves:
+  - SNcurveName: DNV 84 F, Seawater with CP
+    SNcurveSpecificationMethod: Table
+    SNcurveTableN, SNcurveTableS:
+      - [6.3154E+11 , 1000]
+      - [6.3154E+02, 1000000]
+    SNcurveEnduranceLimit: 0
+    SNcurveMeanStressModel: None
+AnalysisData:
+  - ArcLengthInterval: [0, 7000]
+    RadialPosition: Inner
+    SCF: 1.3
+    ThicknessCorrectionFactor: 1
+    AnalysisDataSNcurve: DNV 84 F, Seawater with CP
+  - ArcLengthInterval: [0, 7000]
+    RadialPosition: Outer
+    SCF: 1.3
+    ThicknessCorrectionFactor: 1
+    AnalysisDataSNcurve: DNV 84 F, Seawater with CP
+LoadCases:
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_000_2500ft_WT0750_064pcf_Dr000_Hs00.25m_Tp02.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 57.94831730769229
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_001_2500ft_WT0750_064pcf_Dr000_Hs00.25m_Tp03.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 688.355769230769
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_002_2500ft_WT0750_064pcf_Dr000_Hs00.25m_Tp04.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 617.2373798076922
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_003_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp03.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 527.6808894230768
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_004_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp04.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 1648.8930288461534
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_005_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp05.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 1396.0276442307688
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_006_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp10.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 10.536057692307692
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_007_2500ft_WT0750_064pcf_Dr000_Hs01.25m_Tp04.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 218.6231971153846
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_008_2500ft_WT0750_064pcf_Dr000_Hs01.25m_Tp05.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 1086.0919471153843
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_009_2500ft_WT0750_064pcf_Dr000_Hs01.25m_Tp06.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 853.4206730769229
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_010_2500ft_WT0750_064pcf_Dr000_Hs01.75m_Tp06.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 696.2578125
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_011_2500ft_WT0750_064pcf_Dr000_Hs01.75m_Tp07.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 454.80649038461536
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_012_2500ft_WT0750_064pcf_Dr000_Hs02.25m_Tp10.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 26.34014423076923
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_013_2500ft_WT0750_064pcf_Dr000_Hs02.75m_Tp07.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 450.41646634615375
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_014_2500ft_WT0750_064pcf_Dr000_Hs03.25m_Tp13.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 4.3900240384615365
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_015_2500ft_WT0750_064pcf_Dr000_Hs04.75m_Tp09.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 23.706129807692307
+-
+  LoadCaseFileName: M:\0185\WaveFatigue\Rev2\lid02_016_2500ft_WT0750_064pcf_Dr000_Hs06.75m_Tp10.50s.sim
+  LoadCaseLineName: vertical
+  PeriodFrom: 100
+  PeriodTo: 3600
+  LoadCaseExposureTime: 5.268028846153844

@@ -1,0 +1,5 @@
+name: taperDesign
+channels:
+  - defaults
+dependencies:
+  - yaml

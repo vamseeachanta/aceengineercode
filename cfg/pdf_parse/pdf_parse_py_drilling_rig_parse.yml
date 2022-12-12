@@ -1,0 +1,15 @@
+default:
+  Constants:
+    g : 9.81
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+
+files:
+  from_pdf:
+    -
+      io: data_manager\data\posters\062614DrillRig-posterAds.pdf
+      page: 1
+      label: drilling_rigs
+      package: NULL

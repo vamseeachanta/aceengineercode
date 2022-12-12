@@ -1,0 +1,394 @@
+&id005 !!python/object/new:common.data.AttributeDict
+dictitems:
+  default:
+    Analysis:
+      GML:
+        Circumference: true
+        Length: false
+      LML: false
+      B31G: false
+    Units: inch
+    log_level: DEBUG
+    config:
+      overwrite:
+        output: true
+  ReadingSets:
+  - io: tests\data\518_north_for_analysis.xlsx
+    sheet_name: C-scans - scan 1
+    index_col: 0
+    skiprows: 71
+    skipfooter: 34
+    DataCorrectionFactor: 1.0
+    DataFill: true
+    Label: Area 1
+    Contour:
+      xlim: null
+      ylim: null
+      zlim:
+      - 0.675
+      - 0.9
+    FCARate: Historical
+    FCA:
+    - 0.0
+    - 0.04
+    - 0.08
+    - 0.12
+    - 0.16
+    - 0.2
+    - 0.24
+    - 0.28
+    - 0.32
+    - 0.36
+    - 0.4
+  API579Parameters:
+    RSFa: 0.9
+    Age: 15
+    FCARateFloor: 0.00118
+    FoliasFactor:
+      FlawParameter:
+      - 0.0
+      - 0.5
+      - 1.0
+      - 1.5
+      - 2.0
+      - 2.5
+      - 3.0
+      - 3.5
+      - 4.0
+      - 4.5
+      - 5.0
+      - 5.5
+      - 6.0
+      - 6.5
+      - 7.0
+      - 7.5
+      - 8.0
+      - 8.5
+      - 9.0
+      - 9.5
+      - 10.0
+      Mt:
+        Cylindrical:
+        - 1.001
+        - 1.056
+        - 1.199
+        - 1.394
+        - 1.618
+        - 1.857
+        - 2.103
+        - 2.351
+        - 2.6
+        - 2.847
+        - 3.091
+        - 3.331
+        - 3.568
+        - 3.801
+        - 4.032
+        - 4.262
+        - 4.492
+        - 4.727
+        - 4.97
+        - 5.225
+        - 5.497
+        Conical:
+        - 1.001
+        - 1.056
+        - 1.199
+        - 1.394
+        - 1.618
+        - 1.857
+        - 2.103
+        - 2.351
+        - 2.6
+        - 2.847
+        - 3.091
+        - 3.331
+        - 3.568
+        - 3.801
+        - 4.032
+        - 4.262
+        - 4.492
+        - 4.727
+        - 4.97
+        - 5.225
+        - 5.497
+        Spherical: []
+  Outer_Pipe:
+    Geometry: &id002
+      Nominal_ID: !!python/object/apply:numpy.core.multiarray.scalar
+      - &id001 !!python/object/apply:numpy.dtype
+        args:
+        - f8
+        - 0
+        - 1
+        state: !!python/tuple
+        - 3
+        - <
+        - null
+        - null
+        - null
+        - -1
+        - -1
+        - 0
+      - !!binary |
+        nlZETOE8FEA=
+      Nominal_OD: 6.625
+      Design_WT: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        erFDBFx/2D8=
+      Corrosion_Allowance: 0
+    Material:
+      Material: Steel
+      Material_Grade: API 5L X65
+      WeldFactor:
+        Seamless: 1.0
+      Insulation: null
+      Buoyancy: null
+      E: 30000000.0
+      Rho: 0.2817929
+      Poissionsratio: 0.3
+      ThermalExpansionCoefficient: 6.5e-06
+      Grades: &id003
+        API 5L X65:
+          SMYS: 65000
+          SMUS: 77500
+          Reference: null
+        API 5L X70:
+          SMYS: 70300
+          SMUS: null
+          Reference: null
+      SMYS: 65000
+      SMUS: 77500
+      Reference: null
+      G: 11538461.538461538
+    Code:
+    - API RP 1111-2009 Risers
+    Manufacturing:
+      Coupling Mass Ratio: 0.0
+    section_properties: &id004
+      pipe:
+        geometry: *id002
+        Ao: 34.47161626536613
+        Ai: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          QifO8ssaNEA=
+        Io: 94.56129891544283
+        Ii: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          MFRWWiAVQEA=
+        Jo: 189.12259783088567
+        Ji: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          MFRWWiAVUEA=
+        A: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          MLZLyt+7LEA=
+        I: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          ijk8SrgyT0A=
+        J: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          ijk8SrgyX0A=
+        MassPerUnitLength: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          7BpcjqoxEEA=
+        EI: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          2xkhHK/k20E=
+        EA: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          hxLE/KmwuUE=
+        GJ: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id001
+        - !!binary |
+          WXYZeNV01UE=
+        E: 30000000.0
+        SMYS: 65000
+        SMUS: 77500
+        PoissonRatio: 0.3
+  Inner_Pipe: null
+  Geometry:
+    NominalID: null
+    NominalOD: 6.625
+    DesignWT: 0.864
+    StartWTFactor: 1
+    tmin: 0.7619
+    AssessmentLengthCeilingFactor_Circumference: null
+    AssessmentLengthCeilingFactor_Length: 1.0
+    CorrosionAllowance: 0.0
+  Design:
+  - Load Condition:
+      Outer_Pipe: internal_pressure
+    InternalPressure:
+      Outer_Pipe: 10000
+    InternalFluid:
+      Outer_Pipe: 0.03703047
+    ExternalPressure:
+      Outer_Pipe: 0
+    ExternalFluid:
+      Outer_Pipe: 0.03703047
+    Temperature:
+      Ambient:
+        Outer_Pipe: 50
+      Operating:
+        Outer_Pipe: 82
+      Maximum: null
+    BendingMoment: 0
+    AxialForce: 0
+    Torsion: 0
+    Condition: Restrained
+    Code:
+    - Outer_Pipe: API RP 1111-2009 Risers
+    Material:
+      temperature_derating:
+        Outer_Pipe:
+          API RP 1111-2009 Risers: 1
+    mass:
+      pipe: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        YiiK1X9KSEA=
+      Coupling: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+      internal_fluid: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        BsSbgx7eIUA=
+      dry: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        ZBlxdgfCTEA=
+      buoyancy: 15.31800182359383
+      wet: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        suXMLVMZRUA=
+  Material:
+    Steel:
+      E: 30000000.0
+      Rho: 0.2817929
+      Poissionsratio: 0.3
+      ThermalExpansionCoefficient: 6.5e-06
+      Grades: *id003
+      G: 11538461.538461538
+  LML:
+    LTA:
+    - io: dataManager\API579\CT - Sample WT Profile (Simulated3).xlsx
+      sheet_name: Sheet1
+      index_col: 0
+      skiprows: 0
+      skipfooter: 0
+      DataCorrectionFactor: 1.0
+      Label: Feature 1
+      sIndex:
+      - 8
+      - 18
+      cIndex:
+      - 10
+      - 13
+      s: null
+      c: null
+      Contour:
+        xlim: null
+        ylim: null
+        zlim:
+        - 1.172
+        - 1.28
+      FCA:
+      - 0.0
+      - 0.04
+      - 0.08
+      - 0.12
+      - 0.16
+      - 0.2
+      - 0.24
+      - 0.28
+      - 0.32
+      - 0.36
+      - 0.4
+      - 0.44
+      Lmsd: 15
+      MtType: Cylindrical
+      FCAs: null
+      FCAc: null
+      FCANonFlawRatio: 0.25
+  PlotSettings:
+    Data:
+      PltSupTitle: Marco Polo, GC 518, 6 inch FFS
+      PltTitle: Measured WT
+      PltXLabel: Circumference (inch)
+      PltYLabel: Length (inch)
+    LML:
+      PltSupTitle: Marco Polo, GC 518, 6 inch FFS
+      PltTitle: Local Metal Loss, Levels 1 & 2
+      PltXLabel: Future Corrosion Allowance (inch)
+      PltYLabel: Maximum Allowable Working Pressure (psi)
+      ylim:
+      - 5000
+      - 12000
+    GML:
+      PltSupTitle: Marco Polo, GC 518, 6 inch FFS
+      PltTitle: General Metal Loss, Level 2
+      PltXLabel: Future Corrosion Allowance (inch)
+      PltYLabel: Maximum Allowable Working Pressure (psi)
+      ylim:
+      - 5000
+      - 12000
+  DesignFactors:
+    API RP 1111-2009 Risers:
+      internal_pressure:
+        Fd: 0.6
+      collapse_propagation:
+        Fp: 0.8
+      D_over_T_Trasition_Ratio: 15
+  cfg_variations:
+    pre_analysis: null
+    post_analysis: null
+  Analysis:
+    file_name: app_API579_API579_py_6in_GC_518_Code_API1111_2009
+    file_name_for_overwrite: app_API579_API579_py_6in_GC_518_Code_API1111_2009
+    result_folder: tests\cfg\results\
+    log_folder: tests\cfg\logs\
+    start_time: 2019-11-19 15:28:50.055138
+    cfg_array_file_names: null
+  Result:
+    Circumference: []
+    Outer_Pipe:
+      internal_pressure:
+        API RP 1111-2009 Risers:
+          thickness:
+            Zero Corrosion Allowance: !!python/object/apply:numpy.core.multiarray.scalar
+            - *id001
+            - !!binary |
+              erFDBFx/2D8=
+            With Corrosion Allowance: !!python/object/apply:numpy.core.multiarray.scalar
+            - *id001
+            - !!binary |
+              erFDBFx/2D8=
+          Design_WT_Max_Pressure:
+            Zero Corrosion Allowance: !!python/object/apply:numpy.core.multiarray.scalar
+            - *id001
+            - !!binary |
+              IMLvKJNuskA=
+            With Corrosion Allowance: !!python/object/apply:numpy.core.multiarray.scalar
+            - *id001
+            - !!binary |
+              IMLvKJNuskA=
+          minimum_thickness:
+            Zero Corrosion Allowance: 0.7619321449108682
+            With Corrosion Allowance: 0.7619321449108682
+  equivalent_pipe:
+    section_properties: *id004
+state: *id005

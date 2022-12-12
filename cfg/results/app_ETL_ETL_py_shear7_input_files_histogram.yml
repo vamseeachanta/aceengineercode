@@ -1,0 +1,261 @@
+default:
+  Analysis:
+    Analyze :
+      flag: False
+      file_type: yaml
+      simulation: False
+      statics: False
+    Summary:
+      flag: False
+      AddMinimumToSummary: True
+      AddMaximumToSummary: True
+      AddMeanToSummary: True
+    RangeGraph:
+      flag: False
+      add_effective_tension_to_cfg: False
+    time_series:
+      flag: True
+      histogram: True
+      summation: True
+  rain_flow: 
+    bins: 1000
+    range:
+      - 0
+      - 1000000
+
+  log_level: DEBUG
+
+  config:
+    overwrite:
+      output: True
+
+PostProcessUnits:
+    System : US
+    Effective Tension:
+        US: 1
+        SI: 1
+    Bend Moment:
+        US: 1
+        SI: 1
+    API STD 2RD Method 1:
+        US: 1
+        SI: 1
+
+Files:
+-
+  Label: Dr000_Hs00.25m,Tp02.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_000_2500ft_WT0750_064pcf_Dr000_Hs00.25m_Tp02.50s.dat
+  ObjectName: vertical
+  probability: 0.6610576923076922
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs00.25m,Tp03.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_001_2500ft_WT0750_064pcf_Dr000_Hs00.25m_Tp03.50s.dat
+  ObjectName: vertical
+  probability: 7.852564102564101
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs00.25m,Tp04.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_002_2500ft_WT0750_064pcf_Dr000_Hs00.25m_Tp04.50s.dat
+  ObjectName: vertical
+  probability: 7.041266025641024
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs00.75m,Tp03.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_003_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp03.50s.dat
+  ObjectName: vertical
+  probability: 6.019631410256409
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs00.75m,Tp04.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_004_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp04.50s.dat
+  ObjectName: vertical
+  probability: 18.81009615384615
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs00.75m,Tp05.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_005_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp05.50s.dat
+  ObjectName: vertical
+  probability: 15.925480769230765
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs00.75m,Tp10.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_006_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp10.50s.dat
+  ObjectName: vertical
+  probability: 0.12019230769230768
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs01.25m,Tp04.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_007_2500ft_WT0750_064pcf_Dr000_Hs01.25m_Tp04.50s.dat
+  ObjectName: vertical
+  probability: 2.4939903846153846
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs01.25m,Tp05.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_008_2500ft_WT0750_064pcf_Dr000_Hs01.25m_Tp05.50s.dat
+  ObjectName: vertical
+  probability: 12.389823717948715
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs01.25m,Tp06.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_009_2500ft_WT0750_064pcf_Dr000_Hs01.25m_Tp06.50s.dat
+  ObjectName: vertical
+  probability: 9.735576923076922
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs01.75m,Tp06.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_010_2500ft_WT0750_064pcf_Dr000_Hs01.75m_Tp06.50s.dat
+  ObjectName: vertical
+  probability: 7.942708333333333
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs01.75m,Tp07.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_011_2500ft_WT0750_064pcf_Dr000_Hs01.75m_Tp07.50s.dat
+  ObjectName: vertical
+  probability: 5.188301282051282
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs02.25m,Tp10.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_012_2500ft_WT0750_064pcf_Dr000_Hs02.25m_Tp10.50s.dat
+  ObjectName: vertical
+  probability: 0.3004807692307692
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs02.75m,Tp07.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_013_2500ft_WT0750_064pcf_Dr000_Hs02.75m_Tp07.50s.dat
+  ObjectName: vertical
+  probability: 5.138221153846153
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs03.25m,Tp13.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_014_2500ft_WT0750_064pcf_Dr000_Hs03.25m_Tp13.50s.dat
+  ObjectName: vertical
+  probability: 0.05008012820512819
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs04.75m,Tp09.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_015_2500ft_WT0750_064pcf_Dr000_Hs04.75m_Tp09.50s.dat
+  ObjectName: vertical
+  probability: 0.2704326923076923
+  simulation_duration: 3500
+ 
+-
+  Label: Dr000_Hs06.75m,Tp10.50s
+  Name: M:\0185\WaveFatigue\Rev2\lid02_016_2500ft_WT0750_064pcf_Dr000_Hs06.75m_Tp10.50s.dat
+  ObjectName: vertical
+  probability: 0.06009615384615383
+  simulation_duration: 3500
+ 
+
+PlotSettings:
+  Name: Buoyancy Element Hydrodynamic Coefficients
+  SupTitle: Buoyancy Element Hydrodynamic Coefficients
+  Title: SLWR Configuration Development
+
+RangeGraph:
+-
+  Command: Range Graph
+  AdditionalData:
+    - ArcLength 7.4; Outer; Theta 180
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 0
+    - 7000
+  Variable: Effective Tension
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  Title: Effective Tension at Top of Riser
+  Subtitle: All Riser
+  FileName: Effective_Tension
+  axhline: NULL
+
+time_series:
+-
+  AdditionalData: NULL
+  SimulationPeriod: SpecifiedPeriod(100.0, 3600.0)
+  ArcLength:
+    - 25
+  RadialPos: Outer
+  Theta: 0
+  Variable: ZZ Stress
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  Title: Effective Tension at Top of Riser
+  Subtitle: All Riser
+  Label: Histogram, al 255, rp Outer Tehta 0
+  axhline: NULL
+-
+  AdditionalData: NULL
+  SimulationPeriod: SpecifiedPeriod(100.0, 3600.0)
+  ArcLength:
+    - 25
+  RadialPos: Inner
+  Theta: 0
+  Variable: ZZ Stress
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  Title: Effective Tension at Top of Riser
+  Subtitle: All Riser
+  Label: Histogram, al 255, rp Outer Tehta 22.5
+  axhline: NULL
+-
+  AdditionalData: NULL
+  SimulationPeriod: SpecifiedPeriod(100.0, 3600.0)
+  ArcLength:
+    - 35
+  RadialPos: Outer
+  Theta: 0
+  Variable: ZZ Stress
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  Title: Effective Tension at Top of Riser
+  Subtitle: All Riser
+  Label: Histogram, al 255, rp Outer Tehta 0
+  axhline: NULL
+-
+  AdditionalData: NULL
+  SimulationPeriod: SpecifiedPeriod(100.0, 3600.0)
+  ArcLength:
+    - 35
+  RadialPos: Inner
+  Theta: 0
+  Variable: ZZ Stress
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  Title: Effective Tension at Top of Riser
+  Subtitle: All Riser
+  Label: Histogram, al 255, rp Outer Tehta 22.5
+  axhline: NULL
+
+
+Summary:
+-
+  SummaryFileName: Table_Top
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData:
+        - Max
+      SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 50
+      Variable: Effective Tension
+      Label: Eff. Tension
+

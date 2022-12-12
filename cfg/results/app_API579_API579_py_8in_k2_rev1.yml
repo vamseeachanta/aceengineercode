@@ -1,0 +1,363 @@
+default:
+  Analysis:
+    GML:
+      Circumference: true
+      Length: false
+    LML: false
+    B31G: false
+  Units: inch
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: true
+ReadingSets:
+- io: tests\data\K2 West_Rev1.xlsx
+  sheet_name: C-scans - p1.1
+  index_col: 0
+  skiprows: 71
+  skipfooter: 34
+  DataCorrectionFactor: 1.0
+  DataFill: true
+  Label: Feature P1.1
+  Contour:
+    xlim: null
+    ylim: null
+    zlim:
+    - 1.0
+    - 1.5
+  FCARate: Historical
+  FCA:
+  - 0.0
+  - 0.04
+  - 0.08
+  - 0.12
+  - 0.16
+  - 0.2
+  - 0.24
+  - 0.28
+  - 0.32
+  - 0.36
+  - 0.4
+API579Parameters:
+  RSFa: 0.9
+  Age: 15
+  FCARateFloor: 0.00118
+  FoliasFactor:
+    FlawParameter:
+    - 0.0
+    - 0.5
+    - 1.0
+    - 1.5
+    - 2.0
+    - 2.5
+    - 3.0
+    - 3.5
+    - 4.0
+    - 4.5
+    - 5.0
+    - 5.5
+    - 6.0
+    - 6.5
+    - 7.0
+    - 7.5
+    - 8.0
+    - 8.5
+    - 9.0
+    - 9.5
+    - 10.0
+    Mt:
+      Cylindrical:
+      - 1.001
+      - 1.056
+      - 1.199
+      - 1.394
+      - 1.618
+      - 1.857
+      - 2.103
+      - 2.351
+      - 2.6
+      - 2.847
+      - 3.091
+      - 3.331
+      - 3.568
+      - 3.801
+      - 4.032
+      - 4.262
+      - 4.492
+      - 4.727
+      - 4.97
+      - 5.225
+      - 5.497
+      Conical:
+      - 1.001
+      - 1.056
+      - 1.199
+      - 1.394
+      - 1.618
+      - 1.857
+      - 2.103
+      - 2.351
+      - 2.6
+      - 2.847
+      - 3.091
+      - 3.331
+      - 3.568
+      - 3.801
+      - 4.032
+      - 4.262
+      - 4.492
+      - 4.727
+      - 4.97
+      - 5.225
+      - 5.497
+      Spherical: []
+Geometry:
+  NominalID: null
+  NominalOD: 8.625
+  DesignWT: 1.5
+  StartWTFactor: 1
+  tmin: 1.247
+  AssessmentLengthCeilingFactor_Circumference: null
+  AssessmentLengthCeilingFactor_Length: 1.0
+  CorrosionAllowance: 0.0
+Design:
+- Load Condition:
+    Outer_Pipe: internal_pressure
+  InternalPressure:
+    Outer_Pipe: 10134
+  InternalFluid:
+    Outer_Pipe: 0.03703047
+  ExternalPressure:
+    Outer_Pipe: 0
+  ExternalFluid:
+    Outer_Pipe: 0.03703047
+  Temperature:
+    Ambient:
+      Outer_Pipe: 50
+    Operating:
+      Outer_Pipe: 82
+    Maximum: null
+  BendingMoment: 0
+  AxialForce: 0
+  Torsion: 0
+  Condition: Restrained
+  Code:
+  - Outer_Pipe: API RP 1111-2009 Risers
+  Material:
+    temperature_derating:
+      Outer_Pipe:
+        API RP 1111-2009 Risers: 1
+  mass:
+    pipe: !!python/object/apply:numpy.core.multiarray.scalar
+    - &id001 !!python/object/apply:numpy.dtype
+      args:
+      - f8
+      - 0
+      - 1
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 0
+    - !!binary |
+      aGCBO7r1VEA=
+    Coupling: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      AAAAAAAAAAA=
+    internal_fluid: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ElwHivjjLUA=
+    dry: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      6kvCTDmyWEA=
+    buoyancy: 25.96262252834825
+    wet: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      aOI8sZ00UkA=
+Material:
+  E: 30000000.0
+  rho: 7800
+  Poissionsratio: 0.3
+  SMYS: 70000
+  SMUS: null
+  ThermalExpansionCoefficient: 6.5e-06
+  WeldFactor:
+    Seamless: 1.0
+  Steel:
+    E: 30000000.0
+    Rho: 0.2817929
+    Poissionsratio: 0.3
+    ThermalExpansionCoefficient: 6.5e-06
+    Grades:
+      ASTM A106 Grade C:
+        SMYS: 40000
+        SMUS: 70000
+        Reference: https://www.amerpipe.com/steel-pipe-products/carbon-pipe/a106/a106-specifications/
+DesignFactors:
+  Pressure: 0.72
+  Longitudinal: 0.9
+  EquivalentStress: 0.9
+  Logitudinal: 0.9
+  TemperatureDerating: 1.0
+  API RP 1111-2009 Risers:
+    internal_pressure:
+      Fd: 0.6
+    collapse_propagation:
+      Fp: 0.8
+    D_over_T_Trasition_Ratio: 15
+LML:
+  LTA:
+  - io: dataManager\API579\CT - Sample WT Profile (Simulated3).xlsx
+    sheet_name: Sheet1
+    index_col: 0
+    skiprows: 0
+    skipfooter: 0
+    DataCorrectionFactor: 1.0
+    Label: Feature 1
+    sIndex:
+    - 8
+    - 18
+    cIndex:
+    - 10
+    - 13
+    s: null
+    c: null
+    Contour:
+      xlim: null
+      ylim: null
+      zlim:
+      - 1.172
+      - 1.28
+    FCA:
+    - 0.0
+    - 0.04
+    - 0.08
+    - 0.12
+    - 0.16
+    - 0.2
+    - 0.24
+    - 0.28
+    - 0.32
+    - 0.36
+    - 0.4
+    - 0.44
+    Lmsd: 15
+    MtType: Cylindrical
+    FCAs: null
+    FCAc: null
+    FCANonFlawRatio: 0.25
+PlotSettings:
+  Data:
+    PltSupTitle: Marco Polo, K2 West, 8 inch FFS
+    PltTitle: Measured WT
+    PltXLabel: Circumference (inch)
+    PltYLabel: Length (inch)
+  LML:
+    PltSupTitle: Marco Polo, K2 West, 8 inch FFS
+    PltTitle: Local Metal Loss, Levels 1 & 2
+    PltXLabel: Future Corrosion Allowance (inch)
+    PltYLabel: Maximum Allowable Working Pressure (psi)
+    ylim:
+    - 5000
+    - 12000
+  GML:
+    PltSupTitle: Marco Polo, K2 West, 8 inch FFS
+    PltTitle: General Metal Loss, Level 2
+    PltXLabel: Future Corrosion Allowance (inch)
+    PltYLabel: Maximum Allowable Working Pressure (psi)
+    ylim:
+    - 5000
+    - 12000
+Outer_Pipe:
+  Geometry:
+    Nominal_ID: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      OM+agPMsGkA=
+    Nominal_OD: 8.625
+    Design_WT: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      U/bHMGV/5D8=
+    Corrosion_Allowance: 0.0
+  Material:
+    Material: Steel
+    Material_Grade: ASTM A106 Grade C
+    WeldFactor:
+      Seamless: 1.0
+    Insulation: null
+    Buoyancy: null
+    SMYS: 40000
+    SMUS: 70000
+    Reference: https://www.amerpipe.com/steel-pipe-products/carbon-pipe/a106/a106-specifications/
+  Code:
+  - API RP 1111-2009 Risers
+  Manufacturing:
+    Coupling Mass Ratio: 0.0
+  section_properties:
+    pipe:
+      Ao: 58.4262602489883
+      Ai: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        JvaDNv/QQEA=
+      Io: 271.64787602093094
+      Ii: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        5N3CKfmAVkA=
+      Jo: 543.2957520418619
+      Ji: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        5N3CKfmAZkA=
+      A: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        CBE99yDLOEA=
+      I: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        aMmc0T60ZkA=
+      J: !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        aMmc0T60dkA=
+Inner_Pipe: null
+cfg_variations:
+  pre_analysis: null
+  post_analysis: null
+Analysis:
+  file_name: app_API579_API579_py_8in_k2_rev1
+  file_name_for_overwrite: app_API579_API579_py_8in_k2_rev1
+  result_folder: tests\cfg\results\
+  log_folder: tests\cfg\logs\
+  start_time: 2019-05-08 18:23:49.369957
+Result:
+  Circumference: []
+  Outer_Pipe:
+    internal_pressure:
+      API RP 1111-2009 Risers:
+        thickness:
+          Zero Corrosion Allowance: !!python/object/apply:numpy.core.multiarray.scalar
+          - *id001
+          - !!binary |
+            U/bHMGV/5D8=
+          With Corrosion Allowance: !!python/object/apply:numpy.core.multiarray.scalar
+          - *id001
+          - !!binary |
+            U/bHMGV/5D8=
+        Design_WT_Max_Pressure:
+          Zero Corrosion Allowance: 4775.618862780761
+          With Corrosion Allowance: 4775.618862780761
+        minimum_thickness:
+          Zero Corrosion Allowance: 1.246708846673552
+          With Corrosion Allowance: 1.246708846673552

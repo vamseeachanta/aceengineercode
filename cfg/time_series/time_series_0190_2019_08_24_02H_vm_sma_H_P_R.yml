@@ -1,0 +1,198 @@
+---
+parameters:
+  start_datetime: &start_datetime "2019-08-24 02:00:00"
+  end_datetime: &end_datetime "2019-08-24 04:00:00"
+  start_datetime_range1: &start_datetime_range1 "2019-08-24 02:37:30"
+  end_datetime_range1: &end_datetime_range1 "2019-08-24 02:39:30"
+  start_datetime_range2: &start_datetime_range2 "2019-08-24 03:15:00"
+  end_datetime_range2: &end_datetime_range2 "2019-08-24 03:17:00"
+  start_datetime_range3: &start_datetime_range3 "2019-06-06 16:15:00"
+  end_datetime_range3: &end_datetime_range3 "2019-06-06 16:15:30"
+
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+  analysis:
+    db:
+      simple: False
+      table_statistics:
+        flag: False
+        statistics: [min, max, count, avg]
+        statistics_df_columns: [RiserId, SchemaName, TableName, ColumnName, ColumnDataType, StatisticsClassId, StartTime, EndTime, TableRows, Minimum, Maximum, Average, RMS, StandardDeviation]
+        schema: XOM
+#        tables: All
+        tables: [BD_TENSIONERS, BD_CALCULATEDDATAROOT, BD_RMSAS_VIVMONITOR, BD_RMSOUTPUT]
+      timeline_statistics:
+        flag: False
+        schema: XOM
+        time_interval_in_hours: 1
+        sets: []
+    run_example: False
+
+    statistics:
+      flag: True
+    moving_average:
+      flag: False
+      settings:
+        by_data_points:
+          code: sma_5
+          flag: True
+          window_size: 5
+    filter:
+      flag: False
+      type: value
+      range: [-sigma, sigma]
+      sigma_range: [-5, 5]
+
+    fft:
+      flag: False
+      filter:
+        low_pass:
+          flag: False
+          frequency_maximum:
+        high_pass:
+          flag: False
+          frequency_minimum:
+        band_pass:
+          flag: False
+          frequency_minimum:
+          frequency_maximum:
+      ifft: True
+
+  units:
+    theta: degrees
+    time: s
+
+  data_source: db
+
+  db:
+    dev:
+        server_type: mssql
+        server: guyanariser.database.windows.net
+        user: GuyanaRiserUser
+        password: M@ry12345
+        database: GuyanaRiser
+        pd_parse_dates_columns: [TIMESTAMP]
+
+  input_data:
+    source: db
+    save_data_to_xlsx: False
+    sets:
+      -
+        label: vm
+        schema: XOM
+        query:
+          filename: get_time_window_records_from_table.sql
+          arguments: [XOM.BD_VESSEL, TIMESTAMP, *start_datetime, *end_datetime]
+
+plot_settings: []
+plot_multiple:
+
+  -
+    file_name_extension: NULL
+    nrows: 2
+    ncols: 1
+    suptitle: *start_datetime
+    sets:
+
+    -
+      title: Heave
+      xlabel: Date Time
+      ylabel: Heave (ft)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+#      ylim: [0, 500]
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_vm
+          label: [Heave]
+          x: [TIMESTAMP]
+          y: [HEAVE]
+          scale:
+            columns: [HEAVE]
+            factors: [3.281]
+          plt_kind: line
+          marker: NULL
+
+    -
+      title: Pitch and Roll
+      xlabel: Date Time
+      ylabel: Angle (deg)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_vm
+          label: [Pitch, Roll]
+          x: [TIMESTAMP]
+          y: [PITCH, ROLL]
+          scale:
+            columns: [PITCH, ROLL]
+            factors: [57.3, 57.3]
+          plt_kind: line
+          marker: NULL
+
+
+  -
+    file_name_extension: range_1
+    nrows: 2
+    ncols: 1
+    suptitle: *start_datetime
+    sets:
+
+    -
+      title: Heave
+      xlabel: Date Time
+      ylabel: Heave (ft)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+#      ylim: [0, 500]
+      xlim: [*start_datetime_range1, *end_datetime_range1]
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_vm
+          label: [Heave]
+          x: [TIMESTAMP]
+          y: [HEAVE]
+          scale:
+            columns: [HEAVE]
+            factors: [3.281]
+          plt_kind: line
+          marker: NULL
+
+    -
+      title: Pitch and Roll
+      xlabel: Date Time
+      ylabel: Angle (deg)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+      xlim: [*start_datetime_range1, *end_datetime_range1]
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_vm
+          label: [Pitch, Roll]
+          x: [TIMESTAMP]
+          y: [PITCH, ROLL]
+          scale:
+            columns: [PITCH, ROLL]
+            factors: [57.3, 57.3]
+          plt_kind: line
+          marker: NULL

@@ -1,0 +1,18 @@
+default:
+  Constants:
+    g : 9.81
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+
+files:
+  from_pdf:
+    -
+      io: data_manager\data\ASME31G.pdf
+      page: 44
+      label: ASME31G, page 44
+    -
+      io: data_manager\data\ASME31G.pdf
+      page: 45
+      label: ASME31G, page 45

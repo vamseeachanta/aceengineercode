@@ -1,0 +1,66 @@
+default:
+  logLevel: DEBUG
+
+ymlFiles:
+  - 
+    io: results\Summary_B31.yml
+    Label: B31
+
+
+dataFrame:
+  label: ASMESummary
+  columns:
+    - FileName
+    - Nominal OD (inch)
+    - MAOP
+    - Minimum Wall Thickness (inch)
+    - D/tMinimum Ratio
+    - StressEquivalent
+    - StressLogitudinal
+
+  data:
+  -
+    L1: Geometry
+    L2: NominalOD
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: Design
+    L2: InternalPressure
+    L3: NULL
+    L4: NULL
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB314
+    L3: InternalPressure
+    L4: MinimumWallThickness_Pressure
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB314
+    L3: InternalPressure
+    L4: D/TMin
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB314
+    L3: EquivalentStress
+    L4: Stress_Equivalent
+    L5: NULL
+  -
+    L1: Result
+    L2: ASMEB314
+    L3: LogitudinalStress
+    L4: Stress_Logitudinal
+    L5: NULL
+
+PlotSettings:
+  Data:
+    PltSupTitle: B31
+    PltTitle: Measured Wall Thickness
+    PltXLabel: D/tMinimum Ratio
+    PltYLabel: MAOP
+ 
+ 

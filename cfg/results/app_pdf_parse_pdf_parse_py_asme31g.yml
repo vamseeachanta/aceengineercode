@@ -1,0 +1,27 @@
+&id001 !!python/object/new:common.data.AttributeDict
+dictitems:
+  Analysis:
+    cfg_array_file_names: null
+    file_name: app_pdf_parse_pdf_parse_py_asme31g
+    file_name_for_overwrite: app_pdf_parse_pdf_parse_py_asme31g
+    log_folder: C:\Users\achantv\Documents\Utilities\aceengineer\tests\cfg\logs\
+    result_folder: C:\Users\achantv\Documents\Utilities\aceengineer\tests\cfg\results\
+    start_time: 2019-09-06 10:29:11.358006
+  cfg_variations:
+    post_analysis: null
+    pre_analysis: null
+  default:
+    Constants:
+      g: 9.81
+    config:
+      overwrite:
+        output: true
+    log_level: DEBUG
+  files:
+    from_pdf:
+    - io: data_manager\data\ASME31G.pdf
+      label: ASME31G
+      page:
+      - 26
+      save: true
+state: *id001

@@ -1,0 +1,358 @@
+BuoyPipe:
+  BuoyancySection: &id001
+    A: 1399.9761168201217
+    Ai: 314.1592653589793
+    Ao: 1714.135382179101
+    I: 225965.3285398669
+    ID: 20
+    OD: 46.71728752421477
+  InsulationSection: &id002
+    A: 160.22122533307945
+    Ai: 153.93804002589985
+    Ao: 314.1592653589793
+    I: 5968.240643657209
+    ID: 14
+    OD: 20
+  SteelSection: &id003
+    A: 60.62488423264903
+    Ai: 93.31315579325083
+    Ao: 153.93804002589985
+    I: 1192.832487830015
+    ID: 10.9
+    OD: 14
+  equivalentPipe: &id004
+    massPerUnitLength: 921.8142408408132
+    weightPerUnitLength: -2077.018638988269
+BuoyancySection: *id001
+FEASettings:
+  DesignPressure:
+    Surface: 750
+    TDP: null
+  FlexJointStiffness:
+  - - 0
+    - 0
+  - - 0.01
+    - 0.612714788
+  - - 0.02
+    - 0.938047993
+  - - 0.03
+    - 1.203460494
+  - - 0.04
+    - 1.436106019
+  - - 0.05
+    - 1.647197234
+  - - 0.06
+    - 1.842416513
+  - - 0.07
+    - 2.025510629
+  - - 0.08
+    - 2.198622569
+  - - 0.09
+    - 2.363701762
+  - - 0.1
+    - 2.521812787
+  - - 0.2
+    - 3.860696287
+  - - 0.3
+    - 4.953205313
+  - - 0.4
+    - 5.910775235
+  - - 0.5
+    - 6.779445725
+  - - 0.6
+    - 7.582858779
+  - - 0.7
+    - 8.336637469
+  - - 0.8
+    - 9.048662461
+  - - 0.9
+    - 9.728058735
+  - - 1
+    - 10.37897401
+  - - 1.5
+    - 13.31624992
+  - - 2
+    - 15.89129176
+  - - 3
+    - 20.38603594
+  - - 4
+    - 24.32775099
+  - - 6
+    - 31.20743324
+  - - 8
+    - 37.24098094
+  - - 10
+    - 42.72149952
+  - - 11.93
+    - 47.61844795
+  - - 22
+    - 87.81272882
+  Seabed:
+    FrictionCoefficient:
+      Axial: 0.45
+      Normal: 0.6
+    Stiffness:
+      Extreme: 10000
+      Fatigue: 1000
+FileName: 14OD_SE0500_HE0800
+InsulationSection: *id002
+LazyWaveCatenaryDefinition:
+  DiscreteBuoyancy:
+    BuoyancyCoverage: 50
+    BuoyancyFactor: null
+    Thickness: 62.96832463421832
+  HangoffBelowMeanSeaLevel: 0
+  HogBendAboveSeabed: 800
+  SagBendElevationAboveSeabed: 500
+  Spacing: 10
+  TDPToAnchor: 800
+  UniformBuoyancy:
+    BuoyancyFactor: 2
+    Thickness: 13.358643762107384
+  VerticalDistance: 4000
+  declinationAngle: 8
+MainPipe:
+  BuoyancySection: null
+  InsulationSection:
+    A: 160.22122533307945
+    Ai: 153.93804002589985
+    Ao: 314.1592653589793
+    I: 5968.240643657209
+    ID: 14
+    OD: 20
+  SteelSection:
+    A: 60.62488423264903
+    Ai: 93.31315579325083
+    Ao: 153.93804002589985
+    I: 1192.832487830015
+    ID: 10.9
+    OD: 14
+  equivalentPipe:
+    massPerUnitLength: 401.46778592421134
+    weightPerUnitLength: 1646.3462812384673
+Material:
+  Buoyancy:
+    Rho: 600
+  ExternalCoating:
+    Rho: 704.8
+  Fluid:
+    Rho: 400.4616
+  MarineGrowth:
+    Density: null
+  SeaWater:
+    Rho: 1025
+  Steel:
+    E: 30000000.0
+    G: 11538461.54
+    PoissionsRatio: 0.3
+    Rho: 7850
+    SMUS: 77600
+    SMYS: 65300
+  Strakes:
+    Density: null
+    MassPerUnitLength: 21.5787
+    WeightPerUnitLength: -42.3375
+SteelSection: *id003
+catenaryResult:
+  BendRadius: 646.6949446644049
+  Empty:
+    F: 7650068.942197826
+    Fh: 1064683.8172439593
+    Fv: 7575618.997130109
+    S: 4601.473628884037
+    q: 8
+    weightPerUnitLength: 1646.3462812384673
+  F: null
+  FluidFilled:
+    F: 8749035.19958904
+    Fh: 1217630.359135572
+    Fv: 8663890.190449059
+    S: 4601.473628884037
+    q: 8
+    weightPerUnitLength: 1882.851210113368
+  S: 4601.473628884037
+  SeaWaterFilled:
+    F: 10462923.94209294
+    Fh: 1456157.5701303869
+    Fv: 10361099.485526314
+    S: 4601.473628884037
+    q: 8
+    weightPerUnitLength: 2251.691592990639
+  X: 1720.4065239521278
+  d: 4000
+  q: 8
+default:
+  Analysis:
+    JumperAnalysis: false
+    SCRAnalysis: true
+    SLWRAnalysis: true
+  Constants:
+    g: 9.81
+  logLevel: DEBUG
+  units:
+    BendingMoment: kNm
+    BuoyancyCoverage: Percentage
+    E: psi
+    EffectiveTension: kN
+    MassPerUnitLength: kg/m
+    NominalID: inch
+    NominalOD: inch
+    NominalWT: inch
+    Pressure: psi
+    Rho: kg/m3
+    SoilStiffness: kN/m/m
+    Temperature: deg F
+    WeightPerUnitLength: N/m
+    YieldStrength: psi
+    declinationAngle: deg with vertical
+    verticalDistance: m
+equivalentPipe: *id004
+geometry:
+  CorrosionAllowance: 0.236
+  DesignWT: 1.55
+  ExternalCoating:
+    Thickness: 3
+  MarineGrowth:
+    Thickness: null
+  NominalID: 10.9
+  NominalOD: 14
+  Strakes:
+    Area: null
+    BaseThickness: 0.5906
+  waterDepth: 4000
+lazyWaveCatenaryResult:
+  BuoyancyToHog:
+    BendRadius: 565.8580765813543
+    S: 438.4716900489772
+    X: 403.4182551188839
+    d: 150.0
+  BuoyancyToTouchDown:
+    BendRadius: 565.8580765813543
+    S: 782.7429087925892
+    X: 638.4169325875577
+    d: 400.0
+  HangOff:
+    BendRadius: 565.8580765813543
+    F: null
+    S: 4026.2894252735327
+    X: 1505.3557084581118
+    d: 3500
+    q: 8
+  HogBendAboveSeabed: 800
+  HogToBuoyancy:
+    BendRadius: 565.8580765813543
+    S: 782.7429087925892
+    X: 638.4169325875577
+    d: 400.0
+  SagBendElevationAboveSeabed: 500
+  SagToBuoyancy:
+    BendRadius: 565.8580765813543
+    S: 438.4716900489772
+    X: 403.4182551188839
+    d: 150.0
+  Summary:
+    Buoyancy:
+      PlotData:
+        X:
+        - 1908.7739635769958
+        - 2012.95748234764
+        - 2117.1410011182843
+        - 2221.324519888928
+        - 2325.5080386595723
+        - 2429.6915574302166
+        - 2533.875076200861
+        - 2638.058594971505
+        - 2742.242113742149
+        - 2846.425632512793
+        - 2950.6091512834373
+        Y:
+        - -3350.0
+        - -3280.981115056052
+        - -3233.951247316897
+        - -3207.311636867821
+        - -3200.156681729125
+        - -3212.243152310397
+        - -3243.981922926293
+        - -3296.4519392903
+        - -3371.436896805355
+        - -3471.4858765138815
+        - -3600.0
+      S: 1221.2145988415664
+      X: 1041.8351877064415
+    BuoyancyToTouchDown:
+      PlotData:
+        X:
+        - 2950.6091512834373
+        - 3014.450844542193
+        - 3078.292537800949
+        - 3142.1342310597047
+        - 3205.9759243184603
+        - 3269.817617577216
+        - 3333.659310835972
+        - 3397.5010040947277
+        - 3461.3426973534833
+        - 3525.1843906122394
+        - 3589.026083870995
+        Y:
+        - -3600.0
+        - -3682.3449992949186
+        - -3753.4318398769174
+        - -3814.166345275093
+        - -3865.3224244656703
+        - -3907.551933401283
+        - -3941.3929812805236
+        - -3967.276787400346
+        - -3985.5331759646956
+        - -3996.394778866937
+        - -4000.0
+      S: 782.7429087925892
+      X: 638.4169325875577
+    Fh: 1065426.5642436258
+    Fv: 8646330.480886554
+    HangOffToBuoyancy:
+      PlotData:
+        X:
+        - 0.0
+        - 190.87739635769958
+        - 381.75479271539916
+        - 572.6321890730987
+        - 763.5095854307983
+        - 954.3869817884979
+        - 1145.2643781461975
+        - 1336.141774503897
+        - 1527.0191708615966
+        - 1717.8965672192965
+        - 1908.7739635769958
+        Y:
+        - -4.547473508864641e-13
+        - -1150.54375868947
+        - -1966.2041670762574
+        - -2540.676470504384
+        - -2939.950537869779
+        - -3209.8911449009793
+        - -3381.506479741045
+        - -3474.510066225758
+        - -3499.585264444635
+        - -3459.612472692128
+        - -3350.0
+      S: 4464.76111532251
+      X: 1908.7739635769958
+    HangoffToTDP:
+      S: 6468.718622956666
+      X: 3589.026083870995
+  WeightPerUnitLengthWithBuoyancy: -1882.851210113368
+  WeightPerUnitLengthWithOutBuoyancy: 1882.851210113368
+plotSettings:
+  label: Design Pressure Limit
+  plotFileName: OD_{0}
+  pltSupTitle: Design Pressure With Thickness
+  pltTitle: API STD 2RD, X-65, {2} of {0} inch, Corrosion Allowance {1} inch
+  pltXLabel: Thickness (inch)
+  pltYLabel: Pressure (psi)
+  yLim:
+  - 0
+  - 12500
+simpleCatenaryDefinition:
+  axialLineForce: null
+  declinationAngle: 8
+  verticalDistance: 4000

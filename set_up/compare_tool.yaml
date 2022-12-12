@@ -1,0 +1,20 @@
+name: compare_tool
+channels:
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.7
+  - pip
+  - pyyaml=3.13
+  - yaml
+  - xlrd
+  - matplotlib
+  - pandas
+  - pip:
+    - oyaml
+    - pyparsing
+
+#    - python-dateutil pytz --force-reinstall --upgrade
+# Additional batch file instructions below:
+# pip install python-dateutil pytz --force-reinstall --upgrade
+# https://stackoverflow.com/questions/42193030/dateutil-pytz-missing-dependencies-python

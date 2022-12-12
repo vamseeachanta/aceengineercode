@@ -1,0 +1,21 @@
+name: front_end
+channels:
+  - defaults
+  - anaconda
+dependencies:
+  - python=3.7
+  - pyyaml=3.13
+  - yaml
+  - matplotlib
+  - pandas
+  - psycopg2
+  - pymssql
+  - sqlalchemy
+  - pyodbc
+  - pip
+  - pip:
+    - oyaml
+    - pyparsing
+    - pdfkit
+    - jinja2
+    - html2text

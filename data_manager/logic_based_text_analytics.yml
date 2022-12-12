@@ -1,0 +1,43 @@
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: False
+
+files:
+  from_xlsx:
+    -
+      io: data_manager\data\BHA_PowerSections.xlsx
+      sheet_name: Data Set1
+      index_col: NULL
+      skiprows: 0
+      skipfooter: 0
+      label: BHA Power Section Data 1
+      column: Additional Description
+    -
+      io: data_manager\data\BHA_PowerSections.xlsx
+      sheet_name: Data Set2
+      index_col: NULL
+      skiprows: 0
+      skipfooter: 0
+      label: BHA Power Section Data 2
+      column: Additional Description
+
+Analysis:
+  input_df_columns: []
+  result_df_columns: ['text', 'OD', 'LOBE', 'STAGE', 'RPG' ]
+
+regular_expressions:
+  -
+    regex_find_first: \d+\"|\d.+\"
+    remove: ['"']
+  -
+    regex_find_first: \d+/+\d+ LOBE|\d+/+\d+
+    remove: [LOBE]
+  -
+    regex_find_first: \d+\.\d+ STAGE|\d+ STAGE
+    remove: [STAGE]
+  -
+    regex_find_first: \d+\.\d+ RPG|\d+\.\d+ REV/GAL|\d+\.\d+ REV
+    remove: [RPG, REV/GAL, REV]
+

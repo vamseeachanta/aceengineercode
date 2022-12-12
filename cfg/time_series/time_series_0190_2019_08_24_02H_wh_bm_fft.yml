@@ -1,0 +1,373 @@
+---
+parameters:
+  start_datetime: &start_datetime "2019-08-24 02:00:00"
+  end_datetime: &end_datetime "2019-08-24 04:00:00"
+  start_datetime_range1: &start_datetime_range1 "2019-08-24 02:37:30"
+  end_datetime_range1: &end_datetime_range1 "2019-08-24 02:39:30"
+  start_datetime_range2: &start_datetime_range2 "2019-08-24 03:15:00"
+  end_datetime_range2: &end_datetime_range2 "2019-08-24 03:17:00"
+  start_datetime_range3: &start_datetime_range3 "2019-08-24 03:15:30"
+  end_datetime_range3: &end_datetime_range3 "2019-08-24 03:15:50"
+
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+  analysis:
+    db:
+      simple: False
+      table_statistics:
+        flag: False
+        statistics: [min, max, count, avg]
+        statistics_df_columns: [RiserId, SchemaName, TableName, ColumnName, ColumnDataType, StatisticsClassId, StartTime, EndTime, TableRows, Minimum, Maximum, Average, RMS, StandardDeviation]
+        schema: XOM
+#        tables: All
+        tables: [BD_TENSIONERS, BD_CALCULATEDDATAROOT, BD_RMSAS_VIVMONITOR, BD_RMSOUTPUT]
+      timeline_statistics:
+        flag: False
+        schema: XOM
+        time_interval_in_hours: 1
+        sets: []
+    run_example: False
+
+    statistics:
+      flag: False
+    moving_average:
+      flag: False
+      settings:
+        by_data_points:
+          code: sma_5
+          flag: True
+          window_size: 5
+    filter:
+      flag: False
+      type: value
+      range: [-sigma, sigma]
+      sigma_range: [-5, 5]
+
+    fft:
+      flag: True
+      run_example: True
+      time_step: 1
+      window:
+        size: 1000
+        moving_average:
+          flag: True
+          window_size: 3
+      filter:
+        low_pass:
+          flag: False
+          frequency_maximum: 1
+        high_pass:
+          flag: False
+          frequency_minimum: 0.01
+        band_pass:
+          flag: True
+          frequency_minimum: 0.03
+          frequency_maximum: 1
+      ifft: True
+      peaks:
+        flag: True
+        solver: find_peaks
+        min_height_percentage: 30
+        min_distance_index_percentage: 10
+
+  units:
+    theta: degrees
+    time: s
+
+  data_source: db
+
+  db:
+    dev:
+        server_type: mssql
+        server: guyanariser.database.windows.net
+        user: GuyanaRiserUser
+        password: M@ry12345
+        database: GuyanaRiser
+        pd_parse_dates_columns: [TIMESTAMP]
+
+  input_data:
+    source: db
+    save_data_to_xlsx: False
+    sets:
+      -
+        label: bm
+        schema: XOM
+        query:
+          filename: get_time_window_records_from_table.sql
+          arguments: [XOM.BD_WHBENDINGMOMENT, TIMESTAMP, *start_datetime, *end_datetime]
+
+plot_settings: []
+plot_multiple:
+
+  -
+    file_name_extension: NULL
+    nrows: 2
+    ncols: 1
+    suptitle: *start_datetime
+    sets:
+
+    -
+      title: Wellhead Bending
+      xlabel: Date Time
+      ylabel: Bending Moment (ft-kips)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+#      ylim: [0, 500]
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_bm
+          label: [Magnitude]
+          x: [TIMESTAMP]
+          y: [MAGNITUDE]
+          scale:
+            columns: [MAGNITUDE]
+            factors: [0.000737562]
+          plt_kind: line
+          marker: NULL
+
+    -
+      title: Wellhead Bending Direction
+      xlabel: Date Time
+      ylabel: Angle (deg)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_bm
+          label: [Direction]
+          x: [TIMESTAMP]
+          y: [ORIENTATION]
+          scale:
+            columns: [ORIENTATION]
+            factors: [57.3]
+          plt_kind: line
+          marker: NULL
+
+  -
+    file_name_extension: range_1
+    nrows: 2
+    ncols: 1
+    suptitle: *start_datetime
+    sets:
+
+    -
+      title: Wellhead Bending
+      xlabel: Date Time
+      ylabel: Bending Moment (ft-kips)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+#      ylim: [0, 500]
+      xlim: [*start_datetime_range1, *end_datetime_range1]
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_bm
+          label: [Magnitude]
+          x: [TIMESTAMP]
+          y: [MAGNITUDE]
+          scale:
+            columns: [MAGNITUDE]
+            factors: [0.000737562]
+          plt_kind: line
+          marker:
+            type: 'o'
+            size: 3
+            edge_color: None
+
+    -
+      title: Wellhead Bending Direction
+      xlabel: Date Time
+      ylabel: Angle (deg)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+      xlim: [*start_datetime_range1, *end_datetime_range1]
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_bm
+          label: [Direction]
+          x: [TIMESTAMP]
+          y: [ORIENTATION]
+          scale:
+            columns: [ORIENTATION]
+            factors: [57.3]
+          plt_kind: line
+          marker:
+            type: 'o'
+            size: 3
+            edge_color: None
+
+  -
+    file_name_extension: range_2
+    nrows: 2
+    ncols: 1
+    suptitle: *start_datetime
+    sets:
+
+    -
+      title: Wellhead Bending
+      xlabel: Date Time
+      ylabel: Bending Moment (ft-kips)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+#      ylim: [0, 500]
+      xlim: [*start_datetime_range2, *end_datetime_range2]
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_bm
+          label: [Magnitude]
+          x: [TIMESTAMP]
+          y: [MAGNITUDE]
+          scale:
+            columns: [MAGNITUDE]
+            factors: [0.000737562]
+          plt_kind: line
+          marker:
+            type: 'o'
+            size: 3
+            edge_color: None
+
+    -
+      title: Wellhead Bending Direction
+      xlabel: Date Time
+      ylabel: Angle (deg)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+      xlim: [*start_datetime_range2, *end_datetime_range2]
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_bm
+          label: [Direction]
+          x: [TIMESTAMP]
+          y: [ORIENTATION]
+          scale:
+            columns: [ORIENTATION]
+            factors: [57.3]
+          plt_kind: line
+          marker:
+            type: 'o'
+            size: 3
+            edge_color: None
+
+  -
+    file_name_extension: range_3
+    nrows: 2
+    ncols: 1
+    suptitle: *start_datetime
+    sets:
+
+    -
+      title: Wellhead Bending
+      xlabel: Date Time
+      ylabel: Bending Moment (ft-kips)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+#      ylim: [0, 500]
+      xlim: [*start_datetime_range3, *end_datetime_range3]
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_bm
+          label: [Magnitude]
+          x: [TIMESTAMP]
+          y: [MAGNITUDE]
+          scale:
+            columns: [MAGNITUDE]
+            factors: [0.000737562]
+          plt_kind: line
+          marker:
+            type: 'o'
+            size: 3
+            edge_color: None
+
+    -
+      title: Wellhead Bending Direction
+      xlabel: Date Time
+      ylabel: Angle (deg)
+      xticklabels: NULL
+      autofmt:
+        xdate: True
+      xlim: [*start_datetime_range3, *end_datetime_range3]
+      grid: True
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: input_data_bm
+          label: [Direction]
+          x: [TIMESTAMP]
+          y: [ORIENTATION]
+          scale:
+            columns: [ORIENTATION]
+            factors: [57.3]
+          plt_kind: line
+          marker:
+            type: 'o'
+            size: 3
+            edge_color: None
+
+  -
+    file_name_extension: fft
+    nrows: 1
+    ncols: 1
+    suptitle: *start_datetime
+    sets:
+
+    -
+      title: WH Bending, PSD
+      xlabel: Frequency (Hz)
+      ylabel: Power Density
+#      ylim: [0, 1.5]
+      xlim: [0, 0.5]
+      xres: 0.1
+      xticklabels: NULL
+      grid: True
+      grid_minor:
+        x:
+          flag: True
+          step: 0.05
+        y:
+          flag: False
+          step: NULL
+      legend: True
+      legend_location: best
+      data:
+       -
+          df: output_average_fft_bm_MAGNITUDE
+          label: [NULL]
+          x: [fft_freq]
+          y: [power]
+          plt_kind: line
+          color: blue
+          marker:
+            type: 'o'
+            size: 3
+            edge_color: None

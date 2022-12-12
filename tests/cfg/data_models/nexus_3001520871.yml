@@ -1,0 +1,29 @@
+default:
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: True
+  analysis:
+    db:
+      simple: False
+    run_example: False
+  db_runs: False
+
+input_data:
+  source: csv
+  sets:
+    -
+      label: WellTest
+      df_columns: NULL
+      header: 'infer'
+      io: C:\Oxy\src\Nexus\Oxy.Cipher.WellTestValidation\tests\data\30015208710001.csv
+      output:
+        target: db
+        if_exists: 'append'
+
+db:
+  server_type: mssql
+  server: not added
+  user: not added
+  password: not added
+  database: not added

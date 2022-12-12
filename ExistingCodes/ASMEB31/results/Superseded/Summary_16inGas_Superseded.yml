@@ -1,0 +1,121 @@
+Default:
+  Constants:
+    g: 9.81
+  units:
+    verticalDistance: m
+    declinationAngle: deg with vertical
+    Temperature: deg F
+    Pressure: psi
+    EffectiveTension: kN
+    BendingMoment: kNm
+    YieldStrength: psi
+    E: psi
+    NominalID: inch
+    NominalOD: inch
+    NominalWT: inch
+    Rho: kg/m3
+    MassPerUnitLength: kg/m
+    WeightPerUnitLength: N/m
+    SoilStiffness: kN/m/m
+    BuoyancyCoverage: Percentage
+    ThermalExpansionCoefficient: in/in/deg F
+  logLevel: DEBUG
+  Analysis:
+    Code: ASME B31.8
+    Extreme: true
+    Fatigue: false
+Geometry:
+  NominalID: null
+  NominalOD: 16
+  DesignWT: 0.625
+  CorrosionAllowance: 0.0
+Design:
+  InternalPressure: 2220
+  ExternalPressure: 0
+  Temperature:
+    Ambient: 50
+    Operating: 90
+    Maximum: null
+  BendingMoment: 0
+  AxialForce: 0
+  Torsion: 0
+  Condition: Restrained
+Material:
+  E: 30000000.0
+  rho: 7800
+  Poissionsratio: 0.3
+  SMYS: 60000
+  SMUS: null
+  ThermalExpansionCoefficient: 6.5e-06
+  WeldFactor:
+    Seamless: 1.0
+DesignFactors:
+  Pressure: 0.5
+  Longitudinal: 0.9
+  EquivalentStress: 0.9
+  Logitudinal: 0.9
+Fatigue:
+  serviceLife: null
+  singleULSEvent: null
+  singleALSEvent: null
+FileName: 16inGas_Superseded
+Result:
+  TemperatureDerating: 1
+  ASMEB318:
+    InternalPressure:
+      S: 60000
+      t: 0.625
+      D: 16
+      Pi: 2220
+      Po: 0
+      F: 0.5
+      WeldFactor: 1.0
+      T: 1
+      MaximumDesignPressure: 2343.75
+      MinimumWallThickness: 0.570877531340405
+    LogitudinalStress:
+      S: 60000
+      t: 0.625
+      D: 16
+      Pi: 2220
+      Po: 0
+      M: 0
+      Fa: 0
+      F: 0.9
+      WeldFactor: 1.0
+      E: 30000000.0
+      Poissionsratio: 0.3
+      T: 1
+      Alpha: 6.5e-06
+      T1: 90
+      T2: 50
+      Condition: Restrained
+      MinimumWallThickness_Longitudinal: 0.08575153300178649
+      Stress_Elongation: -7800.0
+      Stress_Logitudinal: 54000.0
+      Stress_Hoop: 206000.0
+      Stress_Axial: 0
+      Stress_Moment: 0
+    EquivalentStress:
+      S: 60000
+      t: 0.625
+      D: 16
+      Pi: 2220
+      Po: 0
+      M: 0
+      Fa: 0
+      F: 0.9
+      WeldFactor: 1.0
+      E: 30000000.0
+      Poissionsratio: 0.3
+      T: 1
+      Alpha: 6.5e-06
+      T1: 90
+      T2: 50
+      Condition: Restrained
+      MinimumWallThickness_Equivalent: 0.36193058700400427
+      Stress_Elongation: -7800.0
+      Stress_Hoop: 47960.18261986106
+      Stress_Axial: 0
+      Stress_Moment: 0
+      Stress_Equivalent: 54000.0

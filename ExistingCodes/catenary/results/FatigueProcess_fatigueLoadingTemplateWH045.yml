@@ -1,0 +1,496 @@
+Title: SLWR Fatigue Analysis
+DamageCalculation: Homogeneous pipe stress
+AnalysisType: Rainflow
+UnitsSystem: SI
+CriticalDamageFactor: 0.1
+ThetaCount: 16
+SNCurves:
+- SNcurveName: BS C Curve
+  SNcurveSpecificationMethod: Table
+  SNcurveTableN, SNcurveTableS:
+  - - 1337
+    - 1000000
+  - - 12050942
+    - 74130
+  - - 13365955165
+    - 10000
+  SNcurveEnduranceLimit: 0
+  SNcurveMeanStressModel: None
+- SNcurveName: BS D Curve
+  SNcurveSpecificationMethod: Table
+  SNcurveTableN, SNcurveTableS:
+  - - 1519
+    - 1000000
+  - - 3730079
+    - 74130
+  - - 1519497535
+    - 10000
+  SNcurveEnduranceLimit: 0
+  SNcurveMeanStressModel: None
+- SNcurveName: BS E Curve
+  SNcurveSpecificationMethod: Table
+  SNcurveTableN, SNcurveTableS:
+  - - 1035
+    - 1000000
+  - - 2541663
+    - 74130
+  - - 1035380544
+    - 10000
+  SNcurveEnduranceLimit: 0
+  SNcurveMeanStressModel: None
+LoadCases:
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=0.5 m, Tp=3 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.7889399999999999
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.0 m, Tp=3 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 15.866459999999998
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=0.5 m, Tp=5 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.1915
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.0 m, Tp=5 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 164.97611999999998
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.5 m, Tp=5 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 553.83588
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.0 m, Tp=5 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 99.66942
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.5 m, Tp=5 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.4544799999999998
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=0.5 m, Tp=7 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.1915
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.0 m, Tp=7 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 237.03264000000001
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.5 m, Tp=7 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 971.62344
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.0 m, Tp=7 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 1397.12508
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.5 m, Tp=7 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 725.73714
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.0 m, Tp=7 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 145.60326
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.5 m, Tp=7 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 8.06472
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.0 m, Tp=7 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.7889399999999999
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=0.5 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 5.87322
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.0 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 148.5837
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.5 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 353.62044
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.0 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 479.67552
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.5 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 452.23794
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.0 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 373.25628
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.5 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 202.58226
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.0 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 64.78074
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.5 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 17.18136
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=5.0 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 3.7693799999999995
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=5.5 m, Tp=9 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.52596
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=0.5 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.26298
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.0 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 87.83532
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.5 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 225.46152
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.0 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 254.73996
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.5 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 234.84113999999997
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.0 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 172.2519
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.5 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 100.19538
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.0 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 56.71602
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.5 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 43.30404
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=5.0 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 29.8044
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=5.5 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 12.886019999999998
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=6.0 m, Tp=11 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.98044
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=0.5 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.71746
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.0 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 50.49215999999999
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.5 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 174.09276
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.0 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 180.5796
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.5 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 145.34027999999998
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.0 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 104.49072
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.5 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 56.45304
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.0 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 33.83676
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.5 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 25.509059999999998
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=5.0 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 11.834100000000001
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=5.5 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 11.57112
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=6.0 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 4.8213
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=6.5 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 3.2434199999999995
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=7.0 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.7889399999999999
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=7.5 m, Tp=13 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.26298
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=0.5 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 1.5778799999999997
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.0 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 38.65806
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.5 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 65.04372
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.0 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 53.209619999999994
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.5 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 40.3236
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.0 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 25.246079999999996
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.5 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 17.970299999999998
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.0 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 8.3277
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.5 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 6.486839999999999
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=5.0 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 8.3277
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=5.5 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 7.80174
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=6.0 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.98044
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=6.5 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.1915
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=7.0 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 1.3149
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=7.5 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 1.5778799999999997
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=8.0 m, Tp=15 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 1.05192
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=0.5 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.52596
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.0 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 1.5778799999999997
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.5 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 4.29534
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.0 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.4544799999999998
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.5 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.4544799999999998
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.0 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 1.3149
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.5 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.1915
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.0 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 2.71746
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=4.5 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 1.5778799999999997
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=5.0 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.52596
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=5.5 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 4.03236
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=6.0 m, Tp=17 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 1.05192
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=1.5 m, Tp=19 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.26298
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.0 m, Tp=19 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.26298
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=2.5 m, Tp=19 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.7889399999999999
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.0 m, Tp=19 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.26298
+- LoadCaseFileName: SLWR_16OD_SE1200_HE1500_FatigueWH045_WH45 Hs=3.5 m, Tp=19 s.sim
+  LoadCaseLineName: SLWR
+  PeriodFrom: 20
+  PeriodTo: 600
+  LoadCaseExposureTime: 0.26298
+AnalysisData:
+- ArcLengthInterval:
+  - 0
+  - 9.144
+  RadialPosition: Outer
+  SCF: 1.1
+  ThicknessCorrectionFactor: 1
+  AnalysisDataSNcurve: BS C Curve
+- ArcLengthInterval:
+  - 9.144
+  - 7000
+  RadialPosition: Outer
+  SCF: 1.2
+  ThicknessCorrectionFactor: 1.12
+  AnalysisDataSNcurve: BS D Curve
+- ArcLengthInterval:
+  - 9.144
+  - 7000
+  RadialPosition: Inner
+  SCF: 1.2
+  ThicknessCorrectionFactor: 1.12
+  AnalysisDataSNcurve: BS E Curve
+OutputLoadCaseTables: true
+OutputDetailedLoadCaseTables: false
+LoadCaseDamageUnits: Damage per year

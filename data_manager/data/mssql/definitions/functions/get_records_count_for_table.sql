@@ -1,0 +1,1 @@
+SELECT * FROM [XOM].[TableStatistics] WHERE TableName='{0}' and ColumnName='{1}' and StatisticsClassID={2}

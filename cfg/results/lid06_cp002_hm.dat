@@ -1,0 +1,188 @@
+{"depth_below_msl": [0, 1652.9304], "shielding": [[0, 53.64]], "shielding_factor": 0, "shear7_x_by_L": [0.977, 0], "water_depth": 1652.9304}
+OrcaFlex 10.0e: Reference_TTR_Model_VA_Metric.sim (modified 9:03 PM on 9/22/2019 by OrcaFlex 10.0e).
+*** BLOCK 1. unit system ***
+0  Unit system, 0=SI, 1=US
+*** BLOCK 2. structural and hydrodynamic data ***
+999  Structural model type, .mds file is used to import the modal response
+1683.5628  Total cylinder length
+1105.0		number of elements
+1025  Fluid density
+1.35E-6  Kinematic viscosity
+0.003  Structural damping ratio
+1382476  Effective tension at x/L=0
+18  Number of Zones
+0  0.0011043722  zone start, finish (x/L) - Conductor 1.86 m
+0.9144  0.9144  0.8382  Diameter, stress OD and stress ID
+0.010087034  1473.0452  207776.39  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.0011043722  0.0018104463  zone start, finish (x/L) - Tieback Connector
+0.6858  0.6858  0.47625  Diameter, stress OD and stress ID 1.2 m
+0.0083329678  1711.0493  10587.462  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.0018104463  0.003960351225  zone start, finish (x/L) - Well Stress Joint 14.5 m, -Div1
+0.425  0.425  0.2159  Diameter, stress OD and stress ID
+0.001495  826  7052  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.003960351225  0.00611025615  zone start, finish (x/L) - Well Stress Joint 14.5 m, -Div2
+0.39975  0.39975  0.2159  Diameter, stress OD and stress ID
+0.001147  698  5956  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.00611025615  0.008260161075  zone start, finish (x/L) - Well Stress Joint 14.5 m, -Div3
+0.3745  0.3745  0.2159  Diameter, stress OD and stress ID
+0.000859  577  4927  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.008260161075  0.010410066  zone start, finish (x/L) - Well Stress Joint 14.5 m, -Div4
+0.34925  0.34925  0.2159  Diameter, stress OD and stress ID
+0.000624  465  3966  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.010410066  0.88322622  zone start, finish (x/L) - Composite_Pipe 1469.4 m
+0.32385  0.32385  0.298704  Diameter, stress OD and stress ID
+0.00020914451  262.50498  1746.8161  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.88322622  0.88458405375  zone start, finish (x/L) - Well Stress Joint 14.5 m, -Div1
+0.324  0.324  0.217678  Diameter, stress OD and stress ID
+0.000431  355  3030  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.88458405375  0.8859418875  zone start, finish (x/L) - Well Stress Joint 14.5 m, -Div2
+0.4462  0.4462  0.217678  Diameter, stress OD and stress ID
+0.001836  935  7983  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.8859418875  0.88729972125  zone start, finish (x/L) - Well Stress Joint 14.5 m, -Div3
+0.5684  0.5684  0.217678  Diameter, stress OD and stress ID
+0.005014  1,700  14507  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.88729972125  0.888657555  zone start, finish (x/L) - Well Stress Joint 14.5 m, -Div4
+0.6906  0.6906  0.217678  Diameter, stress OD and stress ID
+0.011055  2,648  22602  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.888657555  0.89001538875  zone start, finish (x/L) - Well Stress Joint 14.5 m, -Div5
+0.8128  0.8128  0.217678  Diameter, stress OD and stress ID
+0.021314  3,781  32270  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.89001538875  0.8913732225  zone start, finish (x/L) - Well Stress Joint 14.5 m, -
+0.6906  0.6906  0.217678  Diameter, stress OD and stress ID
+0.011055  2,648  22602  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.8913732225  0.89273105625  zone start, finish (x/L) - Well Stress Joint 14.5 m, -
+0.5684  0.5684  0.217678  Diameter, stress OD and stress ID
+0.005014  1,700  14507  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.89273105625  0.89408889  zone start, finish (x/L) - Well Stress Joint 14.5 m, -
+0.4462  0.4462  0.217678  Diameter, stress OD and stress ID
+0.001836  935  7983  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.89408889  0.99818955  zone start, finish (x/L) - Composite_Pipe 175.3 m
+0.32385  0.32385  0.298704  Diameter, stress OD and stress ID
+0.00020914451  262.50498  -10928.4  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.99818955  0.99891373  zone start, finish (x/L) - Production Wellhead 1.2 m
+0.9144  0.9144  0.3556  Diameter, stress OD and stress ID
+5.6603774E-7  4879.0534  -2217834.8  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+0.99891373  1  zone start, finish (x/L) - Tree 1.8 m 
+0.9144  0.9144  0.3556  Diameter, stress OD and stress ID
+5.6603774E-7  4879.0534  47847.169  I, Mass per unit length, tension variation
+2.12E11  1  Young's modulus, S-N Curve ID ('Curve1')
+0.4 0.18  1  1  Bandwidth, Strouhal no., lift reduction factor, zone CL type
+1  0.2  0.18  0.2  added mass, damping coeffs. still water, low vel, high vel
+*** BLOCK 3. current data ***
+44  1.0   1      no. of profile data pts, probability, profile ID
+0.000296     0.067056
+0.385900     0.067056
+0.400673     0.064008
+0.415446     0.064008
+0.430219     0.067056
+0.444992     0.073152
+0.459765     0.079248
+0.474538     0.088392
+0.489311     0.097536
+0.504084     0.106680
+0.518857     0.109728
+0.533630     0.115824
+0.548403     0.118872
+0.563176     0.118872
+0.577949     0.121920
+0.592722     0.121920
+0.607495     0.128016
+0.622268     0.131064
+0.637221     0.137160
+0.651994     0.143256
+0.666767     0.149352
+0.681540     0.152400
+0.696313     0.164592
+0.711086     0.164592
+0.725859     0.167640
+0.740632     0.161544
+0.755405     0.149352
+0.770178     0.131064
+0.784951     0.112776
+0.799724     0.100584
+0.814497     0.176784
+0.829270     0.225552
+0.844043     0.280416
+0.858816     0.344424
+0.873589     0.417576
+0.888362     0.521208
+0.903135     0.569976
+0.917908     0.707136
+0.932681     0.920496
+0.945295     1.085088
+0.945354     0.000000
+0.947454     0.000000
+0.962227     0.000000
+0.977000     0.000000
+*** BLOCK 4. S-N and scf data ***
+1  Number of SN curves defined
+1 1  SN Curve ID (Curve1), Number of SN segments
+0  Endurance limit
+1.000E+06  1.0127E+15    stress range (N/m**2) cycles to failure
+1.000E+09  1.0127E+03    stress range (N/m**2) cycles to failure
+1  Global SCF
+0  Number of stress concentration points
+*** BLOCK 5. computation/output options ***
+2  Calculation option, 2=Response defined by common.mds file
+0  1  0.0059397844  Output summary locations: start, end, increment (x/L)
+9.80665  g
+0.05 0.3  Power ratio cutoff level, primary zone amplitude limit
+1  Power ratio exponent
+0  flag for importing nodal effective tension and mass (1=y;0=n)
+0  flag for MATLAB animation data output (1=y;0=n)
+1  flag for generating .scr file (1=y;0=n)
+0  flag for generating .dmg file (1=y;0=n)
+0  flag for generating .fat file (1=y;0=n)
+0  flag for out file selection, (0=.out;1=.out1;2=.out1+.out2)
+*** BLOCK 6. supplemental data (not used) ***

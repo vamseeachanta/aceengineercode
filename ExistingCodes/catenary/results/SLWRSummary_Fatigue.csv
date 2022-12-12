@@ -1,0 +1,3 @@
+,FileName,Nominal OD (inch),Nominal Wall Thickness (inch),Sag Bend Elevation (m),Hog Bend Elevation (m),"LSWR, Fv, Fluid (N)","LSWR, Fh, Fluid (N)","SCR, Fv, Empty (N)","SCR, Fv, Fluid Filled (N)","SCR, Fv, Water Filled (N)",Buoyancy Factor (#),Discrete Buoyancy Coverage (%),Discrete Buoyancy Thickness (inch),Total Buoyancy (N/m)
+0,results\SLWR_Summary_16OD_SE1200_HE1500_BF_2p5.yml,16,1.73,1200,1500,9025206.261042016,1112112.7650103548,9864032.221857242,11304419.280045226,13550769.56357161,2.5,100,48.22619875187894,-7028990.297442382
+1,results\SLWR_Summary_16OD_SE2000_HE2300_BF_2p5.yml,16,1.73,2000,2300,6446575.900744295,794366.2607216819,9864032.221857242,11304419.280045226,13550769.56357161,2.5,100,48.22619875187894,-8426989.011202333

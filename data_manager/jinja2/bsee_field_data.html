@@ -1,0 +1,56 @@
+{% extends "data_manager/jinja2/ong_fd_layout.html" %}
+{% block content %}
+
+  <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="{{ vars.file_prefix }}FieldData.html">Field Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}ProductionData.html">Production Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}WellData.html">Well Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}Reserves.html">Reserves</a>
+      </li>
+  </ul>
+
+  <div id="#fieldWellsData" class="in">
+    <h4>Field Wells Data</h4>
+    {{vars.well_high_level_df_html}}
+  </div>
+
+  <div id="#chartProducersWellLocation"> 
+    <h4>Well Locations</h4>
+    <h5>Producing Well (Relative) Locations and Summary</h5> 
+    <p>Bubble size proportional to production (MMBbl) to date. Hover on bubble for further well information</p> 
+  </div>
+  <div id="#wellLocationStatistics">
+    <h5>Well Location Statistics</h5>
+    <p>All Wellheads, Max Distance (ft): {{vars.wellhead_distances_df_dict[0].wellhead_distances['All Wellheads, Max Distance (ft)'] }}</p>
+    <p>All Wells, Max Horizontal Departure (ft): {{vars.wellhead_distances_df_dict[0].wellhead_distances['All Wells, Max Horizontal Departure (ft)'] }}</p>
+    <p>Producing Wellheads, Max Distance (ft): {{vars.wellhead_distances_df_dict[0].wellhead_distances['Producing Wellheads, Max Distance (ft)']}}</p>
+    <p>Producing Wellheads, Min Distance (ft): {{vars.wellhead_distances_df_dict[0].wellhead_distances['Producing Wellheads, Min Distance (ft)'] }}</p>
+    <p>Producing Wellheads, Max Horizontal Departure (ft): {{vars.wellhead_distances_df_dict[0].wellhead_distances['Producing Wellheads, Max Horizontal Departure (ft)'] }}</p>
+  </div>
+  <div id="#chartProducersWellheadWithBottom">
+  </div>
+  <div id="#chartAllWellheadWithBottom">
+  </div>
+
+
+  <script type="text/javascript">
+
+    var chartData = {{ vars['chartProducersWellLocation'] }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartProducersWellheadWithBottom'] }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartAllWellheadWithBottom'] }}
+    addChartToDOM(chartData);
+
+  </script>
+
+{% endblock %}

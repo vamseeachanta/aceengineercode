@@ -1,0 +1,293 @@
+// Standard Header Line 1
+// Standard Header Line 2
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 0.24999999999999997
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 2.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 71573
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_000_2500ft_WT0750_064pcf_Dr000_Hs00.25m_Tp02.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 0.24999999999999997
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 3.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 47469
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_001_2500ft_WT0750_064pcf_Dr000_Hs00.25m_Tp03.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 0.24999999999999997
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 4.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 2101
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_002_2500ft_WT0750_064pcf_Dr000_Hs00.25m_Tp04.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 0.7500000000000001
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 3.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 24226
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_003_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp03.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 0.7500000000000001
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 4.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 1003
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_004_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp04.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 0.7500000000000001
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 5.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 61328
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_005_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp05.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 0.7500000000000001
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 10.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 8844
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_006_2500ft_WT0750_064pcf_Dr000_Hs00.75m_Tp10.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 1.25
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 4.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 74522
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_007_2500ft_WT0750_064pcf_Dr000_Hs01.25m_Tp04.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 1.25
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 5.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 67166
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_008_2500ft_WT0750_064pcf_Dr000_Hs01.25m_Tp05.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 1.25
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 6.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 57162
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_009_2500ft_WT0750_064pcf_Dr000_Hs01.25m_Tp06.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 1.7499999999999998
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 6.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 82243
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_010_2500ft_WT0750_064pcf_Dr000_Hs01.75m_Tp06.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 1.7499999999999998
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 7.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 22609
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_011_2500ft_WT0750_064pcf_Dr000_Hs01.75m_Tp07.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 2.25
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 10.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 4407
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_012_2500ft_WT0750_064pcf_Dr000_Hs02.25m_Tp10.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 2.75
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 7.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 22620
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_013_2500ft_WT0750_064pcf_Dr000_Hs02.75m_Tp07.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 3.2500000000000004
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 13.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 90496
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_014_2500ft_WT0750_064pcf_Dr000_Hs03.25m_Tp13.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 4.75
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 9.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 84067
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_015_2500ft_WT0750_064pcf_Dr000_Hs04.75m_Tp09.50s.dat
+ 
+LoadData app_vertical_riser_2500ft_WT0750_064pcf_Wave1_FE.yml
+Select General
+StageDuration[2]= 3600.0
+Select Environment
+Select WaveTrain "Wave1"
+WaveHs= 6.75
+Select Environment
+Select WaveTrain "Wave1"
+WaveTp= 10.5
+Select Environment
+Select WaveTrain "Wave1"
+WaveSeed= 95023
+Select Environment
+Select WaveTrain "Wave1"
+WaveDirection= 0
+SaveData M:\0185\WaveFatigue\Rev1\lid02_016_2500ft_WT0750_064pcf_Dr000_Hs06.75m_Tp10.50s.dat
+ 
+// Standard Footer Line 1
+// Standard Footer Line 2

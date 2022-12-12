@@ -1,0 +1,97 @@
+---
+parameters:
+  file_io_01: &file_io_01 data_manager\data\shear7\lid_02_cp01_2500ft_WT0750_064pcf.plt
+  label_01: &label_01 label 1
+
+default:
+  Analysis:
+    depth_analysis: True
+    depth_vizualizations: False
+    witsml_column_qa: default_true
+    input_parameter_group_vizualizations: False
+    data_direct_from_nov: False
+    db:
+      simple: False
+      table_statistics:
+        flag: False
+  log_level: DEBUG
+  config:
+    overwrite:
+      output: False
+  custom_folder: C:\Temp\oda\
+
+  db:
+    dev:
+        server_type: mssql
+        server: tba
+        user: tba
+        password: tba
+        database: tba
+
+  nov_witsml_server:
+    dev:
+        url: https://witsml2.welldata.net/witsml/wmls.asmx?wsdl
+        user: tba
+        password: tba
+
+witsml_column_for_qa:
+  - name: BitWt
+    qa: [non_null, positive]
+  - name: TdSpeed
+    qa: [non_null]
+  - name: TdTorque
+    qa: [non_null, unit_check]
+
+witsml_groups:
+  - name: bit_weight
+    array: [Hookload, BitWt, Wob, WcBitWeight]
+#  - name: rpm
+#    array: [TdSpeed, BitRpm, PipeRpm]
+#  - name: flow_rate
+#    array: [FlowIn, FlowOut]
+#  - name: pressure
+#    array: [FlowPressure, StandpipePressure1, StandpipePressure2, AnnPressure, PumpPressure, DiffPress]
+#  - name: torque
+#    array: [RotTorque, StringTorque, PipeTorque, TopDrvTorqueConverted, DsMudMotorTorque, TdTorque]
+#  - name: RoP
+#    array: [FastRopFtHr, RopFast, AdRop, RopAutoDriller]
+
+plots:
+  - file_suffix: depths
+    suptitle: Depth Status of Well and Algorithms
+    size: default
+    orientation: portrait
+    plt_kind: bar
+    title: Env - {0}, Well - {1}, Drilling - {2}
+    grid: True
+    legend: True
+    legend_location: best
+    marker: NULL
+    x: [label]
+    y: [depths]
+    label: [Hole, Bit, TAD, ILT, SAS, BKL, BBO]
+    xlabel: Description
+    ylabel: Depth (ft)
+    invert_yaxis: True
+    yscale:
+      log: False
+    ayhline: 0.1
+
+  - file_suffix: input_group_
+    suptitle: Input Data Analysis - {}
+    size: default
+    orientation: portrait
+    plt_kind: line
+    title: Env - {0}, Well - {1}, Drilling - {2}
+    grid: True
+    legend: True
+    legend_location: best
+    marker: NULL
+    x: [RigTime]
+    y: [to_be_assigned]
+    label: [to_be_assigned]
+    xlabel: Rig Time
+    ylabel: to_be_assigned
+    invert_yaxis: False
+    yscale:
+      log: False

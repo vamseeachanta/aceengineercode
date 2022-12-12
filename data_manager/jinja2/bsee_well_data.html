@@ -1,0 +1,118 @@
+{% extends "data_manager/jinja2/ong_fd_layout.html" %}
+{% block content %}
+
+  <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}FieldData.html">Field Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}ProductionData.html">Production Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="{{ vars.file_prefix }}WellData.html">Well Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}Reserves.html">Reserves</a>
+      </li>
+  </ul>
+
+  <h4>Well Data </h4>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#wellLocationData">Well Location Data</button>
+  <div> <br> </div>
+  <div id="wellLocationData" class="collapse">
+    {{vars.well_location_df_html}}
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#wellDrillingInformation">Well Drilling Information</button>
+  <div> <br> </div>
+  <div id="wellDrillingInformation" class="collapse">
+    {{vars.well_drill_info_df_html}}
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#hydrocarbonBearingInterval">Hydrocarbon Bearing Interval</button>
+  <div> <br> </div>
+  <div id="hydrocarbonBearingInterval" class="collapse">
+    {{vars.hydrocarbon_bearing_interval_html}}
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#geologyMarkers">Geology Markers</button>
+  <div> <br> </div>
+  <div id="geologyMarkers" class="collapse">
+    {{vars.geology_markers_html}}
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#wellCompletionInformation">Well Completion Information</button>
+  <div> <br> </div>
+  <div id="wellCompletionInformation" class="collapse">
+    {{vars.well_completion_info_df_html}}
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#wellCompletionPerforations">Well Completion Perforations</button>
+  <div> <br> </div>
+  <div id="wellCompletionPerforations" class="collapse">
+    {{vars.completion_perforations_html}}
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#wellTubularInformation">Producers, Tubulars Grouped by Hole Size</button>
+  <div> <br> </div>
+  <div id="wellTubularInformation" class="collapse">
+    <ul>
+      {% for n in vars.well_tubulars_by_hole_df_html %}
+      <button type="button" class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#TubularHole{{loop.index}}">Hole Size: {{n["Hole Size"]}}</button>
+      <div> <br> </div>
+      <div id="TubularHole{{loop.index}}" class="collapse">
+        {{n.data}}
+      </div>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#wellTubularRawInformation">All Wells, Tubulars Raw Information</button>
+  <div> <br> </div>
+  <div id="wellTubularRawInformation" class="collapse">
+    {{vars.well_tubulars_df_html}}
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#openHoleActivities">Open Hole Activities</button>
+  <div> <br> </div>
+  <div id="openHoleActivities" class="collapse">
+    {{vars.well_activity_open_hole_html}}
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#wellActivitySummary">Well Activity Summary</button>
+  <div> <br> </div>
+  <div id="wellActivitySummary" class="collapse">
+    {{vars.well_activity_summary_html}}
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#wellActivityRemarks">Well Activity Remarks</button>
+  <div> <br> </div>
+  <div id="wellActivityRemarks" class="collapse table-wrapper-scroll-y my-custom-scrollbar">
+    {{vars.well_activity_remarks_html}}
+  </div>
+
+
+  <script type="text/javascript">
+
+    var chartData = {{ vars['chartProducersWellLocation'] }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartProducersWellheadWithBottom'] }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartAllWellheadWithBottom'] }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartProducersWellLocation'] }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartProducersWellheadWithBottom'] }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartAllWellheadWithBottom'] }}
+    addChartToDOM(chartData);
+
+  </script>
+
+{% endblock %}

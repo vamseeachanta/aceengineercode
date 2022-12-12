@@ -1,0 +1,39 @@
+{% extends "data_manager/jinja2/ong_fd_layout.html" %}
+{% block content %}
+
+  <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}FieldData.html">Field Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="{{ vars.file_prefix }}ProductionData.html">Production Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}WellData.html">Well Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ vars.file_prefix }}Reserves.html">Reserves</a>
+      </li>
+  </ul>
+
+  <div id="#wellProductionInformation">
+    <h4>Well Production Information </h4>
+    {{vars.well_production_summary_df_html}}
+    <img src="app_ong_field_development_{{ vars.parameters['ong_app_file_name_key'] }}_well_production.png" class="img-fluid" alt="Responsive image">
+    <img src="app_ong_field_development_{{ vars.parameters['ong_app_file_name_key'] }}_production_with_time.png" class="img-fluid" alt="Responsive image">
+  </div>
+
+  <script type="text/javascript">
+
+    var chartData = {{ vars['chartProducersWellLocation'] }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartProducersWellheadWithBottom'] }}
+    addChartToDOM(chartData);
+
+    var chartData = {{ vars['chartAllWellheadWithBottom'] }}
+    addChartToDOM(chartData);
+
+  </script>
+
+{% endblock %}

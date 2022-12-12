@@ -1,0 +1,11 @@
+CALL python catenaryRiserSummary.py catenarySummary_BF_3p0_Rerun.yml
+#CALL python catenaryRiserSummary.py catenarySummary_BF_1200m_Rerun.yml
+
+CALL python catenaryRiserSummary.py catenarySummary_10OD_Rerun.yml
+CALL python catenaryRiserSummary.py catenarySummary_12OD_Rerun.yml
+CALL python catenaryRiserSummary.py catenarySummary_14OD_Rerun.yml
+CALL python catenaryRiserSummary.py catenarySummary_16OD_Rerun.yml
+
+CALL python catenaryRiserSummary.py catenarySummary_BF_2p5_Rerun.yml
+CALL python catenaryRiserSummary.py catenarySummary_ALLBF_1200sag_Rerun.yml
+CALL python catenaryRiserSummary.py catenarySummary_2000sag_Rerun.yml

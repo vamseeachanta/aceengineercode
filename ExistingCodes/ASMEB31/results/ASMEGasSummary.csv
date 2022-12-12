@@ -1,0 +1,12 @@
+,FileName,Nominal OD (inch),Nominal Wall Thickness (inch),InternalPressure
+0,results\Summary_10p5inGas_HornMountain.yml,10.5,0.625,2220
+1,results\Summary_14inGas_Constitution.yml,14.0,0.812,2160
+2,results\Summary_12inGas_Nansen.yml,12.0,0.562,2220
+3,results\Summary_16inGas_Gunnison.yml,16.0,0.625,2220
+4,results\Summary_14inGas_Marlin.yml,14.0,0.625,2220
+5,results\Summary_16inGas_Heidelberg_R1.yml,16.0,0.938,3600
+6,results\Summary_16inGas_Lucius.yml,16.0,1.0,3600
+7,results\Summary_16inGas_Holstein.yml,16.0,0.898,3565
+8,results\Summary_18inGas_MarcoPolo.yml,18.0,0.812,2160
+9,results\Summary_18inGas_Boomvang.yml,18.0,0.875,2220
+10,results\Summary_20inGas_IHUB.yml,20.0,1.22,3639

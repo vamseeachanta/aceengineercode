@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="lib/d3_reusables.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Bar Chart</title>
+</head>
+
+<body>
+
+<h1>Bar Chart with axis and labels (NOT WORKING)</h1>
+
+<div id="#fruitData"></div>
+
+<script type="text/javascript">
+    var fruitdata = [{
+            "name": "Apples",
+            "value": 20,
+    },
+        {
+            "name": "Bananas",
+            "value": 12,
+    },
+        {
+            "name": "Grapes",
+            "value": 19,
+    },
+        {
+            "name": "Lemons",
+            "value": 5,
+    },
+        {
+            "name": "Limes",
+            "value": 16,
+    },
+        {
+            "name": "Oranges",
+            "value": 26,
+    },
+        {
+            "name": "Pears",
+            "value": 30,
+    }];
+
+    var fruitChart = barChart().barPadding(2);
+    d3.select(document.getElementById("#fruitData"))
+        .datum(fruitdata)
+        .call(fruitChart);
+
+
+</script>
+
+</body>
+</html>

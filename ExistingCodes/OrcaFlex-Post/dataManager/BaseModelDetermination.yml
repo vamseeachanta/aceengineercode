@@ -1,0 +1,286 @@
+Files: 
+  - 
+    Name: K:\\0173 KM Extreme\\SLWR\\Extreme\\Rev3_Full\\Seed1\\GA-01_H_R_SubCase-1.sim
+    Label: GA1 Seed1
+  - 
+    Name: SLWR_16OD_SE1200_HE1500_TSJ3p0in_30ft_100yr Wave, Far BeamSea PS, Seed 1087, 10571s_EndStartElements.sim
+    Label: Start and End Buoyancy High Hydrodynamic Coeffs
+  - 
+    Name: SLWR_16OD_SE1200_HE1500_TSJ3p0in_30ft_100yr Wave, Far BeamSea PS, Seed 1087, 10571s_NoDrag.sim
+    Label: No drag on Buoyancy
+
+
+PlotSettings:
+  Name: Screening Response
+  SupTitle: Frontier Deepwater Feasibility Analysis
+  Title: SLWR Configuration Development
+
+RangeGraph:
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 0
+    - 50
+  Variable: Effective Tension
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  suptitle: Effective Tension Response
+  FileName: Top_Effective_Tension
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 0
+    - 50
+  Variable: Bend Moment
+  xlabel: Arc Length (m)
+  ylabel: Bend Moment (kN.m)
+  suptitle: Bending Moment Response
+  FileName: Top_Bending_Moment
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 0
+    - 50
+  Variable: Max von Mises Stress
+  xlabel: Arc Length (m)
+  ylabel: Max von Mises Stress
+  suptitle: Max von Mises Stress Response
+  FileName: Top_Max von Mises Stress
+  axhline: 449537.4
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 0
+    - 50
+  Variable: API STD 2RD Method 1
+  xlabel: Arc Length (m)
+  ylabel: API STD 2RD Method 1
+  suptitle: API STD 2RD Method 1 Response
+  FileName: Top_API STD 2RD Method 1
+  axhline: 1.0
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 0
+    - 7000
+  Variable: Effective Tension
+  xlabel: Arc Length (m)
+  ylabel: Effective Tension (kN)
+  suptitle: Effective Tension Response
+  FileName: Effective_Tension
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 0
+    - 7000
+  Variable: Bend Moment
+  xlabel: Arc Length (m)
+  ylabel: Bend Moment (kN.m)
+  suptitle: Bending Moment Response
+  FileName: Bending_Moment
+  axhline: NULL
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 0
+    - 7000
+  Variable: Max von Mises Stress
+  xlabel: Arc Length (m)
+  ylabel: Max von Mises Stress
+  suptitle: Max von Mises Stress Response
+  FileName: Max von Mises Stress
+  axhline: 449537.4
+-
+  Command: Range Graph
+  ObjectName: SLWR
+  AdditionalData: 
+    - Max
+  SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+  ArcLength:
+    - 0
+    - 7000
+  Variable: API STD 2RD Method 1
+  xlabel: Arc Length (m)
+  ylabel: API STD 2RD Method 1
+  suptitle: API STD 2RD Method 1 Response
+  FileName: API STD 2RD Method 1
+  axhline: 1.0
+
+Summary:
+-
+  SummaryFileName: Table_Top
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: Effective Tension
+      Label: Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: Bend Moment
+      Label: Bend. Moment
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: API STD 2RD Method 1
+      Label: API M1
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: Max von Mises Stress
+      Label: vM stress
+
+
+Summary:
+-
+  SummaryFileName: Table_Top
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: Effective Tension
+      Label: Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: Bend Moment
+      Label: Bend. Moment
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: API STD 2RD Method 1
+      Label: API M1
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 0
+        - 100
+      Variable: Max von Mises Stress
+      Label: vM stress
+
+-
+  SummaryFileName: Table_Sag,Hog,Buoy,TDP
+  Columns:
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Effective Tension
+      Label: Eff. Tension
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod: SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Bend Moment
+      Label: Bend. Moment
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: API STD 2RD Method 1
+      Label: API M1
+    -
+      Command: Range Graph
+      ObjectName: SLWR
+      AdditionalData: 
+        - Max
+      SimulationPeriod:  SpecifiedPeriod(30.0, 120.0)
+      ArcLength:
+        - 3000
+        - 7000
+      Variable: Max von Mises Stress
+      Label: vM stress
+
